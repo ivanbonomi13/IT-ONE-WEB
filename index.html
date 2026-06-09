@@ -1,16 +1,2235 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="IT ONE - Soluciones en todas las plataformas de tecnologías de la información y telecomunicaciones.">
-    <title>IT ONE | Tecnologías de la Información y Telecomunicaciones</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IT ONE — servicios + tecnología · v13</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy:       #173354;
+  --navy-mid:   #1E3D64;
+  --blue:       #00aeef;
+  --blue-hi:    #33c4f5;
+  --blue-mid:   #009DD8;
+  --amber:      #D97706;
+  --amber-hi:   #F59E0B;
+  --amber-dim:  rgba(217,119,6,0.10);
+  --border-a:   rgba(217,119,6,0.30);
+  --bg:         #FFFFFF;
+  --bg2:        #F2F7FC;
+  --bg3:        #E8F2FA;
+  --bg4:        #D8EBF7;
+  --blue-dim:   rgba(0,174,239,0.08);
+  --border:     rgba(23,51,84,0.08);
+  --border-mid: rgba(23,51,84,0.14);
+  --border-b:   rgba(0,174,239,0.28);
+  --tx:         #173354;
+  --tx-mid:     #3A6080;
+  --tx-muted:   #6E90AA;
+  --tx-dim:     #B8CFE0;
+
+  /* === SISTEMA DE TAGS — 4 dimensiones visibles === */
+  /* D1 · Vertical — navy (identidad sectorial, ancla brand) */
+  --d1-fg: #173354;
+  --d1-bg: #E8EDF3;
+  --d1-bd: rgba(23,51,84,0.22);
+
+  /* D2 · Servicio — cyan (qué hacemos, color secundario brand) */
+  --d2-fg: #007AAB;
+  --d2-bg: #E1F1F9;
+  --d2-bd: rgba(0,174,239,0.30);
+
+  /* D3 · Atributo — verde (lo que diferencia, características del proyecto) */
+  --d3-fg: #166534;
+  --d3-bg: #DCFCE7;
+  --d3-bd: rgba(22,101,52,0.25);
+
+  /* D4 · Producto — slate (tecnología/partner, neutral institucional) */
+  --d4-fg: #334155;
+  --d4-bg: #F1F5F9;
+  --d4-bd: rgba(51,65,85,0.25);
+
+  --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --disp: 'Bebas Neue', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--bg); color: var(--tx); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body::after { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(23,51,84,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(23,51,84,0.03) 1px, transparent 1px); background-size: 80px 80px; pointer-events: none; z-index: 0; }
+
+/* ====== NAV ====== */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 84px; background: rgba(255,255,255,0.97); backdrop-filter: blur(16px); border-bottom: 4px solid var(--amber); display: flex; align-items: center; justify-content: space-between; padding: 0 4rem; box-shadow: 0 2px 24px rgba(23,51,84,0.10); }
+.nav-brand { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+
+.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+.nav-links a { font-size: 12.5px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: var(--tx-muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--navy); }
+.nav-cta { font-family: var(--mono) !important; font-size: 11px !important; font-weight: 500 !important; letter-spacing: 1.5px !important; text-transform: uppercase !important; color: #fff !important; background: var(--navy); padding: 10px 22px; transition: background 0.2s !important; }
+.nav-cta:hover { background: var(--navy-mid) !important; }
+
+/* ====== HERO ====== */
+.hero { position: relative; min-height: 100vh; display: grid; grid-template-columns: 55% 45%; padding-top: 78px; overflow: hidden; z-index: 1; }
+.hero-left { padding: 6rem 4rem 5rem; display: flex; flex-direction: column; justify-content: center; position: relative; background: var(--bg); }
+.hero-left::after { content: ''; position: absolute; top: 0; right: 0; width: 35%; height: 100%; background: repeating-linear-gradient(-55deg, transparent, transparent 40px, rgba(0,174,239,0.025) 40px, rgba(0,174,239,0.025) 41px); pointer-events: none; }
+.hero-right { background: var(--navy); padding: 5rem 3.5rem 4rem; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+.hero-right::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,174,239,0.10) 0%, transparent 65%); pointer-events: none; }
+.hero-right::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(0,174,239,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,174,239,0.04) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+
+.badge { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); border: 1px solid var(--border-a); background: var(--amber-dim); padding: 7px 18px; margin-bottom: 2rem; width: fit-content; }
+.badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: blink 2s infinite; }
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.25; } }
+.hero-h { font-family: var(--disp); font-size: clamp(52px, 5.6vw, 78px); line-height: 0.96; letter-spacing: 1px; color: var(--navy); margin-bottom: 2rem; }
+.hero-h .thin { display: block; font-family: var(--sans); font-size: clamp(22px, 2.6vw, 36px); font-weight: 300; letter-spacing: -0.5px; line-height: 1.15; color: var(--tx-muted); margin-bottom: 6px; }
+.hero-h .accent { color: var(--amber); }
+.hero-sub { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--tx-mid); max-width: 520px; margin-bottom: 2.5rem; border-left: 3px solid var(--amber); padding-left: 1.25rem; }
+
+.hero-acts { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.hero-link-cta { margin-top: 1rem; }
+.hero-link-cta a { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: var(--blue); text-decoration: none; transition: color 0.2s; }
+.hero-link-cta a:hover { color: var(--blue-hi); }
+.btn-blue { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; background: var(--blue); color: #fff; padding: 14px 32px; text-decoration: none; transition: background 0.2s; display: inline-block; }
+.btn-blue:hover { background: var(--blue-mid); }
+.btn-outline { font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); border: 1px solid var(--border-mid); padding: 13px 26px; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+.btn-outline:hover { border-color: var(--navy); }
+
+.hero-stats { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; gap: 0; }
+.stat { flex: 1; border-right: 1px solid var(--border); padding-right: 2rem; margin-right: 2rem; }
+.stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+.stat-n { font-family: var(--disp); font-size: 44px; letter-spacing: 1px; color: var(--amber); line-height: 1; }
+.stat-l { font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--tx-dim); margin-top: 6px; }
+
+.panel-lbl { font-family: var(--mono); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(245,158,11,0.7); margin-bottom: 1rem; display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
+.panel-lbl::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.12); }
+.cap-list { display: flex; flex-direction: column; position: relative; z-index: 1; }
+.cap-item { display: grid; grid-template-columns: 32px 1fr; gap: 0.75rem; align-items: center; padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); cursor: default; }
+.cap-item:last-child { border-bottom: none; }
+.cap-icon { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color 0.3s; }
+.cap-item:hover .cap-icon { border-color: var(--blue); }
+.cap-icon svg { width: 14px; height: 14px; stroke: var(--amber-hi); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.cap-name { font-size: 14px; font-weight: 600; color: #fff; line-height: 1.2; }
+.panel-geo { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; gap: 8px; flex-wrap: wrap; position: relative; z-index: 1; }
+.geo-chip { font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(245,158,11,0.85); border: 1px solid rgba(217,119,6,0.35); padding: 4px 12px; }
+
+/* ====== SECCIÓN COMMONS ====== */
+section { position: relative; z-index: 1; padding: 6rem 4rem; }
+.eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--amber); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 14px; }
+.eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--amber); }
+.sec-title { font-family: var(--disp); font-size: clamp(40px, 4.2vw, 58px); letter-spacing: 1px; line-height: 1; color: var(--navy); margin-bottom: 1.25rem; }
+.sec-sub { font-size: 15px; font-weight: 300; color: var(--tx-muted); max-width: 580px; line-height: 1.75; margin-bottom: 3.5rem; }
+
+/* ====== SISTEMA DE TAGS — chip base + variantes por dimensión ====== */
+.chip-row { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+.chip-row + .chip-row { margin-top: 6px; }
+.chip-lbl { font-family: var(--mono); font-size: 8.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--tx-dim); margin-right: 6px; min-width: 28px; }
+.chip { display: inline-flex; align-items: center; gap: 4px; font-family: var(--mono); font-size: 9.5px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; padding: 3.5px 9px; border-radius: 2px; transition: opacity 0.15s, transform 0.15s; text-decoration: none; line-height: 1; white-space: nowrap; }
+.chip:hover { opacity: 0.78; transform: translateY(-1px); cursor: pointer; }
+.chip-d1 { color: var(--d1-fg); background: var(--d1-bg); border: 1px solid var(--d1-bd); }
+.chip-d2 { color: var(--d2-fg); background: var(--d2-bg); border: 1px solid var(--d2-bd); }
+.chip-d3 { color: var(--d3-fg); background: var(--d3-bg); border: 1px solid var(--d3-bd); }
+.chip-d4 { color: var(--d4-fg); background: var(--d4-bg); border: 1px solid var(--d4-bd); }
+.chip-rigi { color: var(--amber); background: var(--amber-dim); border: 1px solid var(--border-a); font-weight: 600; }
+
+/* Leyenda del sistema de tags */
+.tag-legend { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; background: var(--bg); border: 1px solid var(--border); padding: 0.9rem 1.4rem; margin-bottom: 2.5rem; font-size: 12px; color: var(--tx-muted); }
+.tag-legend-title { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--tx-dim); }
+.tag-legend-item { display: flex; align-items: center; gap: 6px; }
+.tag-legend-item .chip { font-size: 8.5px; padding: 3px 7px; }
+
+/* ====== SERVICIOS ====== */
+.servicios { background: var(--bg2); }
+.srv-intro { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; background: var(--navy); padding: 2.25rem 3.5rem; margin-bottom: 1px; position: relative; overflow: hidden; }
+.srv-intro::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(0,174,239,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,174,239,0.05) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+.srv-intro-content { position: relative; z-index: 1; }
+.srv-intro-title { font-family: var(--disp); font-size: clamp(21px, 2.25vw, 32px); letter-spacing: 0.5px; line-height: 1.05; color: #fff; margin-bottom: 1rem; }
+.srv-intro-desc { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.75; max-width: 680px; }
+
+.srv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+.srv { background: var(--bg2); padding: 2.25rem 2.25rem 1.75rem; position: relative; overflow: hidden; transition: background 0.25s; cursor: default; display: flex; flex-direction: column; }
+.srv:hover { background: var(--bg); }
+.srv::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--amber), var(--amber-hi)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
+.srv:hover::before { transform: scaleX(1); }
+.srv-watermark { position: absolute; top: -10px; right: 16px; font-family: var(--disp); font-size: 110px; letter-spacing: -2px; color: rgba(23,51,84,0.04); pointer-events: none; line-height: 1; user-select: none; }
+.srv-num { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; color: var(--tx-dim); margin-bottom: 1.5rem; position: relative; z-index: 1; }
+.srv-icon { width: 44px; height: 44px; border: 1px solid var(--border-a); background: var(--amber-dim); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; position: relative; z-index: 1; }
+.srv-icon svg { width: 20px; height: 20px; stroke: var(--amber); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.srv-title { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 0.85rem; line-height: 1.25; position: relative; z-index: 1; }
+.srv-desc { font-size: 12.5px; font-weight: 300; color: var(--tx-mid); line-height: 1.7; position: relative; z-index: 1; }
+.srv-areas { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 5px; position: relative; z-index: 1; }
+.srv-tag { font-family: var(--mono); font-size: 8.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--tx-muted); border: 1px solid var(--border-mid); padding: 3px 8px; background: var(--bg); transition: border-color 0.2s, color 0.2s; }
+.srv:hover .srv-tag { border-color: var(--border-a); color: var(--amber); }
+
+/* Sistema de tags aplicado a Servicios */
+.srv-tags-block { margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px dashed var(--border); position: relative; z-index: 1; display: flex; flex-direction: column; gap: 6px; }
+.srv-cta-card { background: var(--bg3) !important; }
+.srv-cta-card .srv-title { color: var(--navy); font-size: 20px; }
+.srv-cta-card .srv-desc { color: var(--tx-muted); }
+
+/* ====== POR QUÉ ====== */
+.porque { background: var(--bg); }
+.pilares { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+.pilar { background: var(--bg); padding: 2.5rem; border-bottom: 3px solid transparent; transition: border-color 0.3s, background 0.2s; cursor: default; position: relative; display: flex; flex-direction: column; }
+.pilar:hover { border-bottom-color: var(--amber); background: var(--bg2); }
+.pilar-n { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; color: var(--tx-dim); margin-bottom: 1.5rem; }
+.pilar-title { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 1rem; line-height: 1.2; }
+.pilar-body { font-size: 13.5px; font-weight: 300; color: var(--tx-muted); line-height: 1.8; margin-bottom: 1.5rem; }
+.pilar-stats {
+  display: flex; gap: 1.5rem; margin: 1.25rem 0 0.75rem;
+  padding-top: 1.25rem; border-top: 1px solid var(--border);
+}
+.pilar-stat { display: flex; flex-direction: column; gap: 3px; }
+.pilar-stat-n {
+  font-family: var(--disp); font-size: 36px; letter-spacing: 1px;
+  color: var(--amber); line-height: 1;
+}
+.pilar-stat-l {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--tx-dim);
+}
+.pilar-stat-note {
+  font-size: 12px; font-weight: 300; color: var(--tx-muted);
+  font-style: italic; margin-bottom: 1rem; line-height: 1.5;
+}
+.pilar-proof { margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--border); font-family: var(--mono); font-size: 10px; letter-spacing: 1px; color: var(--tx-muted); }
+.pilar-proof a { color: var(--amber); text-decoration: none; font-weight: 500; }
+.pilar-proof a:hover { text-decoration: underline; }
+
+/* ====== POR QUÉ IT ONE — bloque unificado v14 ====== */
+.por-empresa { background: var(--bg); }
+
+/* Tres grandes números (hook institucional) */
+.por-numbers {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 3rem 0 3.5rem;
+  margin-bottom: 4rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.por-num { display: flex; flex-direction: column; gap: 0.6rem; padding: 0 1.5rem; position: relative; }
+.por-num + .por-num::before {
+  content: ''; position: absolute; left: 0; top: 15%; bottom: 15%;
+  width: 1px; background: var(--border);
+}
+.por-num-val {
+  font-family: var(--disp); font-size: clamp(56px, 5.8vw, 88px);
+  letter-spacing: 1px; color: var(--navy); line-height: 0.95;
+}
+.por-num-copy {
+  font-size: 12.5px; font-weight: 400; color: var(--tx-mid);
+  line-height: 1.55; max-width: 260px;
+}
+
+/* Mini-puente entre pilares y trayectoria */
+.por-bridge {
+  margin: 5rem 0 2.5rem;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px dashed var(--border);
+  border-bottom: 1px dashed var(--border);
+}
+.por-bridge-text {
+  font-family: var(--disp); font-size: clamp(22px, 2.2vw, 30px);
+  letter-spacing: 0.5px; color: var(--navy); line-height: 1.2;
+  margin: 0;
+}
+
+/* Subsección Trayectoria — timeline compacto + presencia regional */
+.por-trayectoria { margin-top: 2.5rem; }
+.por-trayectoria .sec-title { font-size: clamp(28px, 3vw, 40px); }
+.tl-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 5rem;
+  align-items: start;
+}
+.tl-list { display: flex; flex-direction: column; }
+.tl-row {
+  display: grid; grid-template-columns: 110px 1fr; gap: 1.25rem;
+  padding: 0.9rem 0; border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.tl-row:last-child { border-bottom: none; }
+.tl-year {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--amber); font-weight: 500;
+}
+.tl-txt { font-size: 12.5px; font-weight: 300; color: var(--tx-mid); line-height: 1.65; }
+
+/* Presencia regional grilla */
+.presencia { display: flex; flex-direction: column; gap: 2.5rem; }
+.presencia-col-title {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--amber); margin-bottom: 1rem;
+  padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-a);
+}
+.presencia-list { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.presencia-item {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 1.2px; color: var(--navy);
+  padding: 6px 12px; background: var(--bg2);
+  border: 1px solid var(--border-mid);
+}
+
+/* ====== VERTICALES ====== */
+.verticales { background: var(--bg2); }
+.vert-wrap { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: var(--border); }
+.vert-col { background: var(--bg); }
+.vert-head { padding: 1rem 1.5rem; background: var(--navy); border-bottom: 2px solid var(--amber); font-family: var(--mono); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 10px; }
+.vert-head svg { width: 14px; height: 14px; stroke: var(--blue); fill: none; stroke-width: 2; }
+
+.vert-row { padding: 1.1rem 1.5rem; border-bottom: 1px solid var(--border); cursor: default; }
+.vert-row:last-child { border-bottom: none; }
+.vert-row-top { display: grid; grid-template-columns: 8px 1fr; gap: 0.75rem; align-items: start; }
+.vert-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bg4); border: 1.5px solid var(--amber); margin-top: 9px; flex-shrink: 0; transition: background 0.2s; }
+.vert-row:hover .vert-dot { background: var(--amber); }
+.vert-name { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+.vert-desc { font-size: 12px; font-weight: 300; color: var(--tx-muted); line-height: 1.55; }
+
+.vert-tags { margin-top: 0.75rem; margin-left: calc(8px + 0.75rem); }
+.vert-tags .chip-row { gap: 4px; }
+
+/* Acordeón Energía */
+.vert-accordion { cursor: pointer; user-select: none; }
+.acc-arrow { font-size: 11px; color: var(--amber); transition: transform 0.3s ease; display: inline-block; margin-left: 6px; }
+.vert-accordion.open .acc-arrow { transform: rotate(90deg); }
+.acc-panel { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.acc-panel.open { max-height: 1200px; }
+.vert-child { background: var(--bg2); padding-left: 1rem !important; border-left: 2px solid var(--amber); }
+.vert-child-name { font-size: 13.5px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+.vert-child-desc { font-size: 11.5px; font-weight: 300; color: var(--tx-muted); line-height: 1.5; }
+
+/* ====== CASOS ====== */
+.casos { background: var(--bg); }
+.casos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
+.caso { background: var(--bg); padding: 2.25rem; display: flex; flex-direction: column; transition: background 0.2s; cursor: default; border-bottom: 3px solid transparent; }
+.caso:hover { background: var(--bg2); border-bottom-color: var(--amber); }
+.caso-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+.caso-sector { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); background: var(--amber-dim); border: 1px solid var(--border-a); padding: 4px 12px; align-self: flex-start; }
+.caso-num { font-family: var(--mono); font-size: 9px; color: var(--tx-dim); letter-spacing: 1px; }
+.caso-title { font-size: 17px; font-weight: 700; color: var(--navy); line-height: 1.32; margin-bottom: 0.8rem; }
+.caso-desc { font-size: 12.5px; font-weight: 300; color: var(--tx-mid); line-height: 1.7; margin-bottom: 1.25rem; }
+.caso-results { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1.25rem; }
+.caso-result { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.4px; color: var(--amber); font-weight: 600; }
+.caso-tags-block { display: flex; flex-direction: column; gap: 5px; margin-bottom: 1.25rem; padding-top: 1rem; border-top: 1px dashed var(--border); }
+.clientes { background: var(--bg); padding: 6rem 4rem; }
+.clientes-wrap { display: flex; flex-direction: column; gap: 3rem; margin-top: 3rem; }
+.clientes-grupo-title {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--amber);
+  margin-bottom: 1.5rem; display: flex; align-items: center; gap: 14px;
+}
+.clientes-grupo-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.clientes-logos { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.cli {
+  display: flex; align-items: center; justify-content: center;
+  min-width: 110px; height: 52px; padding: 0 1rem;
+  border: 1px solid var(--border); background: var(--bg);
+  transition: border-color 0.2s, background 0.2s;
+}
+.cli:hover { border-color: var(--border-b); background: var(--blue-dim); }
+.cli img {
+  max-height: 26px; max-width: 100px; width: auto;
+  filter: grayscale(100%); opacity: 0.5;
+  transition: filter 0.25s, opacity 0.25s; display: block;
+}
+.cli:hover img { filter: grayscale(0%); opacity: 1; }
+.cli-txt {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.5px;
+  text-transform: uppercase; color: var(--tx-muted); white-space: nowrap;
+}
+
+.caso-ctas, .caso-ctas-ver {
+  margin-top: 0.75rem;
+}
+.caso-cta-link {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 1px;
+  color: var(--blue); text-decoration: none;
+  transition: color 0.2s;
+}
+.caso-cta-link:hover { color: var(--blue-hi); }
+.caso-cta-ver { color: var(--tx-muted); }
+.caso-cta-ver:hover { color: var(--navy); }
+
+.caso-client { font-family: var(--mono); font-size: 11px; font-weight: 300; color: var(--tx-muted); padding-top: 1rem; border-top: 1px solid var(--border); margin-top: auto; }
+.caso-client b { color: var(--navy); font-weight: 600; }
+
+/* ====== PRODUCTOS ====== */
+.productos { background: var(--bg2); }
+.prod-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); margin-top: 3rem; }
+.prod { background: var(--bg2); padding: 1.85rem 1.5rem; border-top: 3px solid transparent; transition: border-color 0.25s, background 0.2s; cursor: default; display: flex; flex-direction: column; }
+.prod:hover { border-top-color: var(--amber); background: var(--bg); }
+.prod-name { font-family: var(--disp); font-size: 26px; letter-spacing: 1px; color: var(--navy); margin-bottom: 6px; }
+.prod-tag { font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--amber); background: var(--amber-dim); border: 1px solid var(--border-a); padding: 3px 10px; display: inline-block; margin-bottom: 10px; align-self: flex-start; }
+.prod-desc { font-size: 11.5px; font-weight: 300; color: var(--tx-muted); line-height: 1.6; margin-bottom: 1rem; }
+.prod-used { margin-top: auto; padding-top: 0.85rem; border-top: 1px dashed var(--border); display: flex; flex-direction: column; gap: 5px; }
+
+/* ====== NOSOTROS ====== */
+.mv-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem; }
+.mv-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:1.25rem; }
+.mv-label { font-family:var(--mono); font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--amber-hi); margin-bottom:0.6rem; font-weight:500; }
+.mv-text { font-size:13px; font-weight:300; color:rgba(255,255,255,0.6); line-height:1.7; margin:0; }
+
+.nosotros { background: var(--navy); border-top: 3px solid var(--amber); border-bottom: 3px solid var(--amber); }
+.nos-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+.nosotros .eyebrow { color: rgba(245,158,11,0.9); }
+.nosotros .eyebrow::before { background: rgba(217,119,6,0.7); }
+.nosotros .sec-title { color: #fff; }
+.nosotros .sec-sub { color: rgba(255,255,255,0.55); max-width: 100%; margin-bottom: 1rem; }
+.timeline { border-left: 2px solid rgba(217,119,6,0.4); padding-left: 2rem; }
+.t-item { padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); position: relative; }
+.t-item:last-child { border-bottom: none; }
+.t-item::before { content: ''; position: absolute; left: -2.4rem; top: 1.7rem; width: 10px; height: 10px; border-radius: 50%; background: var(--amber); border: 2px solid var(--navy); }
+.t-year { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--amber-hi); margin-bottom: 5px; }
+.t-txt { font-size: 13.5px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.7; }
+
+/* ====== CTA ====== */
+.intent-selector {
+  display: flex; gap: 1rem; justify-content: center;
+  flex-wrap: wrap; margin-bottom: 2rem;
+}
+.intent-btn {
+  font-family: var(--mono); font-size: 11px; font-weight: 400;
+  letter-spacing: 1px; text-transform: none;
+  color: var(--navy); border: 1.5px solid var(--border-mid);
+  padding: 12px 22px; text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  border-radius: 2px;
+}
+.intent-btn:hover {
+  border-color: var(--amber); background: var(--amber-dim); color: var(--amber);
+}
+
+.cta-sec { background: var(--bg); border-top: 1px solid var(--border-b); text-align: center; padding: 7rem 4rem; }
+.cta-sec .eyebrow { justify-content: center; }
+.cta-sec .eyebrow::before { display: none; }
+.cta-sec .eyebrow::after { content: ''; display: block; width: 20px; height: 2px; background: var(--amber); }
+.cta-h { font-family: var(--disp); font-size: clamp(48px, 5.5vw, 76px); letter-spacing: 2px; line-height: 1; color: var(--navy); margin: 1.5rem auto; max-width: 700px; }
+.cta-h .accent { color: var(--amber); }
+.cta-sub { font-size: 16px; font-weight: 300; color: var(--tx-muted); margin-bottom: 2.5rem; }
+.cta-acts { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.cta-bar { margin-top: 4rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
+.cta-item { background: var(--bg2); padding: 1.75rem; display: flex; flex-direction: column; gap: 6px; }
+.cta-lbl { font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--tx-dim); }
+.cta-val { font-size: 13.5px; font-weight: 500; color: var(--navy); }
+.cta-val a { color: var(--blue); text-decoration: none; }
+
+/* ====== FOOTER ====== */
+/* ====== FOOTER INSTITUCIONAL v14 ====== */
+.footer-inst {
+  background: var(--navy); border-top: 3px solid var(--amber);
+  padding: 4rem 4rem 2rem;
+  position: relative; z-index: 1;
+}
+.footer-inst-top {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 3rem; margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand-block .footer-brand-name {
+  font-family: var(--disp); font-size: 32px; letter-spacing: 3px; color: #fff;
+  margin-bottom: 0.3rem;
+}
+.footer-brand-block .footer-brand-tag {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--amber-hi);
+  margin-bottom: 1.25rem;
+}
+.footer-brand-block .footer-brand-desc {
+  font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,0.55);
+  line-height: 1.7; max-width: 320px;
+}
+.footer-col-lbl {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--amber-hi);
+  margin-bottom: 1rem;
+}
+.footer-col-text {
+  font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,0.55);
+  line-height: 1.7; margin: 0;
+}
+.footer-col-list { list-style: none; padding: 0; margin: 0; }
+.footer-col-list li { padding: 0.3rem 0; }
+.footer-col-list a {
+  font-size: 12.5px; color: rgba(255,255,255,0.55);
+  text-decoration: none; transition: color 0.2s;
+}
+.footer-col-list a:hover { color: var(--amber-hi); }
+.footer-inst-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-copy-inst {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.3);
+}
+.footer-attrib {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 1px;
+  text-transform: uppercase; color: rgba(255,255,255,0.25);
+}
+.footer-attrib a { color: rgba(255,255,255,0.4); text-decoration: underline; }
+
+/* Animaciones */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.badge      { animation: fadeUp .5s ease both; animation-delay: .10s; }
+.hero-h     { animation: fadeUp .6s ease both; animation-delay: .22s; }
+.hero-sub   { animation: fadeUp .6s ease both; animation-delay: .36s; }
+.hero-acts  { animation: fadeUp .6s ease both; animation-delay: .48s; }
+.hero-stats { animation: fadeUp .6s ease both; animation-delay: .60s; }
+
+
+/* ── MICROPUENTES TIPO A ── */
+.micropuente {
+  border-left: 3px solid var(--amber);
+  background: rgba(217,119,6,0.04);
+  padding: 1.5rem 2rem;
+  margin: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; flex-wrap: wrap;
+}
+.micropuente-text {
+  font-size: 14px; font-weight: 300; font-style: italic;
+  color: var(--tx-muted); line-height: 1.7; flex: 1; max-width: 680px;
+}
+.micropuente-cta {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--amber); text-decoration: none;
+  white-space: nowrap; transition: color 0.2s;
+  flex-shrink: 0;
+}
+.micropuente-cta:hover { color: var(--amber-hi); }
+
+/* ── TIPO B — CONTACT UI ── */
+.intent-instruction {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 1px;
+  color: var(--tx-muted); margin-bottom: 1rem; text-align: center;
+}
+.intent-btn.selected {
+  border-color: var(--amber); background: var(--amber-dim); color: var(--amber);
+}
+.intent-status {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px;
+  color: var(--amber); text-align: center; margin-top: 0.75rem;
+  min-height: 1.4em; transition: opacity 0.3s;
+}
+.contact-meta {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0.4rem; margin-top: 1.25rem;
+}
+.contact-response {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px;
+  color: var(--tx-muted);
+}
+.contact-nocommit {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.5px;
+  color: var(--tx-dim);
+}
+.cta-micro {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 1px;
+  color: var(--tx-dim); margin-top: 2px;
+}
+
+/* ── TIPO C — CASES ── */
+.casos-confidential-note {
+  border-left: 3px solid var(--border-mid);
+  background: var(--bg2); padding: 0.9rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.5px;
+  color: var(--tx-muted); line-height: 1.6;
+}
+.caso-nda {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 1px;
+  color: var(--tx-dim); margin-top: 4px; font-style: italic;
+}
+.caso-nav-ctas {
+  display: flex; align-items: center; gap: 8px;
+  padding-top: 1rem; margin-top: 0.5rem;
+  border-top: 1px dashed var(--border-mid);
+}
+.caso-nav-sim {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.5px;
+  color: var(--blue); text-decoration: none; transition: color 0.2s;
+}
+.caso-nav-sim:hover { color: var(--blue-hi); }
+.caso-nav-sep {
+  font-family: var(--mono); font-size: 10px; color: var(--tx-dim);
+}
+.caso-nav-consult {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.5px;
+  color: var(--amber); text-decoration: none; transition: color 0.2s;
+}
+.caso-nav-consult:hover { color: var(--amber-hi); }
+
+/* ====== OTROS PROYECTOS ====== */
+.otros-proyectos { margin-top: 5rem; padding-top: 3.5rem; border-top: 2px dashed var(--border); }
+.otros-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem 4rem; margin-top: 2rem; }
+.otros-grupo-lbl { margin-bottom: 1rem; }
+.otros-lista { display: flex; flex-direction: column; }
+.otro-item {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.3px;
+  color: var(--tx-mid); padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.otro-item:last-child { border-bottom: none; }
+.otro-loc { font-size: 9.5px; color: var(--tx-dim); letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; margin-left: 1rem; }
+
+/* ====== EVIDENCIA — wrapper unificado v15 ====== */
+.evidencia { background: var(--bg); }
+
+/* Bisagra textual interna (más liviano que .micropuente, vive dentro del wrapper) */
+.evidencia-bisagra {
+  margin: 4.5rem 0 3.5rem;
+  padding: 1.75rem 0;
+  text-align: center;
+  border-top: 1px dashed var(--border);
+  border-bottom: 1px dashed var(--border);
+}
+.evidencia-bisagra-text {
+  font-family: var(--mono); font-size: 11.5px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--tx-muted);
+  line-height: 1.7; margin: 0;
+}
+
+/* Otros proyectos — tratamiento denso (decisión 3.C) */
+.otros-densa { margin-top: 0; padding-top: 0; border-top: none; }
+.otros-densa-eyebrow {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--amber);
+  margin-bottom: 0.8rem; display: flex; align-items: center; gap: 14px;
+}
+.otros-densa-eyebrow::before {
+  content: ''; width: 20px; height: 2px; background: var(--amber);
+}
+.otros-densa-intro {
+  font-size: 12px; font-weight: 300; color: var(--tx-muted);
+  line-height: 1.6; max-width: 580px; margin-bottom: 1.75rem;
+}
+.otros-densa .otros-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 3rem; margin-top: 1.5rem;
+}
+.otros-densa .otros-grupo-lbl { margin-bottom: 0.6rem; }
+.otros-densa .otros-grupo-lbl .chip { font-size: 9px; padding: 2.5px 7px; }
+.otros-densa .otro-item {
+  font-family: var(--mono); font-size: 10.5px; padding: 0.35rem 0;
+  color: var(--tx-mid);
+}
+.otros-densa .otro-loc { font-size: 9px; }
+
+/* Clientes — versión sub-bloque (sin padding/background propio de section) */
+.clientes-block { margin-top: 0; padding-top: 0; }
+.clientes-block .clientes-wrap { margin-top: 2rem; }
+.clientes-block-title {
+  font-family: var(--disp); font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: 1px; line-height: 1; color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+.clientes-block-eyebrow {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--amber);
+  margin-bottom: 1rem; display: flex; align-items: center; gap: 14px;
+}
+.clientes-block-eyebrow::before {
+  content: ''; width: 20px; height: 2px; background: var(--amber);
+}
+
+
+/* ====== PRODUCTOS PROPIOS ====== */
+.prod-propios-wrap { margin-top: 3rem; }
+.prod-propios { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
+.prod-propio {
+  background: var(--navy); padding: 2.75rem 2.5rem;
+  position: relative; overflow: hidden; display: flex; flex-direction: column;
+}
+.prod-propio::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(0,174,239,0.045) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,174,239,0.045) 1px, transparent 1px);
+  background-size: 60px 60px; pointer-events: none;
+}
+.prod-propio::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--amber), var(--amber-hi));
+}
+.prod-propio-badge {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--amber); border: 1px solid var(--border-a); background: var(--amber-dim);
+  padding: 4px 14px; display: inline-block; margin-bottom: 1.75rem;
+  align-self: flex-start; position: relative; z-index: 1;
+}
+.prod-propio-name {
+  font-family: var(--disp); font-size: 58px; letter-spacing: 2px; color: #fff;
+  line-height: 1; margin-bottom: 0.5rem; position: relative; z-index: 1;
+}
+.prod-propio-full {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(255,255,255,0.38); margin-bottom: 1.5rem; position: relative; z-index: 1;
+}
+.prod-propio-desc {
+  font-size: 13.5px; font-weight: 300; color: rgba(255,255,255,0.68);
+  line-height: 1.8; position: relative; z-index: 1; flex: 1;
+}
+.prod-propio-used {
+  margin-top: 1.75rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.5px;
+  color: rgba(0,174,239,0.8); position: relative; z-index: 1;
+}
+.prod-propio-used a { color: rgba(0,174,239,0.85); text-decoration: none; }
+.prod-propio-used a:hover { color: var(--blue-hi); }
+.prod-fab-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--amber); margin: 3.5rem 0 1.25rem; display: flex; align-items: center; gap: 14px;
+}
+.prod-fab-label::before { content: ''; width: 20px; height: 2px; background: var(--amber); }
+
+
+/* ====== IT & OT BRIDGE BAND ====== */
+.itot-band {
+  background: var(--navy); padding: 4.5rem 4rem; position: relative; overflow: hidden;
+  margin-bottom: 1px;
+}
+.itot-band::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(0,174,239,0.06) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,174,239,0.06) 1px, transparent 1px);
+  background-size: 60px 60px; pointer-events: none;
+}
+.itot-band::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--amber), var(--amber-hi));
+}
+.itot-eyebrow {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--amber); border: 1px solid var(--border-a); background: var(--amber-dim);
+  padding: 4px 14px; display: inline-block; margin-bottom: 1.5rem;
+  position: relative; z-index: 1;
+}
+.itot-title {
+  font-family: var(--disp); font-size: clamp(56px, 6vw, 84px); letter-spacing: 2px;
+  color: #fff; line-height: 1; margin-bottom: 1.25rem;
+  position: relative; z-index: 1;
+}
+.itot-promise {
+  font-size: 17px; font-weight: 300; line-height: 1.6;
+  color: rgba(255,255,255,0.78); max-width: 720px; margin-bottom: 2.75rem;
+  position: relative; z-index: 1;
+}
+.itot-divider {
+  height: 1px; background: rgba(255,255,255,0.12); margin-bottom: 2.5rem;
+  position: relative; z-index: 1;
+}
+.itot-children {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;
+  position: relative; z-index: 1;
+}
+.itot-child {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+  padding: 1.75rem 1.5rem; transition: border-color 0.25s, background 0.25s;
+}
+.itot-child:hover { border-color: var(--amber); background: rgba(255,255,255,0.05); }
+.itot-child-num {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 2px;
+  color: var(--amber); margin-bottom: 1rem;
+}
+.itot-child-name {
+  font-family: var(--disp); font-size: 22px; letter-spacing: 0.5px;
+  color: #fff; line-height: 1.15; margin-bottom: 0.85rem;
+}
+.itot-child-desc {
+  font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,0.62); line-height: 1.7;
+}
+@media (max-width: 980px) {
+  .itot-children { grid-template-columns: repeat(2, 1fr); }
+  .itot-band { padding: 3rem 2rem; }
+}
+
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+<a class="nav-brand" href="#">
+<img alt="IT ONE servicios + tecnología" src="data:image/png;base64,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" style="height:60px;width:auto;display:block;"/>
+</a>
+<ul class="nav-links"><li><a href="#servicios">Lo que hacemos</a></li><li><a href="#empresa">Por qué IT-ONE</a></li><li><a href="#casos">Casos</a></li><li><a href="#productos">Productos</a></li><li><a class="nav-cta" href="#contacto">Hablar con ingeniería</a></li></ul>
+</nav>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-left">
+<div class="badge">+21 años · +120 proyectos ejecutados</div>
+<h1 class="hero-h">
+<span class="thin">Un solo equipo.</span>
+      De la <span class="accent">ingeniería</span> al activo en operación.
+    </h1>
+<p class="hero-sub">Industria, energía, corporativos y gobierno. Diseñamos la ingeniería, ejecutamos en campo y operamos lo entregado — bajo un mismo responsable técnico, de principio a fin.</p>
+<div class="hero-acts">
+<a class="btn-blue" href="#contacto">Conversemos sobre su proyecto →</a>
+<a class="btn-outline" href="#casos">Ver casos ejecutados</a>
+</div>
+<div class="hero-link-cta">
+<a href="#nosotros">Ver el equipo de ingeniería →</a>
+</div>
+<div class="hero-stats">
+<div class="stat"><div class="stat-n">21+</div><div class="stat-l">años de trayectoria</div></div>
+<div class="stat"><div class="stat-n">3</div><div class="stat-l">países propios</div></div>
+<div class="stat"><div class="stat-n">1°</div><div class="stat-l">RIGI ejecutado</div></div>
+<div class="stat"><div class="stat-n">360°</div><div class="stat-l">ingeniería a operación</div></div>
+</div>
+</div>
+<div class="hero-right">
+<div class="panel-lbl">Capacidades clave</div>
+<div class="cap-list">
+<div class="cap-item">
+<div class="cap-icon"><svg viewbox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
+<div class="cap-name">Ingeniería de Proyectos IT &amp; OT</div>
+</div>
+<div class="cap-item">
+<div class="cap-icon"><svg viewbox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3L8 21M14 3l-2 18"></path></svg></div>
+<div class="cap-name">IT &amp; OT Bridge</div>
+</div>
+<div class="cap-item">
+<div class="cap-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg></div>
+<div class="cap-name">Conectividad de última milla</div>
+</div>
+<div class="cap-item">
+<div class="cap-icon"><svg viewbox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+<div class="cap-name">Automatización &amp; Control</div>
+</div>
+<div class="cap-item">
+<div class="cap-icon"><svg viewbox="0 0 24 24"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg></div>
+<div class="cap-name">Servicios gestionados</div>
+</div>
+</div>
+<div class="panel-geo">
+<span class="geo-chip">Argentina</span>
+<span class="geo-chip">Chile</span>
+<span class="geo-chip">Paraguay</span>
+</div>
+</div>
+</section>
+<!-- ====================== SERVICIOS ====================== -->
+<section class="servicios" id="servicios">
+<div class="eyebrow">Lo que hacemos</div>
+<h2 class="sec-title">El integrador que une los dos mundos</h2>
+<p class="sec-sub">No somos un reseller. Somos un equipo de ingeniería propio que diseña, ejecuta y sostiene proyectos donde el mundo IT y OT se encuentran.</p>
+<div class="srv-intro">
+<div class="srv-intro-content">
+<h3 class="srv-intro-title">No somos un reseller. Somos el equipo que entiende el problema, diseña la solución y la ejecuta en campo.</h3>
+<p class="srv-intro-desc">Servicios integrales IT &amp; OT, diseñados para condiciones reales. Cada servicio puede contratarse de forma independiente o como parte de un proyecto integral. Modelos CAPEX para implementación y OPEX para operación gestionada.</p>
+</div>
+</div>
+<!-- ★ IT & OT BRIDGE BAND -->
+<div class="itot-band">
+<div class="itot-eyebrow">★ Categoría integrada</div>
+<h3 class="itot-title">IT &amp; OT Bridge</h3>
+<p class="itot-promise">Donde la operación industrial conversa con la inteligencia del negocio. Convergencia IT &amp; OT segura.</p>
+<div class="itot-divider"></div>
+<div class="itot-children">
+<div class="itot-child">
+<div class="itot-child-num">// 01</div>
+<div class="itot-child-name">Auditoría fronteras IT &amp; OT</div>
+<div class="itot-child-desc">Diagnóstico de los puntos de contacto entre redes industriales y corporativas. Mapeo de exposiciones, dependencias y riesgos antes de tocar la operación.</div>
+</div>
+<div class="itot-child">
+<div class="itot-child-num">// 02</div>
+<div class="itot-child-name">Convergencia de redes IT &amp; OT</div>
+<div class="itot-child-desc">Arquitectura unificada con segmentación y jerarquía Purdue. Protocolos industriales y corporativos hablando entre sí, sin comprometer la planta.</div>
+</div>
+<div class="itot-child">
+<div class="itot-child-num">// 03</div>
+<div class="itot-child-name">OT Cyberseg</div>
+<div class="itot-child-desc">Ciberseguridad diseñada para entornos OT, no para oficinas. Hardening, detección y respuesta sin afectar la continuidad operativa.</div>
+</div>
+<div class="itot-child">
+<div class="itot-child-num">// 04</div>
+<div class="itot-child-name">Automatización &amp; Control</div>
+<div class="itot-child-desc">Sus máquinas saben más de lo que parece — solo hay que escucharlas. Integración de SCADA, PLCs e IIoT para convertir datos OT en decisiones operativas.</div>
+</div>
+</div>
+</div>
+<div class="srv-grid">
+<!-- S1 · Ingeniería de Proyectos IT & OT -->
+<div class="srv">
+<div class="srv-watermark">01</div>
+<div class="srv-num">// 01</div>
+<div class="srv-icon"><svg viewbox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
+<div class="srv-title">Ingeniería de Proyectos IT &amp; OT</div>
+<div class="srv-desc">Relevamiento en sitio, arquitectura de la solución, integración de sistemas de campo y documentación según estándares de la industria. Cada proyecto atraviesa un proceso técnico estructurado: análisis de requerimientos, definición de topología, especificación de componentes y planes de implementación verificables.</div>
+<div class="srv-areas">
+<span class="srv-tag">Relevamiento</span>
+<span class="srv-tag">Memoria descriptiva</span>
+<span class="srv-tag">Pliegos</span>
+<span class="srv-tag">Ingeniería de detalle</span>
+<span class="srv-tag">PM técnico</span>
+</div>
+<div class="srv-tags-block">
+<div class="chip-row"><span class="chip-lbl">Aplicado en</span>
+<a class="chip chip-d1" href="#casos">03 · Zonda</a>
+<a class="chip chip-d1" href="#casos">01 · El Quemado</a>
+</div>
+<div class="chip-row"><span class="chip-lbl">Verticales</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Corporativo</span>
+<span class="chip chip-d1">Gobierno</span>
+</div>
+</div>
+</div>
+<!-- S2 · Conectividad de última milla (antes era S3) -->
+<div class="srv">
+<div class="srv-watermark">03</div>
+<div class="srv-num">// 03</div>
+<div class="srv-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg></div>
+<div class="srv-title">Conectividad de última milla</div>
+<div class="srv-desc">¿Su próximo proyecto está en medio de la nada? Ningún problema, nosotros llegamos. Órbita baja, radioenlaces, fibra — armamos la solución que su locación necesita. Sin conectividad, no hay operación. Opere con la misma calidad que su oficina central. La distancia ya no es una excusa.</div>
+<div class="srv-areas">
+<span class="srv-tag">Donde sea</span>
+<span class="srv-tag">Lo que sea</span>
+<span class="srv-tag">Rápido</span>
+<span class="srv-tag">Confiable</span>
+</div>
+<div class="srv-tags-block">
+<div class="chip-row"><span class="chip-lbl">Aplicado en</span>
+<a class="chip chip-d1" href="#casos">02 · PECASA</a>
+<a class="chip chip-d1" href="#casos">03 · Zonda</a>
+<a class="chip chip-d1" href="#casos">01 · El Quemado</a>
+</div>
+<div class="chip-row"><span class="chip-lbl">Tecnología</span>
+<span class="chip chip-d4">Starlink</span>
+<span class="chip chip-d4">Getac</span>
+</div>
+</div>
+</div>
+<!-- S4 · Redes & Conectividad -->
+<div class="srv">
+<div class="srv-watermark">04</div>
+<div class="srv-num">// 04</div>
+<div class="srv-icon"><svg viewbox="0 0 24 24"><rect height="8" rx="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" width="20" x="2" y="14"></rect></svg></div>
+<div class="srv-title">Redes &amp; Conectividad</div>
+<div class="srv-desc">La red es el activo invisible que sostiene cada decisión de su negocio. Diseñamos arquitecturas de datos robustas para entornos industriales y corporativos, con foco en alta disponibilidad, seguridad y escalabilidad. Cuando la red funciona, su operación también.</div>
+<div class="srv-areas">
+<span class="srv-tag">Arquitectura</span>
+<span class="srv-tag">Alta disponibilidad</span>
+<span class="srv-tag">Multisite</span>
+<span class="srv-tag">Soporte continuo</span>
+</div>
+<div class="srv-tags-block">
+<div class="chip-row"><span class="chip-lbl">Aplicado en</span>
+<a class="chip chip-d1" href="#casos">02 · PECASA</a>
+<a class="chip chip-d1" href="#casos">01 · El Quemado</a>
+</div>
+<div class="chip-row"><span class="chip-lbl">Verticales</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Corporativo</span>
+</div>
+</div>
+</div>
+<!-- S5 · Sistemas de Seguridad Integrados -->
+<div class="srv">
+<div class="srv-watermark">05</div>
+<div class="srv-num">// 05</div>
+<div class="srv-icon"><svg viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+<div class="srv-title">Sistemas de Seguridad Integrados</div>
+<div class="srv-desc">La seguridad ya no es una cámara y un guardia. Es un ecosistema integrado de videovigilancia IP, control de accesos y detección de intrusión operando en tiempo real desde una única plataforma — con cumplimiento normativo para entornos regulados como banca, energía y minería. La inteligencia aparece cuando estos sistemas dialogan con los sistemas de gestión.</div>
+<div class="srv-areas">
+<span class="srv-tag">Videovigilancia IP</span>
+<span class="srv-tag">Control de accesos</span>
+<span class="srv-tag">VMS/PSIM</span>
+<span class="srv-tag">Biometría</span>
+<span class="srv-tag">Cumplimiento</span>
+</div>
+<div class="srv-tags-block">
+<div class="chip-row"><span class="chip-lbl">Aplicado en</span>
+<a class="chip chip-d1" href="#casos">01 · El Quemado</a>
+<a class="chip chip-d1" href="#casos">06 · Molino</a>
+<a class="chip chip-d1" href="#casos">07 · Laminadora</a>
+</div>
+<div class="chip-row"><span class="chip-lbl">Verticales</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Corporativo</span>
+<span class="chip chip-d1">Gobierno</span>
+</div>
+</div>
+</div>
+<!-- S6 · Infraestructura & Energía -->
+<div class="srv">
+<div class="srv-watermark">06</div>
+<div class="srv-num">// 06</div>
+<div class="srv-icon"><svg viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="7"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg></div>
+<div class="srv-title">Infraestructura &amp; Energía</div>
+<div class="srv-desc">Salas de datos, UPS modulares con redundancia N+1, tableros eléctricos TGBT, sistemas de tierra y pararrayos, climatización de precisión y cableado estructurado. Coordinamos obra civil, electricidad y tecnología bajo un solo project management. Proyectos llave en mano.</div>
+<div class="srv-areas">
+<span class="srv-tag">Salas Tier</span>
+<span class="srv-tag">UPS N+1</span>
+<span class="srv-tag">TGBT</span>
+<span class="srv-tag">Cat 6A/7</span>
+</div>
+<div class="srv-tags-block">
+<div class="chip-row"><span class="chip-lbl">Tecnología</span>
+<span class="chip chip-d4">Weidmüller</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">Verticales</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Corporativo</span>
+</div>
+</div>
+</div>
+<!-- S8 · Servicios gestionados -->
+<div class="srv">
+<div class="srv-watermark">08</div>
+<div class="srv-num">// 08</div>
+<div class="srv-icon"><svg viewbox="0 0 24 24"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg></div>
+<div class="srv-title">Servicios gestionados</div>
+<div class="srv-desc">Lo que instalamos lo cuidamos. Su tecnología funciona los 365 días del año porque nuestro equipo trabaja para que así sea. Monitoreo continuo, respuesta inmediata, mantenimiento planificado. Gestionamos infraestructura crítica bajo modelos de servicio con SLA, costos predecibles y reportes ejecutivos.</div>
+<div class="srv-areas">
+<span class="srv-tag">SLA garantizado</span>
+<span class="srv-tag">Monitoreo 24/7</span>
+<span class="srv-tag">Modelo OPEX</span>
+<span class="srv-tag">Reportes ejecutivos</span>
+</div>
+<div class="srv-tags-block">
+<div class="chip-row"><span class="chip-lbl">Aplicado en</span>
+<a class="chip chip-d1" href="#casos">02 · PECASA</a>
+<a class="chip chip-d1" href="#casos">01 · El Quemado</a>
+</div>
+<div class="chip-row"><span class="chip-lbl">Tecnología</span>
+<span class="chip chip-d4">TIM</span>
+<span class="chip chip-d4">SAR-H</span>
+</div>
+</div>
+</div>
+<!-- CTA Card -->
+<div class="srv srv-cta-card">
+<div class="srv-num" style="color: var(--amber);">// CTA</div>
+<div class="srv-title">¿Su proyecto tiene requerimientos específicos?</div>
+<div class="srv-desc" style="margin-bottom: 1.5rem;">Cada proyecto es único. El equipo de ingeniería evalúa los requerimientos y diseña la solución.</div>
+<a class="btn-blue" href="#contacto" style="align-self: flex-start;">Consultar con ingeniería</a>
+</div>
+</div>
+<div class="por-bridge"><p class="por-bridge-text">La misma ingeniería, adaptada al entorno donde opera. IT-ONE conoce las tres: industria, corporaciones y gobierno.</p></div><div class="verticales verticales-sub"><div id="verticales" style="position:absolute;top:-80px;"></div><div class="eyebrow">Sectores</div><h2 class="sec-title">Verticales</h2><p class="sec-sub">Industrial, Corporativo y Gobierno. Cada contexto define sus propias exigencias operativas; IT-ONE tiene interlocución e ingeniería propias para cada uno.</p><div class="vert-wrap">
+<!-- INDUSTRIAL -->
+<div class="vert-col">
+<div class="vert-head">
+<svg viewbox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+        Industrial
+      </div>
+<div class="vert-row vert-accordion" onclick="toggleEnergia(this)">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Energía <span class="acc-arrow">▸</span></div>
+<div class="vert-desc">Generación térmica, eólica y solar.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Última Milla</span>
+<span class="chip chip-d2">Redes</span>
+<span class="chip chip-d2">Seguridad</span>
+<span class="chip chip-d2">Gestionados</span>
+</div>
+</div>
+</div>
+<div class="acc-panel" id="energia-panel">
+<div class="vert-row vert-child">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-child-name">Centrales Termoeléctricas</div>
+<div class="vert-child-desc">La tecnología que mantiene la generación en línea, sin importar las condiciones del entorno.</div>
+</div>
+</div>
+</div>
+<div class="vert-row vert-child">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-child-name">Parques Eólicos</div>
+<div class="vert-child-desc">Conectividad y control en locaciones remotas donde el viento llega antes que la fibra.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Caso</span>
+<a class="chip chip-d1" href="#casos">02 · PECASA</a>
+</div>
+</div>
+</div>
+<div class="vert-row vert-child">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-child-name">Parques Solares</div>
+<div class="vert-child-desc">Infraestructura IT y OT para parques que operan solos, lejos de todo.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Casos</span>
+<a class="chip chip-d1" href="#casos">03 · Zonda</a>
+<a class="chip chip-d1" href="#casos">01 · El Quemado</a>
+<span class="chip chip-rigi">RIGI ★</span>
+</div>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Oil &amp; Gas</div>
+<div class="vert-desc">Desde el pozo hasta la refinería. Redes, automatización y seguridad donde la operación no puede parar.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">IT/OT Bridge</span>
+<span class="chip chip-d2">Última Milla</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">Caso</span>
+<a class="chip chip-d1" href="#casos">05 · Válvula</a>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Minería</div>
+<div class="vert-desc">En superficie o bajo tierra, llevamos tecnología a donde otros no llegan.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">Seguridad</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">Caso</span>
+<a class="chip chip-d1" href="#casos">06 · Molino</a>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Plantas de Producción</div>
+<div class="vert-desc">Conectamos el piso de planta con la sala de dirección. En tiempo real.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">IT/OT Bridge</span>
+<span class="chip chip-d2">Seguridad</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">Casos</span>
+<a class="chip chip-d1" href="#casos">04 · Fresadora</a>
+<a class="chip chip-d1" href="#casos">07 · Laminadora</a>
+</div>
+</div>
+</div>
+</div>
+<!-- CORPORATIVO -->
+<div class="vert-col">
+<div class="vert-head">
+<svg viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
+        Corporativo
+      </div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Empresas Multisite</div>
+<div class="vert-desc">Una sola tecnología, muchas locaciones. Estandarización y soporte unificado.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Redes</span>
+<span class="chip chip-d2">Gestionados</span>
+<span class="chip chip-d2">Infraestructura</span>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Logística &amp; Supply Chain</div>
+<div class="vert-desc">Trazabilidad, conectividad y automatización para operaciones que no admiten demoras.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">Seguridad</span>
+<span class="chip chip-d2">Redes</span>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Banca &amp; Servicios Financieros</div>
+<div class="vert-desc">Infraestructura crítica para entornos donde cada segundo y cada dato importan.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Seguridad</span>
+<span class="chip chip-d2">Infraestructura</span>
+<span class="chip chip-d2">Gestionados</span>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Salud</div>
+<div class="vert-desc">Tecnología confiable para organizaciones donde una falla puede tener consecuencias reales.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Redes</span>
+<span class="chip chip-d2">Infraestructura</span>
+<span class="chip chip-d2">Seguridad</span>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Real Estate Corporativo</div>
+<div class="vert-desc">Edificios inteligentes, seguros y conectados. Tecnología invisible que se nota cuando falta.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Infraestructura</span>
+<span class="chip chip-d2">Seguridad</span>
+<span class="chip chip-d2">Automatización</span>
+</div>
+</div>
+</div>
+</div>
+<!-- GOBIERNO -->
+<div class="vert-col">
+<div class="vert-head">
+<svg viewbox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Gobierno
+      </div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Seguridad &amp; Fuerzas</div>
+<div class="vert-desc">Infraestructura tecnológica robusta para organizaciones que operan en alta exigencia.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Seguridad</span>
+<span class="chip chip-d2">Última Milla</span>
+<span class="chip chip-d2">Redes</span>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Salud Pública</div>
+<div class="vert-desc">Conectividad y sistemas para hospitales, centros de salud y redes sanitarias distribuidas.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Redes</span>
+<span class="chip chip-d2">Infraestructura</span>
+<span class="chip chip-d2">Gestionados</span>
+</div>
+</div>
+</div>
+<div class="vert-row">
+<div class="vert-row-top">
+<div class="vert-dot"></div>
+<div>
+<div class="vert-name">Smart Cities</div>
+<div class="vert-desc">Tecnología que hace más eficiente lo público. Sensores, redes y datos al servicio del ciudadano.</div>
+</div>
+</div>
+<div class="vert-tags">
+<div class="chip-row">
+<span class="chip-lbl">Servicios</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">Redes</span>
+<span class="chip chip-d2">Seguridad</span>
+</div>
+</div>
+</div>
+</div>
+</div></div></section>
+<div class="micropuente">
+<p class="micropuente-text">La arquitectura sectorial está clara. Lo que sigue explica por qué IT-ONE está equipado para ejecutar en cada uno de esos entornos.</p>
+<a class="micropuente-cta" href="#empresa">Ver por qué IT-ONE →</a>
+</div>
+<!-- ====================== POR QUÉ IT ONE ====================== -->
+<!-- ====================== POR QUÉ IT ONE — bloque unificado v14 ====================== -->
+<section class="porque por-empresa" id="empresa">
+<!-- Sub-anchor de compatibilidad: las referencias a #porque siguen funcionando -->
+<div id="porque" style="position:absolute;top:-80px;"></div>
+<div class="eyebrow">Por qué IT-ONE</div>
+<h2 class="sec-title">Tres diferenciales reales</h2>
+<p class="sec-sub">Tres razones concretas por las que las organizaciones más exigentes de la región eligen IT-ONE — y siguen eligiéndola.</p>
+<!-- Tres grandes números (hook institucional) -->
+<div class="por-numbers">
+<div class="por-num">
+<div class="por-num-val">+21 años</div>
+<div class="por-num-copy">De operación ininterrumpida en IT &amp; OT</div>
+</div>
+<div class="por-num">
+<div class="por-num-val">12 provincias</div>
+<div class="por-num-copy">Donde otros integradores no llegan</div>
+</div>
+<div class="por-num">
+<div class="por-num-val">+120 proyectos</div>
+<div class="por-num-copy">Ejecutados en campo, no facturados desde escritorio</div>
+</div>
+</div>
+<!-- Tres pilares -->
+<div class="pilares">
+<div class="pilar">
+<div class="pilar-n">// 01</div>
+<div class="pilar-title">Personas</div>
+<div class="pilar-body">Un equipo de ingenieros, técnicos y asesores estratégicos con inversión continua en capacitación y tecnología, comprometido con acompañar la evolución de cada cliente.</div>
+<div class="pilar-stats">
+<div class="pilar-stat"><span class="pilar-stat-n">70%</span><span class="pilar-stat-l">Perfiles técnicos</span></div>
+<div class="pilar-stat"><span class="pilar-stat-n">+7 años</span><span class="pilar-stat-l">Permanencia promedio</span></div>
+</div>
+<div class="pilar-stat-note">En una industria con alta rotación, retenemos el talento y el know-how.</div>
+<div class="pilar-proof">→ Verificado en <a href="#casos">caso 05 · Válvula</a> y <a href="#casos">caso 07 · Laminadora</a></div>
+</div>
+<div class="pilar">
+<div class="pilar-n">// 02</div>
+<div class="pilar-title">Capacidad de campo</div>
+<div class="pilar-body">Operamos en zonas remotas donde la mayoría de los integradores no llega. Comunicaciones, infraestructura, satelital de órbita baja, radio, fibra — en donde su operación lo necesita.</div>
+<div class="pilar-stats">
+<div class="pilar-stat"><span class="pilar-stat-n">7</span><span class="pilar-stat-l">Países</span></div>
+<div class="pilar-stat"><span class="pilar-stat-n">12</span><span class="pilar-stat-l">Provincias</span></div>
+</div>
+<div class="pilar-proof">→ Verificado en casos <a href="#casos">02 · PECASA</a>, <a href="#casos">03 · Zonda</a> y <a href="#casos">01 · El Quemado</a></div>
+</div>
+<div class="pilar">
+<div class="pilar-n">// 03</div>
+<div class="pilar-title">Ciclo completo</div>
+<div class="pilar-body">Desde la ingeniería conceptual hasta el soporte continuo post-implementación. Un mismo equipo en todas las etapas, garantizando coherencia técnica y trazabilidad del proyecto.</div>
+<div class="pilar-stats">
+<div class="pilar-stat"><span class="pilar-stat-n">6</span><span class="pilar-stat-l">Clientes principales</span></div>
+<div class="pilar-stat"><span class="pilar-stat-n">+15 años</span><span class="pilar-stat-l">De relación promedio</span></div>
+</div>
+<div class="pilar-stat-note">Quince años no se sostienen con un único proyecto. Se sostienen con ciclo completo.</div>
+<div class="pilar-proof">→ Verificado en la trayectoria <a href="#casos">Zonda → PECASA → El Quemado</a> con YPF Luz</div>
+</div>
+</div>
+<!-- Mini-puente entre pilares y trayectoria -->
+<div class="evidencia-bisagra"><p class="evidencia-bisagra-text">Se verifican en las organizaciones que siguen eligiendo IT-ONE.</p></div><div class="clientes-block" id="clientes">
+<div class="clientes-block-eyebrow">Clientes</div>
+<h3 class="clientes-block-title">Organizaciones que confían en IT-ONE</h3>
+<p class="sec-sub" style="margin-bottom:2rem;">Industriales, Corporativas y Gobierno — con una constante: exigencia operativa real.</p><div class="clientes-wrap">
+<!-- Industriales & Energía -->
+<div>
+<div class="clientes-grupo-title">Industriales &amp; Energía</div>
+<div class="clientes-logos">
+<div class="cli"><img alt="Techint" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Techint&lt;/span&gt;'" src="https://logos.hunter.io/techint.com"/></div>
+<div class="cli"><img alt="Siemens" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Siemens&lt;/span&gt;'" src="https://logos.hunter.io/siemens.com"/></div>
+<div class="cli"><img alt="General Electric" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;General Electric&lt;/span&gt;'" src="https://logos.hunter.io/ge.com"/></div>
+<div class="cli"><img alt="Central Puerto" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Central Puerto&lt;/span&gt;'" src="https://logos.hunter.io/centralpuerto.com"/></div>
+<div class="cli"><span class="cli-txt">AESA</span></div>
+<div class="cli"><span class="cli-txt">DVS Energy</span></div>
+<div class="cli"><span class="cli-txt">Aspro Energy</span></div>
+<div class="cli"><span class="cli-txt">Central Dock Sud</span></div>
+<div class="cli"><span class="cli-txt">Refinor</span></div>
+<div class="cli"><img alt="YPF Luz" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;YPF Luz&lt;/span&gt;'" src="https://logos.hunter.io/ypfluz.com"/></div>
+<div class="cli"><span class="cli-txt">MSU Energy</span></div>
+<div class="cli"><span class="cli-txt">ALUAR</span></div>
+<div class="cli"><img alt="Wärtsilä" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Wärtsilä&lt;/span&gt;'" src="https://logos.hunter.io/wartsila.com"/></div>
+<div class="cli"><img alt="Veolia" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Veolia&lt;/span&gt;'" src="https://logos.hunter.io/veolia.com"/></div>
+</div>
+</div>
+<!-- Corporativos & Gobierno -->
+<div>
+<div class="clientes-grupo-title">Corporativos &amp; Gobierno</div>
+<div class="clientes-logos">
+<div class="cli"><img alt="Toyota" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Toyota&lt;/span&gt;'" src="https://logos.hunter.io/toyota.com"/></div>
+<div class="cli"><img alt="ESPN" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;ESPN&lt;/span&gt;'" src="https://logos.hunter.io/espn.com"/></div>
+<div class="cli"><span class="cli-txt">Autopistas del Oeste</span></div>
+<div class="cli"><img alt="Swiss Medical" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Swiss Medical&lt;/span&gt;'" src="https://logos.hunter.io/swissmedical.com.ar"/></div>
+<div class="cli"><span class="cli-txt">ACARA</span></div>
+<div class="cli"><img alt="Ferrovías" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Ferrovías&lt;/span&gt;'" src="https://logos.hunter.io/ferrovias.com.ar"/></div>
+<div class="cli"><span class="cli-txt">Autotrol</span></div>
+<div class="cli"><span class="cli-txt">IOSFA</span></div>
+<div class="cli"><span class="cli-txt">OSFATLYF</span></div>
+<div class="cli"><span class="cli-txt">Epidata</span></div>
+<div class="cli"><img alt="IESS" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;IESS Ecuador&lt;/span&gt;'" src="https://logos.hunter.io/iess.gob.ec"/></div>
+<div class="cli"><img alt="RITBA" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;RITBA EE.UU.&lt;/span&gt;'" src="https://logos.hunter.io/ritba.com"/></div>
+<div class="cli"><img alt="AYSA" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;AYSA&lt;/span&gt;'" src="https://logos.hunter.io/aysa.com.ar"/></div>
+<div class="cli"><img alt="Duro Felguera" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Duro Felguera&lt;/span&gt;'" src="https://logos.hunter.io/durofelguera.com"/></div>
+<div class="cli"><span class="cli-txt">ACTC</span></div>
+<div class="cli"><span class="cli-txt">Grupo Timbo</span></div>
+<div class="cli"><span class="cli-txt">Distecna SA <span style="font-size:8px;opacity:0.7;">Paraguay</span></span></div>
+<div class="cli"><span class="cli-txt">Gob. San Juan</span></div>
+<div class="cli"><span class="cli-txt">Ferrocarriles Argentinos S.E.</span></div>
+</div>
+</div>
+<!-- Minería -->
+<div>
+<div class="clientes-grupo-title">Minería</div>
+<div class="clientes-logos">
+<div class="cli"><img alt="VALE" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;VALE&lt;/span&gt;'" src="https://logos.hunter.io/vale.com"/></div>
+<div class="cli"><img alt="McEwen Copper" loading="lazy" onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;McEwen Copper&lt;/span&gt;'" src="https://logos.hunter.io/mcewencopper.com"/></div>
+</div>
+</div>
+</div>
+</div><div class="evidencia-bisagra"><p class="evidencia-bisagra-text">Esta confianza se construye en 21 años de ejecución.</p></div>
+<!-- Subsección Trayectoria — timeline compacto + presencia regional -->
+<div class="por-trayectoria">
+<!-- Sub-anchor de compatibilidad: las referencias a #nosotros siguen funcionando -->
+<div id="nosotros" style="position:absolute;"></div>
+<div class="eyebrow">Trayectoria</div>
+<h2 class="sec-title">+21 años transformando organizaciones</h2>
+<p class="sec-sub">Nacimos en Argentina con foco en redes e infraestructura física y hemos evolucionado hacia la convergencia IT/OT y la automatización industrial, sin perder la capacidad de ejecución en campo que nos distingue.</p>
+<div class="tl-grid">
+<!-- Timeline compacto -->
+<div class="tl-list">
+<div class="tl-row">
+<div class="tl-year">2002</div>
+<div class="tl-txt">Fundación en Argentina. Fibra óptica, cableado estructurado y proyectos eléctricos.</div>
+</div>
+<div class="tl-row">
+<div class="tl-year">2004–2008</div>
+<div class="tl-txt">Primeros proyectos de networking de topología y electrónica de red. Ejecución de los primeros proyectos en el sector energético. Suma de firewalls, videovigilancia y radioenlaces.</div>
+</div>
+<div class="tl-row">
+<div class="tl-year">2010–2011</div>
+<div class="tl-txt">Desarrollo de los Departamentos de Ingeniería y Servicios Gestionados.</div>
+</div>
+<div class="tl-row">
+<div class="tl-year">2012–2014</div>
+<div class="tl-txt">Primeros proyectos de Última Milla de Internet en locaciones remotas.</div>
+</div>
+<div class="tl-row">
+<div class="tl-year">2015</div>
+<div class="tl-txt">Expansión a Chile, Paraguay y México.</div>
+</div>
+<div class="tl-row">
+<div class="tl-year">2016–2019</div>
+<div class="tl-txt">Posicionamiento en energía corporativa. Incorporación de IIoT y automatización industrial.</div>
+</div>
+<div class="tl-row">
+<div class="tl-year">Hoy</div>
+<div class="tl-txt">Ingeniería y Servicios integrales para Energía, Industria, Oil &amp; Gas y corporativos en Argentina y Chile.</div>
+</div>
+</div>
+<!-- Presencia regional -->
+<div class="presencia">
+<div>
+<div class="presencia-col-title">Operación propia</div>
+<div class="presencia-list">
+<span class="presencia-item">Argentina</span>
+<span class="presencia-item">Chile</span>
+<span class="presencia-item">Paraguay</span>
+</div>
+</div>
+<div>
+<div class="presencia-col-title">Partners asociados</div>
+<div class="presencia-list">
+<span class="presencia-item">Brasil</span>
+<span class="presencia-item">Colombia</span>
+<span class="presencia-item">Panamá</span>
+<span class="presencia-item">México</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top:3.5rem; text-align:center;">
+<a class="btn-blue" href="#contacto" style="font-size:11px;padding:12px 28px;display:inline-block;">Hablemos →</a>
+</div>
+</section>
+<!-- ====================== VERTICALES ====================== -->
+<div class="micropuente">
+<p class="micropuente-text">Los diferenciales anteriores se sostienen en proyectos reales. Lo que sigue son doce de ellos — con resultados medibles.</p>
+<a class="micropuente-cta" href="#casos">Ver proyectos ejecutados →</a>
+</div>
+<!-- ====================== CASOS DE ÉXITO ====================== -->
+<!-- ====================== EVIDENCIA — wrapper unificado v15 ====================== -->
+<section class="evidencia" id="evidencia">
+<!-- Sub-anchor de compatibilidad: las referencias a #casos siguen funcionando -->
+<div id="casos" style="position:absolute;top:-80px;"></div>
+<div class="eyebrow">Evidencia</div>
+<h2 class="sec-title">Proyectos que hablan por nosotros</h2>
+<p class="sec-sub">Soluciones ejecutadas en campo, con resultados medibles. Cada proyecto es la prueba de lo que podemos hacer en el tuyo.</p>
+<!-- Leyenda del sistema de tags -->
+<div class="tag-legend">
+<span class="tag-legend-title">Cómo leer cada caso:</span>
+<div class="tag-legend-item"><span class="chip chip-d1">Vertical</span></div>
+<div class="tag-legend-item"><span class="chip chip-d2">Servicio</span></div>
+<div class="tag-legend-item"><span class="chip chip-d3">Atributo</span></div>
+<div class="tag-legend-item"><span class="chip chip-d4">Tecnología</span></div>
+<div class="tag-legend-item"><span class="chip chip-rigi">★ Destacado</span></div>
+</div>
+<div class="casos-confidential-note">
+    Algunos casos identifican al cliente como confidencial por solicitud expresa del mismo. IT-ONE puede facilitar referencias verificables bajo acuerdo de confidencialidad.
+  </div>
+<div class="casos-grid">
+<!-- CASO 03 — El Quemado -->
+<div class="caso" id="caso-01">
+<div class="caso-head">
+<div class="caso-sector">Energía Solar · Primer RIGI Nacional ★</div>
+<div class="caso-num">// 01</div>
+</div>
+<div class="caso-title">El Quemado — Primer RIGI aprobado y desplegado en Argentina, Mendoza</div>
+<div class="caso-desc">Solución llave en mano en entorno hostil de baja infraestructura. IT-ONE desplegó internet de alta disponibilidad, WiFi LAN con seguridad administrada y monitoreo, videovigilancia para el predio de Aduana, radioenlaces industriales y redes OT en campo, y monitoreo continuo de todos los servicios. El know-how aplicado proviene directamente de los relevamientos previos en Zonda y Loma Campana. Primera ejecución nacional bajo marco RIGI.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Llave en mano operativa en zona de infraestructura mínima</div>
+<div class="caso-result">✔ Primera ejecución nacional bajo marco RIGI</div>
+<div class="caso-result">✔ IT-ONE referente para proyectos RIGI en energía, minería y O&amp;G</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row">
+<span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Energía · Solar</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Ingeniería IT/OT</span>
+<span class="chip chip-d2">Última Milla</span>
+<span class="chip chip-d2">Redes</span>
+<span class="chip chip-d2">Seguridad</span>
+<span class="chip chip-d2">Gestionados</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D3</span>
+<span class="chip chip-rigi">RIGI ★</span>
+<span class="chip chip-d3">Llave en Mano</span>
+<span class="chip chip-d3">Zona Remota</span>
+<span class="chip chip-d3">Operación Crítica</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D4</span>
+<span class="chip chip-d4">Starlink</span>
+<span class="chip chip-d4">TIM</span>
+<span class="chip chip-d4">SAR-H</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-02">02 · PECASA</a> · <a class="caso-nav-sim" href="#caso-03">03 · Zonda</a> · <a class="caso-nav-sim" href="#caso-08">08 · Los Teros</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 01 — PECASA -->
+<div class="caso" id="caso-02">
+<div class="caso-head">
+<div class="caso-sector">Energía Eólica · 2024</div>
+<div class="caso-num">// 02</div>
+</div>
+<div class="caso-title">PECASA — Internet de Obra en 24hs</div>
+<div class="caso-desc">YPF Luz necesitaba conectividad operativa inmediata en un sitio de obra que no contaba con infraestructura. IT-ONE relevó el sitio, diseñó la infraestructura y gestionó el servicio en el transcurso del día. Monitoreo continuo y coordinación directa con el responsable de obra durante toda la ejecución.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Conectividad operativa en tiempo récord</div>
+<div class="caso-result">✔ Implementación sin infraestructura previa</div>
+<div class="caso-result">✔ Monitoreo continuo durante toda la obra</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row">
+<span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Energía · Eólica</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Última Milla</span>
+<span class="chip chip-d2">Redes</span>
+<span class="chip chip-d2">Gestionados</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Despliegue Express</span>
+<span class="chip chip-d3">Sin Infraestructura Previa</span>
+<span class="chip chip-d3">Monitoreo 24/7</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D4</span>
+<span class="chip chip-d4">Starlink</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-03">03 · Zonda</a> · <a class="caso-nav-sim" href="#caso-01">01 · El Quemado</a> · <a class="caso-nav-sim" href="#caso-08">08 · Los Teros</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 02 — Zonda -->
+<div class="caso" id="caso-03">
+<div class="caso-head">
+<div class="caso-sector">Energía Solar · 2021</div>
+<div class="caso-num">// 03</div>
+</div>
+<div class="caso-title">Parque Solar Zonda — Relevamiento de conectividad en zona remota, San Juan</div>
+<div class="caso-desc">En una zona extremadamente remota de San Juan, sin infraestructura de carrier disponible, YPF Luz necesitaba saber si era posible conectar el futuro Parque Solar Zonda — y cómo. IT-ONE pasó 7 días en el sitio, relevó el terreno y entregó un informe con tres alternativas comparadas, estimación de costos y cronograma. Ese informe fue el punto de partida de una relación de largo plazo: los proyectos El Quemado y PECASA son su consecuencia directa.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Factibilidad técnica documentada con tres alternativas comparadas</div>
+<div class="caso-result">✔ Plazo de implementación establecido: 90 días máximo</div>
+<div class="caso-result">✔ Antecedente directo para El Quemado y PECASA</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row">
+<span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Energía · Solar</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Ingeniería IT/OT</span>
+<span class="chip chip-d2">Última Milla</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Zona Remota</span>
+<span class="chip chip-d3">Sin Infraestructura Previa</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-02">02 · PECASA</a> · <a class="caso-nav-sim" href="#caso-01">01 · El Quemado</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 04 — Fresadora -->
+<div class="caso" id="caso-04">
+<div class="caso-head">
+<div class="caso-sector">Automatización · Industria</div>
+<div class="caso-num">// 04</div>
+</div>
+<div class="caso-title">Fresadora · Automatización y telemetría industrial en nube</div>
+<div class="caso-desc">Una línea de montaje industrial necesitaba automatizar el cabezal de una fresadora con sistema hidráulico de avance y tener visibilidad remota del equipo en tiempo real. IT-ONE diseñó una solución a medida: automatización del proceso mecánico e integración de telemetría vía microprocesador conectado a Microsoft Azure, con visualización y control centralizado del equipo desde cualquier ubicación.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Automatización completa del cabezal hidráulico</div>
+<div class="caso-result">✔ Telemetría en tiempo real integrada a Azure</div>
+<div class="caso-result">✔ Control y visualización remota desde cualquier punto</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row">
+<span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Plantas de Producción</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">IT/OT Bridge</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D3</span>
+<span class="chip chip-d3">IIoT</span>
+<span class="chip chip-d3">Telemetría</span>
+<span class="chip chip-d3">Convergencia IT/OT</span>
+<span class="chip chip-d3">Confidencial</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D4</span>
+<span class="chip chip-d4">Microsoft Azure</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>Confidencial</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-07">07 · Laminadora</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 05 — Válvula -->
+<div class="caso" id="caso-05">
+<div class="caso-head">
+<div class="caso-sector">Automatización · Oil &amp; Gas</div>
+<div class="caso-num">// 05</div>
+</div>
+<div class="caso-title">Válvula de ramal · Actuador automático con energía solar y telemetría</div>
+<div class="caso-desc">Una empresa petrolera necesitaba automatizar una válvula de cuarto de giro en un ramal principal, en una locación sin acceso a red eléctrica. IT-ONE desarrolló una solución integral: control del sistema hidráulico del actuador con modos de operación temporizado y manual, apertura y cierre diferenciados para neutralizar el efecto golpe de ariete, telemetría remota vía red móvil y un sistema de energía solar para alimentar de forma autónoma el circuito de control y el actuador hidráulico.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Operación automatizada sin dependencia de red eléctrica</div>
+<div class="caso-result">✔ Telemetría remota operativa vía red móvil</div>
+<div class="caso-result">✔ Protección contra golpe de ariete implementada en control</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row">
+<span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Oil &amp; Gas</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">IT/OT Bridge</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Telemetría</span>
+<span class="chip chip-d3">Energía Autónoma</span>
+<span class="chip chip-d3">Zona Remota</span>
+<span class="chip chip-d3">Confidencial</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>Confidencial</b></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+<div class="caso-nav-ctas">
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar con ingeniería →</a>
+</div>
+</div>
+<!-- CASO 06 — Molino -->
+<div class="caso" id="caso-06">
+<div class="caso-head">
+<div class="caso-sector">Automatización · Minería</div>
+<div class="caso-num">// 06</div>
+</div>
+<div class="caso-title">Molino de bolas · Sistema de control neumático y eléctrico</div>
+<div class="caso-desc">Diseño e implementación del sistema de control completo para un molino de bolas industrial. IT-ONE ejecutó el control neumático y eléctrico del equipo integrando los sistemas de seguridad requeridos para la operación continua y segura del proceso. La solución garantiza la coordinación de los subsistemas de potencia y mando bajo una arquitectura de control unificada.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Control neumático y eléctrico bajo arquitectura unificada</div>
+<div class="caso-result">✔ Sistemas de seguridad incorporados al proceso de control</div>
+<div class="caso-result">✔ Operación continua y segura en entorno minero</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row">
+<span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Minería</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">Seguridad</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Seguridad Industrial</span>
+<span class="chip chip-d3">Operación Crítica</span>
+<span class="chip chip-d3">Confidencial</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>Confidencial</b></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-09">09 · VALE</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 07 — Laminadora -->
+<div class="caso" id="caso-07">
+<div class="caso-head">
+<div class="caso-sector">Automatización · Industria</div>
+<div class="caso-num">// 07</div>
+</div>
+<div class="caso-title">Laminadora · Control de carro de transporte para bobinas de acero</div>
+<div class="caso-desc">Una planta laminadora necesitaba automatizar el carro de transporte de bobinas de acero, un proceso que exige precisión milimétrica en la alineación en dos ejes para la carga correcta en el mandril. IT-ONE diseñó el sistema de control completo: posicionamiento automatizado con modo manual para operarios, control eléctrico e hidráulico de potencia, y un sistema de seguridad con barreras láser a lo largo de todo el recorrido del carro y barrera física en la zona de carga.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Posicionamiento de bobinas con alineación en dos ejes</div>
+<div class="caso-result">✔ Seguridad perimetral con barreras láser en toda la trayectoria</div>
+<div class="caso-result">✔ Control integrado eléctrico e hidráulico bajo un único sistema</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row">
+<span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Plantas de Producción</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">Seguridad</span>
+</div>
+<div class="chip-row">
+<span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Seguridad Industrial</span>
+<span class="chip chip-d3">Operación Crítica</span>
+<span class="chip chip-d3">Confidencial</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>Confidencial</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-04">04 · Fresadora</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 08 — Los Teros -->
+<div class="caso" id="caso-08">
+<div class="caso-head">
+<div class="caso-sector">Energía Eólica · Buenos Aires</div>
+<div class="caso-num">// 08</div>
+</div>
+<div class="caso-title">Torre Inteligente Móvil para cobertura de radiocomunicaciones en parque eólico</div>
+<div class="caso-desc">El Parque Eólico Los Teros requería un sistema de comunicaciones capaz de adaptarse a la geografía con zonas oscuras en la señal, para cubrir los distintos frentes remotos de trabajo con cumplimiento de H&amp;S. IT-ONE diseñó, construyó y puso en servicio la T.I.M. (Torre Inteligente Móvil) de fabricación propia, proveyendo radiocomunicaciones, Video IP y WiFi en campo desde el primer día.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Cobertura de radiocomunicaciones en zonas oscuras sin infraestructura previa</div>
+<div class="caso-result">✔ Despliegue en el día sin obra civil ni excavaciones</div>
+<div class="caso-result">✔ Cumplimiento de requisitos H&amp;S para todos los frentes de trabajo</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row"><span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Energía · Eólica</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Radiocomunicaciones</span>
+<span class="chip chip-d2">Última Milla</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Despliegue Express</span>
+<span class="chip chip-d3">Sin Infraestructura Previa</span>
+<span class="chip chip-d3">H&amp;S</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D4</span>
+<span class="chip chip-d4">TIM</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>General Electric</b> <span style="font-family:var(--mono);font-size:10px;font-weight:400;color:var(--tx-muted);letter-spacing:0.5px;">EPC</span> · <b>YPF Energía Eléctrica</b> <span style="font-family:var(--mono);font-size:10px;font-weight:400;color:var(--tx-muted);letter-spacing:0.5px;">propietario del activo</span></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-02">02 · PECASA</a> · <a class="caso-nav-sim" href="#caso-01">01 · El Quemado</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 09 — VALE -->
+<div class="caso" id="caso-09">
+<div class="caso-head">
+<div class="caso-sector">Minería · Mendoza</div>
+<div class="caso-num">// 09</div>
+</div>
+<div class="caso-title">700 puestos de trabajo, 3 data centers y backbone de fibra para proyecto minero de gran escala</div>
+<div class="caso-desc">El proyecto de potasio de VALE en Río Colorado requería una infraestructura tecnológica completa para 700 puestos de trabajo en zona remota. IT-ONE implementó cableado Cat 6, backbone de fibra óptica con backup Cat 6A, tres data centers con detección y extinción de incendio, control de accesos, telefonía IP para 700 internos y switching completo.</div>
+<div class="caso-results">
+<div class="caso-result">✔ 700 puestos de trabajo conectados en zona remota sin infraestructura previa</div>
+<div class="caso-result">✔ 3 data centers operativos con sistemas de seguridad física integrados</div>
+<div class="caso-result">✔ Infraestructura de telecomunicaciones completa bajo un único interlocutor técnico</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row"><span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Minería</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Infraestructura</span>
+<span class="chip chip-d2">Redes</span>
+<span class="chip chip-d2">Seguridad</span>
+<span class="chip chip-d2">Gestionados</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Zona Remota</span>
+<span class="chip chip-d3">Sin Infraestructura Previa</span>
+<span class="chip chip-d3">Gran Escala</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D4</span>
+<span class="chip chip-d4">Cat 6A</span>
+<span class="chip chip-d4">Fibra Óptica</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>VALE S.A.</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-06">06 · Molino</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 10 — Central Costanera -->
+<div class="caso" id="caso-10">
+<div class="caso-head">
+<div class="caso-sector">Energía · Buenos Aires</div>
+<div class="caso-num">// 10</div>
+</div>
+<div class="caso-title">Control de variación de velocidad de motores diesel para sistema de incendio en central termoeléctrica</div>
+<div class="caso-desc">La Central Termoeléctrica Costanera necesitaba un sistema de control para sus motores diesel Cummins — dos grupos electrógenos y tres bombas de incendio — con encendido remoto y sincronización de cargas. IT-ONE ejecutó el proyecto llave en mano: ingeniería, instalación mecánica y eléctrica, calibración, sincronización de grupos y documentación completa.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Sistema de incendio con encendido remoto y control de velocidad integrado</div>
+<div class="caso-result">✔ Sincronización de 5 motores diesel para balance de carga</div>
+<div class="caso-result">✔ Entrega llave en mano con documentación de ingeniería completa</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row"><span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Industrial</span>
+<span class="chip chip-d1">Energía · Termoeléctrica</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Automatización</span>
+<span class="chip chip-d2">Ingeniería IT/OT</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Llave en Mano</span>
+<span class="chip chip-d3">Operación Crítica</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D4</span>
+<span class="chip chip-d4">Cummins</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>Central Costanera</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-01">01 · El Quemado</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 11 — IESS -->
+<div class="caso" id="caso-11">
+<div class="caso-head">
+<div class="caso-sector">Gobierno · Ecuador</div>
+<div class="caso-num">// 11</div>
+</div>
+<div class="caso-title">Infraestructura tecnológica crítica para más de 7 millones de usuarios</div>
+<div class="caso-desc">El IESS necesitaba una infraestructura robusta y escalable para soportar la demanda de más de 7 millones de usuarios con alta disponibilidad. IT-ONE diseñó e implementó la solución integral con hardware y software para grandes volúmenes de datos y transacciones simultáneas, y monitoreo 24/7 para garantizar la continuidad del servicio.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Infraestructura operativa para más de 7 millones de usuarios</div>
+<div class="caso-result">✔ Reducción de tiempos de respuesta y ahorro de costos del 35%</div>
+<div class="caso-result">✔ Operaciones ininterrumpidas con confiabilidad mejorada en servicios críticos</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row"><span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Gobierno</span>
+<span class="chip chip-d1">Salud Pública</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Infraestructura Crítica</span>
+<span class="chip chip-d2">Gestionados</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Alta Disponibilidad</span>
+<span class="chip chip-d3">Gran Escala</span>
+<span class="chip chip-d3">Monitoreo 24/7</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>IESS — Instituto Ecuatoriano de Seguridad Social</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-12">12 · RITBA</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+<!-- CASO 12 — RITBA -->
+<div class="caso" id="caso-12">
+<div class="caso-head">
+<div class="caso-sector">Gobierno · Estados Unidos</div>
+<div class="caso-num">// 12</div>
+</div>
+<div class="caso-title">Clústeres de bases de datos con recuperación ante desastres para autoridad vial de Rhode Island</div>
+<div class="caso-desc">RITBA necesitaba garantizar alta disponibilidad y recuperación ante desastres para sus sistemas críticos en SQL Server y PostgreSQL. IT-ONE diseñó e implementó clústeres con replicación y failover automático, creó un sitio DRS completamente funcional y optimizó el rendimiento con monitoreo proactivo.</div>
+<div class="caso-results">
+<div class="caso-result">✔ Reducción del downtime operativo en un 90%</div>
+<div class="caso-result">✔ Recuperación integral garantizada en menos de 15 minutos</div>
+<div class="caso-result">✔ Recuperación completa de operatividad en 2 horas ante eventos de desastre</div>
+</div>
+<div class="caso-tags-block">
+<div class="chip-row"><span class="chip-lbl">D1</span>
+<span class="chip chip-d1">Gobierno</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D2</span>
+<span class="chip chip-d2">Infraestructura Crítica</span>
+<span class="chip chip-d2">Alta Disponibilidad</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D3</span>
+<span class="chip chip-d3">Disaster Recovery</span>
+<span class="chip chip-d3">Alta Disponibilidad</span>
+</div>
+<div class="chip-row"><span class="chip-lbl">D4</span>
+<span class="chip chip-d4">SQL Server</span>
+<span class="chip chip-d4">PostgreSQL</span>
+</div>
+</div>
+<div class="caso-client">Cliente: <b>RITBA — Rhode Island Turnpike and Bridge Authority</b></div>
+<div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a></div>
+<div class="caso-ctas"><a class="caso-cta-link" href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con ingeniería →</a></div>
+<div class="caso-nav-ctas">
+<span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a class="caso-nav-sim" href="#caso-11">11 · IESS Ecuador</a>
+<span class="caso-nav-sep">·</span>
+<a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+</div>
+</div>
+</div>
+<!-- BISAGRA 1: Casos → Otros proyectos (transición interna) -->
+<div class="evidencia-bisagra">
+<p class="evidencia-bisagra-text">Más allá de los doce casos detallados, otras 28 ejecuciones componen la trayectoria.</p>
+</div>
+<!-- OTROS PROYECTOS EJECUTADOS — tratamiento denso (3.C) -->
+<div class="otros-proyectos otros-densa" id="proyectos">
+<div class="otros-densa-eyebrow">Volumen ejecutado</div>
+<p class="otros-densa-intro">Referencias adicionales de proyectos completados. Cada uno responde a una necesidad real, ejecutado con el mismo estándar de ingeniería.</p>
+<div class="otros-grid">
+<div>
+<div class="otros-grupo-lbl"><span class="chip chip-d1">Energía · Termoeléctricas</span></div>
+<div class="otros-lista">
+<div class="otro-item">Central Termoeléctrica Barker <span class="otro-loc">BA</span></div>
+<div class="otro-item">Central Termoeléctrica General Rojo <span class="otro-loc">BA</span></div>
+<div class="otro-item">Central Termoeléctrica Dock Sud <span class="otro-loc">BA</span></div>
+<div class="otro-item">Central Termoeléctrica Puerto <span class="otro-loc">BA</span></div>
+<div class="otro-item">Central Termoeléctrica Loma Campana Este <span class="otro-loc">NQN</span></div>
+<div class="otro-item">Central Termoeléctrica Manuel Belgrano <span class="otro-loc">Campana</span></div>
+<div class="otro-item">Central Termoeléctrica Plaza Huincul <span class="otro-loc">NQN</span></div>
+<div class="otro-item">Central Termoeléctrica Villa María <span class="otro-loc">Córdoba</span></div>
+<div class="otro-item">Central Termoeléctrica Vuelta de Obligado <span class="otro-loc">Santa Fe</span></div>
+<div class="otro-item">Central Termoeléctrica Luján <span class="otro-loc">BA</span></div>
+<div class="otro-item">Central Termoeléctrica Matheu <span class="otro-loc">BA</span></div>
+</div>
+</div>
+<div>
+<div class="otros-grupo-lbl"><span class="chip chip-d1">Energía · Eólica</span></div>
+<div class="otros-lista">
+<div class="otro-item">Parque Eólico Gral. Levalle <span class="otro-loc">Córdoba</span></div>
+<div class="otro-item">Parque Eólico Los Teros II <span class="otro-loc">BA</span></div>
+<div class="otro-item">Parque Eólico Manantiales Behr <span class="otro-loc">Chubut</span></div>
+</div>
+<div class="otros-grupo-lbl" style="margin-top:2rem;"><span class="chip chip-d1">Gobierno &amp; Infraestructura</span></div>
+<div class="otros-lista">
+<div class="otro-item">Centro Cívico Provincia de San Juan <span class="otro-loc">San Juan</span></div>
+<div class="otro-item">Proyecto Soterramiento Tren Sarmiento <span class="otro-loc">BA</span></div>
+<div class="otro-item">Renovación Belgrano Cargas Ramal C8 <span class="otro-loc">Tucumán</span></div>
+<div class="otro-item">Renovación Belgrano Cargas Ramal C8 <span class="otro-loc">Salta</span></div>
+</div>
+</div>
+<div style="grid-column: 1 / -1;">
+<div class="otros-grupo-lbl"><span class="chip chip-d1">Industrial &amp; Corporativo</span></div>
+<div class="otros-lista" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0 3rem;">
+<div class="otro-item">Planta ALUAR <span class="otro-loc">Puerto Madryn · Chubut</span></div>
+<div class="otro-item">Planta Productiva Grupo Timbo <span class="otro-loc">La Pampa</span></div>
+<div class="otro-item">Planta YPF <span class="otro-loc">Ensenada · BA</span></div>
+<div class="otro-item">Planta Water Tech Veolia <span class="otro-loc">BA</span></div>
+<div class="otro-item">Oficinas Corporativas Wärtsilä <span class="otro-loc">BA</span></div>
+<div class="otro-item">Oficinas Corporativas Duro Felguera <span class="otro-loc">CABA</span></div>
+<div class="otro-item">Oficinas ACTC <span class="otro-loc">BA</span></div>
+<div class="otro-item">Oficinas Corporativas Grupo Timbo <span class="otro-loc">BA</span></div>
+<div class="otro-item">Oficinas Corporativas AYSA <span class="otro-loc">Escobar</span></div>
+<div class="otro-item">Oficinas Distecna SA <span class="otro-loc">Paraguay</span></div>
+<div class="otro-item">Oficinas Proyecto CCR YPF <span class="otro-loc">BA</span></div>
+<div class="otro-item">Oficinas Emergencias Médicas <span class="otro-loc">BA</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- BISAGRA 2: Otros proyectos → Clientes (transición interna) -->
+
+<!-- CLIENTES (sub-bloque dentro de Evidencia) -->
+<!-- /clientes-block -->
+<div style="margin-top:2.5rem; text-align:center;">
+<a class="btn-blue" href="#contacto" style="font-size:11px;padding:12px 28px;display:inline-block;">Hablemos →</a>
+</div>
+</section><!-- /evidencia -->
+<div class="micropuente">
+<p class="micropuente-text">Cada proyecto integró tecnología seleccionada para su entorno específico. Fabricantes de automatización industrial, networking corporativo y seguridad física — bajo un mismo criterio: desempeño comprobado en operación real.</p>
+<a class="micropuente-cta" href="#productos">Ver tecnología que integramos →</a>
+</div>
+<!-- ====================== PRODUCTOS ====================== -->
+<section class="productos" id="productos">
+<div class="eyebrow">Productos</div>
+<h2 class="sec-title">Tecnología que integramos</h2>
+<p class="sec-sub">Dos productos de fabricación propia y fabricantes líderes seleccionados por su confiabilidad en entornos industriales y corporativos exigentes.</p>
+<!-- PRODUCTOS PROPIOS -->
+<div class="prod-propios-wrap">
+<div class="prod-propios">
+<div class="prod-propio">
+<div class="prod-propio-badge">Fabricación propia</div>
+<div class="prod-propio-name">TIM</div>
+<div class="prod-propio-full">Torre Inteligente Móvil</div>
+<div class="prod-propio-desc">Desplegable en el día sin obra civil ni excavaciones. Provee Internet de alta disponibilidad, WiFi en campo, Video IP y radiocomunicaciones desde el primer momento de operación. Diseñada para zonas remotas donde la infraestructura no llega antes que la operación.</div>
+<div class="prod-propio-used">→ Aplicada en <a href="#caso-01">01 · El Quemado</a> · <a href="#caso-08">08 · Los Teros</a></div>
+</div>
+<div class="prod-propio">
+<div class="prod-propio-badge">Fabricación propia</div>
+<div class="prod-propio-name">SAR-H</div>
+<div class="prod-propio-full">Sistema de Accionamiento Remoto Hidráulico</div>
+<div class="prod-propio-desc">Control automático y monitoreo remoto para válvulas de ¼ de giro en pozos petroleros. Modos temporizado y manual, apertura y cierre diferenciados para neutralizar golpe de ariete, telemetría 2G/3G/4G y energía solar autónoma — sin dependencia de red eléctrica.</div>
+<div class="prod-propio-used">→ Aplicado en <a href="#caso-05">05 · Válvula</a></div>
+</div>
+</div>
+</div>
+<!-- FABRICANTES -->
+<div class="prod-fab-label">Fabricantes que integramos</div>
+<div class="prod-strip" style="grid-template-columns: repeat(6, 1fr);">
+<div class="prod">
+<div class="prod-name">Getac</div>
+<div class="prod-tag">Hardware ruggedizado</div>
+<div class="prod-desc">Computadoras y tablets certificadas para zonas clasificadas, extremos de temperatura y vibración continua.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Weidmüller</div>
+<div class="prod-tag">Automatización</div>
+<div class="prod-tag" style="margin-top:4px;">Cyberseg OT</div>
+<div class="prod-desc">Bornes, conectores, electrónica de señal y componentes para gabinetes de campo industrial.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Satelital LEO</div>
+<div class="prod-tag">Conectividad satelital</div>
+<div class="prod-desc">Conectividad de banda ancha vía satélite de órbita baja para sitios remotos sin infraestructura terrestre.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Cisco</div>
+<div class="prod-tag">Networking</div>
+<div class="prod-desc">Infraestructura de red corporativa e industrial. Switching, routing y seguridad para entornos de misión crítica.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Fortinet</div>
+<div class="prod-tag">Firewall &amp; Seguridad</div>
+<div class="prod-desc">Firewalls, segmentación de redes y protección perimetral para entornos IT y OT.</div>
+</div>
+<div class="prod">
+<div class="prod-name">SonicWall</div>
+<div class="prod-tag">Firewall &amp; Seguridad</div>
+<div class="prod-desc">Firewall y seguridad perimetral para entornos corporativos. Protección avanzada con gestión simplificada.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Cambium</div>
+<div class="prod-tag">Radioenlaces</div>
+<div class="prod-desc">Radioenlaces punto a punto y multipunto para conectividad en zonas rurales, remotas e industriales.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Aruba</div>
+<div class="prod-tag">WiFi Corporativo</div>
+<div class="prod-tag" style="margin-top:4px;">Networking</div>
+<div class="prod-desc">Conectividad inalámbrica empresarial e industrial. WiFi gestionado, seguro y escalable.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Hikvision</div>
+<div class="prod-tag">Video IP</div>
+<div class="prod-desc">Cámaras IP, grabación y analítica de video para instalaciones industriales, corporativas y perimetrales.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Ricoh</div>
+<div class="prod-tag">Gestión documental</div>
+<div class="prod-desc">Soluciones de impresión y gestión documental para entornos corporativos y administrativos.</div>
+</div>
+<div class="prod">
+<div class="prod-name">ABB</div>
+<div class="prod-tag">Automatización</div>
+<div class="prod-desc">Variadores de frecuencia, protecciones eléctricas y soluciones de potencia para la industria.</div>
+</div>
+<div class="prod">
+<div class="prod-name">Siemens</div>
+<div class="prod-tag">Control industrial</div>
+<div class="prod-desc">PLCs, HMI, sistemas SCADA y automatización industrial para procesos continuos y discretos.</div>
+</div>
+</div>
+</section>
+<div class="micropuente">
+<p class="micropuente-text">Más de veinte años conectando lo que no se puede desconectar — en plantas industriales, organizaciones corporativas y organismos de gobierno. El próximo proyecto puede ser el suyo.</p>
+<a class="micropuente-cta" href="#contacto">Iniciar conversación →</a>
+</div>
+<!-- ====================== CTA ====================== -->
+<section class="cta-sec" id="contacto">
+<div class="eyebrow" style="justify-content:center;"><span>Contacto</span></div>
+<h2 class="cta-h">Cuéntenos su <span class="accent">proyecto.</span></h2>
+<p class="cta-sub">Comparta el requerimiento con el equipo de ingeniería y evaluamos la mejor solución juntos.</p>
+<p style="font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx-dim);margin-bottom:2rem;">Tecnología invisible que se nota cuando falta.</p>
+<!-- Selector de intención -->
+<p class="intent-instruction">Indique el tipo de consulta. Le asignaremos el interlocutor adecuado.</p>
+<div class="intent-selector">
+<button class="intent-btn" data-status="Le asignamos un asesor de proyectos para evaluar alcance y factibilidad." data-subject="Tengo un proyecto en evaluación" onclick="selectIntent(this)">Tengo un proyecto en evaluación</button>
+<button class="intent-btn" data-status="Le asignamos un ingeniero especializado según el área de su consulta." data-subject="Necesito consulta técnica" onclick="selectIntent(this)">Necesito consulta técnica</button>
+<button class="intent-btn" data-status="Le asignamos un referente comercial con experiencia en su sector." data-subject="Quiero una propuesta técnico-comercial" onclick="selectIntent(this)">Quiero una propuesta técnico-comercial</button>
+</div>
+<div class="intent-status" id="intentStatus"></div>
+<!-- CTA principal -->
+<div class="cta-acts">
+<a class="btn-blue" href="mailto:ventas@it-one.com.ar" id="ctaMain">Iniciar conversación</a>
+<a class="btn-outline" href="tel:+541153680804">(+54) 11 5368-0804</a>
+</div>
+<!-- Meta contacto -->
+<div class="contact-meta">
+<span class="contact-response">El equipo de ingeniería responde dentro de las 48 horas hábiles.</span>
+<span class="contact-nocommit">Primera consulta sin costo ni compromiso.</span>
+</div>
+<!-- Datos de contacto -->
+<div class="cta-bar">
+<div class="cta-item"><div class="cta-lbl">Email comercial</div><div class="cta-val"><a href="mailto:ventas@it-one.com.ar">ventas@it-one.com.ar</a></div><div class="cta-micro">Consultas y propuestas</div></div>
+<div class="cta-item"><div class="cta-lbl">Oficina comercial</div><div class="cta-val">El Palomar, Buenos Aires</div><div class="cta-micro">Visitas con turno previo</div></div>
+<div class="cta-item"><div class="cta-lbl">Depósito y laboratorio</div><div class="cta-val">Villa Lynch, San Martín</div><div class="cta-micro">Laboratorio de integración</div></div>
+<div class="cta-item"><div class="cta-lbl">Presencia regional</div><div class="cta-val">Argentina · Chile · Paraguay</div><div class="cta-micro">Equipos propios y partners</div></div>
+</div>
+</section>
+<!-- ====================== FOOTER INSTITUCIONAL v14 ====================== -->
+<footer class="footer-inst">
+<div class="footer-inst-top">
+<div class="footer-brand-block">
+<div class="footer-brand-name">IT ONE</div>
+<div class="footer-brand-tag">Servicios + Tecnología</div>
+<div class="footer-brand-desc">Soluciones de integración IT/OT, comunicaciones e infraestructura para organizaciones industriales, corporativas y de gobierno. Desde 2002.</div>
+</div>
+<div>
+<div class="footer-col-lbl">Misión</div>
+<p class="footer-col-text">Brindar soluciones en todas las plataformas de tecnologías de la información y comunicaciones, para cubrir las necesidades de nuestros clientes en cualquier ambiente y zona geográfica.</p>
+</div>
+<div>
+<div class="footer-col-lbl">Visión</div>
+<p class="footer-col-text">Ser reconocidos por la creatividad e innovación de nuestras soluciones y servicios; y por la calidad humana de nuestro equipo de profesionales.</p>
+</div>
+<div>
+<div class="footer-col-lbl">Contacto</div>
+<ul class="footer-col-list">
+<li><a href="mailto:ventas@it-one.com.ar">ventas@it-one.com.ar</a></li>
+<li><a href="https://www.it-one.com.ar" rel="noopener" target="_blank">www.it-one.com.ar</a></li>
+<li><a href="#contacto">Iniciar conversación →</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-inst-bottom">
+<div class="footer-copy-inst">© 2026 IT ONE · Argentina · Chile · Paraguay</div>
+<div class="footer-attrib">Logos by <a href="https://hunter.io" rel="noopener" target="_blank">Hunter.io</a></div>
+</div>
+</footer>
+</body>
 </html>
