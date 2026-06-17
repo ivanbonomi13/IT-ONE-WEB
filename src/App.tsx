@@ -1,44 +1,78 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
 import Services from './components/Services';
-import BusinessUnits from './components/BusinessUnits';
+import About from './components/About';
+import Evidence from './components/Evidence';
+import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Cursor from './components/Cursor';
+import Preloader from './components/Preloader';
 
 function App() {
-  // Intersection Observer for scroll animations
+  const [loading, setLoading] = useState(true);
+  // Scroll reveal animations
   useEffect(() => {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                obs.unobserve(entry.target);
-            }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
         });
-    }, observerOptions);
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
 
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-    animateElements.forEach(el => observer.observe(el));
-
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
+  }, []);
+
+  // Nav scroll effect
+  const handleScroll = useCallback(() => {
+    const nav = document.querySelector('nav');
+    if (nav) {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    // Set scroll-y CSS variable on document root for parallax scrolling
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initial call to set --scroll-y
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  // Global mouse tracker for glow effects
+  useEffect(() => {
+    const handleGlobalMouseMove = (e: MouseEvent) => {
+      // Set CSS variables for mouse position on the document root
+      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+    };
+    
+    window.addEventListener('mousemove', handleGlobalMouseMove);
+    return () => window.removeEventListener('mousemove', handleGlobalMouseMove);
   }, []);
 
   return (
     <>
+      {loading && <Preloader onComplete={() => setLoading(false)} />}
+      <Cursor />
       <Header />
-      <main>
+      <main style={{ opacity: loading ? 0 : 1, transition: 'opacity 0.8s ease-in-out' }}>
         <Hero />
-        <About />
         <Services />
-        <BusinessUnits />
+        <About />
+        <Evidence />
+        <Products />
         <Contact />
       </main>
       <Footer />

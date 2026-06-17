@@ -1,54 +1,37 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-export default function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  return (
+    <nav>
+      <a className="nav-brand" href="#">
+        <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="30" fontFamily="'Space Grotesk', sans-serif" fontSize="28" fontWeight="700" fill="#0B1D35">IT</text>
+          <text x="34" y="30" fontFamily="'Space Grotesk', sans-serif" fontSize="28" fontWeight="700" fill="#00D4FF">ONE</text>
+          <text x="0" y="39" fontFamily="'JetBrains Mono', monospace" fontSize="7" fontWeight="500" letterSpacing="1.5" fill="#94A3B8">SERVICIOS + TECNOLOGÍA</text>
+        </svg>
+      </a>
 
-    const closeMenu = () => setMenuOpen(false);
+      <button
+        className="mobile-menu-btn"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span style={menuOpen ? { transform: 'rotate(45deg) translate(4px, 4px)' } : {}} />
+        <span style={menuOpen ? { opacity: 0 } : {}} />
+        <span style={menuOpen ? { transform: 'rotate(-45deg) translate(4px, -4px)' } : {}} />
+      </button>
 
-    return (
-        <>
-            <div className="top-bar">
-                <div className="container top-bar-content">
-                    <div className="top-contact">
-                        <span>📞 (+54) 11 5368 0804</span>
-                        <span>✉️ ventas@it-one.com.ar</span>
-                    </div>
-                    <div className="top-links">
-                        <a href="#unidades">Unidades de Negocio</a>
-                        <a href="#casos">Casos de Éxito</a>
-                    </div>
-                </div>
-            </div>
+      <ul className={`nav-links${menuOpen ? ' active' : ''}`}>
+        <li><a href="#servicios" onClick={() => setMenuOpen(false)}>Lo que hacemos</a></li>
+        <li><a href="#empresa" onClick={() => setMenuOpen(false)}>Por qué IT-ONE</a></li>
+        <li><a href="#casos" onClick={() => setMenuOpen(false)}>Casos</a></li>
+        <li><a href="#productos" onClick={() => setMenuOpen(false)}>Productos</a></li>
+        <li><a className="nav-cta" href="#contacto" onClick={() => setMenuOpen(false)}>Hablar con ingeniería</a></li>
+      </ul>
+    </nav>
+  );
+};
 
-            <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-                <div className="container navbar">
-                    <a href="#" className="logo">
-                        IT <span>ONE</span>
-                    </a>
-                    <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
-                        <a href="#inicio" onClick={closeMenu}>Inicio</a>
-                        <a href="#historia" onClick={closeMenu}>Nuestra Historia</a>
-                        <a href="#servicios" onClick={closeMenu}>Servicios</a>
-                        <a href="#contacto" className="btn-primary" onClick={closeMenu}>Contacto</a>
-                    </nav>
-                    <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menú">
-                        {menuOpen ? (
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                        ) : (
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                        )}
-                    </button>
-                </div>
-            </header>
-        </>
-    );
-}
+export default Header;

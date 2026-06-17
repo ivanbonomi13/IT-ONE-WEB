@@ -1,98 +1,77 @@
+
 import { useState } from 'react';
 
-export default function Contact() {
-    const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+const Contact = () => {
+  const [selectedIntent, setSelectedIntent] = useState<number | null>(null);
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus('sending');
-        // Simulate network request
-        setTimeout(() => {
-            setStatus('sent');
-            setTimeout(() => setStatus('idle'), 3000);
-            (e.target as HTMLFormElement).reset();
-        }, 1000);
-    };
+  const intents = [
+    {
+      label: "Tengo un proyecto en evaluación",
+      status: "Le asignamos un asesor de proyectos para evaluar alcance y factibilidad.",
+      subject: "Tengo un proyecto en evaluación"
+    },
+    {
+      label: "Necesito consulta técnica",
+      status: "Le asignamos un ingeniero especializado según el área de su consulta.",
+      subject: "Necesito consulta técnica"
+    },
+    {
+      label: "Quiero una propuesta técnico-comercial",
+      status: "Le asignamos un referente comercial con experiencia en su sector.",
+      subject: "Quiero una propuesta técnico-comercial"
+    }
+  ];
 
-    return (
-        <section id="contacto" className="section">
-            <div className="container">
-                <div className="contact-wrapper">
-                    <div className="contact-info-panel animate-on-scroll">
-                        <h2>Contáctenos</h2>
-                        <p>Estamos listos para afrontar cualquier proyecto. Póngase en contacto con nosotros para recibir asesoramiento personalizado acorde a las necesidades de su empresa.</p>
-                        
-                        <div className="contact-details">
-                            <div className="contact-item">
-                                <div className="c-icon">📞</div>
-                                <div>
-                                    <strong>Teléfono</strong>
-                                    <p>(+54) 11 5368 0804</p>
-                                </div>
-                            </div>
-                            <div className="contact-item">
-                                <div className="c-icon">✉️</div>
-                                <div>
-                                    <strong>Email</strong>
-                                    <p>ventas@it-one.com.ar</p>
-                                </div>
-                            </div>
-                            <div className="contact-item">
-                                <div className="c-icon">🏢</div>
-                                <div>
-                                    <strong>Oficina Comercial y Show Room</strong>
-                                    <p>Capitán Joaquín Madariaga 718<br/>El Palomar - CP 1685</p>
-                                </div>
-                            </div>
-                            <div className="contact-item">
-                                <div className="c-icon">🏭</div>
-                                <div>
-                                    <strong>Depósito y Laboratorio</strong>
-                                    <p>Calle 87 (ex Manuel Alberti) 425<br/>Villa Lynch - San Martín - CP 1672</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div className="contact-form-panel animate-on-scroll">
-                        <h3>Envíe su Consulta</h3>
-                        <form id="contactForm" className="form-corporate" onSubmit={handleSubmit}>
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label htmlFor="name">Nombre</label>
-                                    <input type="text" id="name" required />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="company">Empresa</label>
-                                    <input type="text" id="company" />
-                                </div>
-                            </div>
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label htmlFor="email">Correo Electrónico</label>
-                                    <input type="email" id="email" required />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="phone">Teléfono</label>
-                                    <input type="tel" id="phone" />
-                                </div>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="message">Mensaje</label>
-                                <textarea id="message" rows={5} required></textarea>
-                            </div>
-                            <button 
-                                type="submit" 
-                                className="btn-primary" 
-                                style={{ backgroundColor: status === 'sent' ? '#00d084' : '' }}
-                                disabled={status === 'sending'}
-                            >
-                                {status === 'sending' ? 'Enviando...' : status === 'sent' ? '¡Enviado!' : 'Enviar Mensaje'}
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
+  const getMailtoLink = () => {
+    if (selectedIntent !== null) {
+      return `mailto:ventas@it-one.com.ar?subject=${encodeURIComponent(intents[selectedIntent].subject)}`;
+    }
+    return "mailto:ventas@it-one.com.ar";
+  };
+
+  return (
+    <>
+<section className="cta-sec" id="contacto">
+<div className="eyebrow reveal" style={{ justifyContent: "center" }}><span>Contacto</span></div>
+<h2 className="cta-h reveal reveal-delay-1">Cuéntenos su <span className="accent">proyecto.</span></h2>
+<p className="cta-sub reveal reveal-delay-2">Comparta el requerimiento con el equipo de ingeniería y evaluamos la mejor solución juntos.</p>
+<p style={{ fontFamily: "var(--mono)", fontSize: "10px", letterSpacing: "2px", textTransform: "uppercase", color: "var(--tx-dim)", marginBottom: "2rem" }}>Tecnología invisible que se nota cuando falta.</p>
+{/* Selector de intención */}
+<p className="intent-instruction reveal reveal-delay-3">Indique el tipo de consulta. Le asignaremos el interlocutor adecuado.</p>
+<div className="intent-selector reveal reveal-delay-3">
+  {intents.map((intent, index) => (
+    <button 
+      key={index}
+      className={`intent-btn ${selectedIntent === index ? 'selected' : ''}`}
+      onClick={() => setSelectedIntent(index)}
+    >
+      {intent.label}
+    </button>
+  ))}
+</div>
+<div className="intent-status" style={{ opacity: selectedIntent !== null ? 1 : 0 }}>
+  {selectedIntent !== null ? intents[selectedIntent].status : ' '}
+</div>
+{/* CTA principal */}
+<div className="cta-acts reveal reveal-delay-3">
+<a className="btn-blue" href={getMailtoLink()}>Iniciar conversación</a>
+<a className="btn-outline" href="tel:+541153680804">(+54) 11 5368-0804</a>
+</div>
+{/* Meta contacto */}
+<div className="contact-meta">
+<span className="contact-response">El equipo de ingeniería responde dentro de las 48 horas hábiles.</span>
+<span className="contact-nocommit">Primera consulta sin costo ni compromiso.</span>
+</div>
+{/* Datos de contacto */}
+<div className="cta-bar">
+<div className="cta-item reveal"><div className="cta-lbl">Email comercial</div><div className="cta-val"><a href="mailto:ventas@it-one.com.ar">ventas@it-one.com.ar</a></div><div className="cta-micro">Consultas y propuestas</div></div>
+<div className="cta-item reveal"><div className="cta-lbl">Oficina comercial</div><div className="cta-val">El Palomar, Buenos Aires</div><div className="cta-micro">Visitas con turno previo</div></div>
+<div className="cta-item reveal"><div className="cta-lbl">Depósito y laboratorio</div><div className="cta-val">Villa Lynch, San Martín</div><div className="cta-micro">Laboratorio de integración</div></div>
+<div className="cta-item reveal"><div className="cta-lbl">Presencia regional</div><div className="cta-val">Argentina · Chile · Paraguay</div><div className="cta-micro">Equipos propios y partners</div></div>
+</div>
+</section>
+    </>
+  );
+};
+
+export default Contact;
