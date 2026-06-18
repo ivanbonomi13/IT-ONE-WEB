@@ -57,7 +57,7 @@ function App() {
       document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
       document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
     };
-    
+
     window.addEventListener('mousemove', handleGlobalMouseMove);
     return () => window.removeEventListener('mousemove', handleGlobalMouseMove);
   }, []);
@@ -76,6 +76,30 @@ function App() {
         <Contact />
       </main>
       <Footer />
+
+      {/* Botón provisional para cambiar al diseño viejo */}
+      <a
+        href="/index-viejo.html"
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          zIndex: 9999,
+          backgroundColor: '#ff4b4b',
+          color: '#fff',
+          padding: '10px 15px',
+          borderRadius: '5px',
+          textDecoration: 'none',
+          fontFamily: 'sans-serif',
+          fontWeight: 'bold',
+          boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
+          transition: 'transform 0.2s'
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+      >
+        Ver Sitio A
+      </a>
     </>
   );
 }
