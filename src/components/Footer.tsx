@@ -11,7 +11,7 @@ const Footer = () => {
 </div>
 <div>
 <div className="footer-col-lbl reveal">Misión</div>
-<p className="footer-col-text">Brindar soluciones en todas las plataformas de tecnologías de la información y comunicaciones, para cubrir las necesidades de nuestros clientes en cualquier ambiente y zona geográfica.</p>
+<p className="footer-col-text">Diseñar, ejecutar y operar proyectos IT/OT en los entornos industriales, corporativos y de gobierno más exigentes de Argentina y la región.</p>
 </div>
 <div>
 <div className="footer-col-lbl reveal">Visión</div>

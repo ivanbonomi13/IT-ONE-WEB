@@ -10,18 +10,20 @@ const Products = () => {
 <div className="prod-propios-wrap">
 <div className="prod-propios">
 <div className="prod-propio reveal">
-<div className="prod-propio-badge">Fabricación propia</div>
+<div className="prod-propio-badge">Desarrollo propio</div>
 <div className="prod-propio-name">TIM</div>
+<div className="prod-propio-tagline">Conectividad de campo operativa en una hora. Sin obra civil, sin excavaciones, sin esperar a que la infraestructura llegue.</div>
 <div className="prod-propio-full">Torre Inteligente Móvil</div>
-<div className="prod-propio-desc">Desplegable en el día sin obra civil ni excavaciones. Provee Internet de alta disponibilidad, WiFi en campo, Video IP y radiocomunicaciones desde el primer momento de operación. Diseñada para zonas remotas donde la infraestructura no llega antes que la operación.</div>
-<div className="prod-propio-used">→ Aplicada en <a href="#caso-01">01 · El Quemado</a> · <a href="#caso-08">08 · Los Teros</a></div>
+<div className="prod-propio-desc">Una torre de comunicaciones transportable de hasta 36 metros de altura, desplegable en horas y operativa en menos de una hora. Concebida para entornos donde la infraestructura no existe, no llega a tiempo, o instalarla permanentemente no es viable.<br /><br />Configuraciones disponibles: Internet · Starlink · WiFi · Videovigilancia IP · Puesto de Control de Accesos Móvil · Radiocomunicaciones · Telemetría · IIoT.<br />Cobertura de hasta 20/30 km de radio (*) según servicios configurados. Autonomía energética completa — sin dependencia de red eléctrica (solar/eólica).<br /><br />Una torre fija requiere obra civil, excavaciones, permisos y semanas de trabajo. La TIM requiere un vehículo y una hora.</div>
+<div className="prod-propio-used">→ Aplicada en <a href="#caso-01">01 · El Quemado</a> · <a href="#caso-09">09 · Los Teros I</a>, en Los Teros II y Parque Eólico Gral. Levalle.</div>
 </div>
 <div className="prod-propio reveal">
-<div className="prod-propio-badge">Fabricación propia</div>
+<div className="prod-propio-badge">Desarrollo propio</div>
 <div className="prod-propio-name">SAR-H</div>
+<div className="prod-propio-tagline">Control remoto de válvulas industriales de ¼ de giro desde cualquier lugar — con respaldo manual y certificación ATEX opcional.</div>
 <div className="prod-propio-full">Sistema de Accionamiento Remoto Hidráulico</div>
-<div className="prod-propio-desc">Control automático y monitoreo remoto para válvulas de ¼ de giro en pozos petroleros. Modos temporizado y manual, apertura y cierre diferenciados para neutralizar golpe de ariete, telemetría 2G/3G/4G y energía solar autónoma — sin dependencia de red eléctrica.</div>
-<div className="prod-propio-used">→ Aplicado en <a href="#caso-05">05 · Válvula</a></div>
+<div className="prod-propio-desc">Sistema avanzado de control remoto para válvulas de ¼ de giro en entornos de Oil &amp; Gas. Operación desde plataforma web dedicada en modo automático, semiautomático o manual, con respaldo de operación manual local mediante llave dedicada.<br /><br />Incluye: apertura y cierre diferenciados para neutralizar golpe de ariete, telemetría 2G/3G/4G, monitoreo en tiempo real, notificaciones automáticas por email a usuarios autorizados y energía solar autónoma sin dependencia de red eléctrica. Certificación ATEX opcional para áreas con riesgo de explosión.</div>
+<div className="prod-propio-used">→ Aplicado en <a href="#caso-08">08 · SAR-H · Neuquén</a></div>
 </div>
 </div>
 </div>
@@ -51,6 +53,7 @@ const Products = () => {
         <div className="prod">
           <div className="prod-name">Weidmüller</div>
           <div className="prod-tag">Automatización</div>
+          <div className="prod-tag" style={{ marginTop: '4px' }}>Cyberseg OT</div>
           <div className="prod-desc">Bornes, conectores, electrónica de señal y componentes para gabinetes de campo industrial.</div>
         </div>
         <div className="prod">

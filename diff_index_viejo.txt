@@ -1,0 +1,1688 @@
+﻿diff --git a/index-viejo.html b/index-viejo.html
+index b3c5e4f..d15fde0 100644
+--- a/index-viejo.html
++++ b/index-viejo.html
+@@ -2489,6 +2489,7 @@
+     </a>
+     <ul class="nav-links">
+       <li><a href="#servicios">Lo que hacemos</a></li>
++      <li><a href="#verticales">Verticales</a></li>
+       <li><a href="#empresa">Por qu├® IT-ONE</a></li>
+       <li><a href="#casos">Casos</a></li>
+       <li><a href="#productos">Productos</a></li>
+@@ -2503,8 +2504,7 @@
+         <span class="thin">Un solo equipo.</span>
+         De la <span class="accent">ingenier├¡a</span> al activo en operaci├│n.
+       </h1>
+-      <p class="hero-sub">Industria, energ├¡a, corporativos y gobierno. Dise├▒amos la ingenier├¡a, ejecutamos en campo y
+-        operamos lo entregado ÔÇö bajo un mismo responsable t├®cnico, de principio a fin.</p>
++      <p class="hero-sub">Industria, energ├¡a, corporativo y gobierno. Donde IT y OT se conectan, estamos nosotros.</p>
+       <div class="hero-acts">
+         <a class="btn-blue" href="#contacto">Conversemos sobre su proyecto ÔåÆ</a>
+         <a class="btn-outline" href="#casos">Ver casos ejecutados</a>
+@@ -2583,17 +2583,9 @@
+   <section class="servicios" id="servicios">
+     <div class="eyebrow">Lo que hacemos</div>
+     <h2 class="sec-title">El integrador que une los dos mundos</h2>
+-    <p class="sec-sub">No somos un reseller. Somos un equipo de ingenier├¡a propio que dise├▒a, ejecuta y sostiene
+-      proyectos donde el mundo IT y OT se encuentran.</p>
+-    <div class="srv-intro">
+-      <div class="srv-intro-content">
+-        <h3 class="srv-intro-title">No somos un reseller. Somos el equipo que entiende el problema, dise├▒a la soluci├│n y
+-          la ejecuta en campo.</h3>
+-        <p class="srv-intro-desc">Servicios integrales IT &amp; OT, dise├▒ados para condiciones reales. Cada servicio
+-          puede contratarse de forma independiente o como parte de un proyecto integral. Modelos CAPEX para
+-          implementaci├│n y OPEX para operaci├│n gestionada.</p>
+-      </div>
+-    </div>
++    <p class="sec-sub">No somos un reseller. Somos el equipo que entiende el problema, dise├▒a la soluci├│n y la ejecuta
++      en campo. Cada servicio puede contratarse de forma independiente o como parte de un proyecto integral. Modelos
++      CAPEX para implementaci├│n y OPEX para operaci├│n gestionada.</p>
+     <!-- Ôÿà IT & OT BRIDGE BAND -->
+     <div class="itot-band">
+       <div class="itot-eyebrow">Ôÿà Categor├¡a integrada</div>
+@@ -2814,324 +2806,310 @@
+         </div>
+       </div>
+       <!-- CTA Card -->
+-      <div class="srv srv-cta-card">
+-        <div class="srv-num" style="color: var(--amber);">// CTA</div>
+-        <div class="srv-title">┬┐Su proyecto tiene requerimientos espec├¡ficos?</div>
+-        <div class="srv-desc" style="margin-bottom: 1.5rem;">Cada proyecto es ├║nico. El equipo de ingenier├¡a eval├║a los
+-          requerimientos y dise├▒a la soluci├│n.</div>
+-        <a class="btn-blue" href="#contacto" style="align-self: flex-start;">Consultar con ingenier├¡a</a>
+-      </div>
+-    </div>
+-    <div class="por-bridge">
+-      <p class="por-bridge-text">La misma ingenier├¡a, adaptada al entorno donde opera. IT-ONE conoce las tres:
+-        industria, corporaciones y gobierno.</p>
+     </div>
+-    <div class="verticales verticales-sub">
+-      <div id="verticales" style="position:absolute;top:-80px;"></div>
+-      <div class="eyebrow">Sectores</div>
+-      <h2 class="sec-title">Verticales</h2>
+-      <p class="sec-sub">Industrial, Corporativo y Gobierno. Cada contexto define sus propias exigencias operativas;
+-        IT-ONE tiene interlocuci├│n e ingenier├¡a propias para cada uno.</p>
+-      <div class="vert-wrap">
+-        <!-- INDUSTRIAL -->
+-        <div class="vert-col">
+-          <div class="vert-head">
+-            <svg viewbox="0 0 24 24">
+-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+-            </svg>
+-            Industrial
+-          </div>
+-          <div class="vert-row vert-accordion" onclick="toggleEnergia(this)">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Energ├¡a <span class="acc-arrow">Ôû©</span></div>
+-                <div class="vert-desc">Generaci├│n t├®rmica, e├│lica y solar.</div>
+-              </div>
+-            </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">├Ültima Milla</span>
+-                <span class="chip chip-d2">Redes</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-                <span class="chip chip-d2">Gestionados</span>
+-              </div>
++  </section>
++  <section class="verticales" id="verticales">
++    <div class="eyebrow">Sectores</div>
++    <h2 class="sec-title">Verticales</h2>
++    <p class="sec-sub">Industrial, Corporativo y Gobierno. Cada contexto define sus propias exigencias operativas;
++      IT-ONE tiene interlocuci├│n e ingenier├¡a propias para cada uno.</p>
++    <div class="vert-wrap">
++      <!-- INDUSTRIAL -->
++      <div class="vert-col">
++        <div class="vert-head">
++          <svg viewbox="0 0 24 24">
++            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
++          </svg>
++          Industrial
++        </div>
++        <div class="vert-row vert-accordion" onclick="toggleEnergia(this)">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Energ├¡a <span class="acc-arrow">Ôû©</span></div>
++              <div class="vert-desc">Generaci├│n t├®rmica, e├│lica y solar.</div>
+             </div>
+           </div>
+-          <div class="acc-panel" id="energia-panel">
+-            <div class="vert-row vert-child">
+-              <div class="vert-row-top">
+-                <div class="vert-dot"></div>
+-                <div>
+-                  <div class="vert-child-name">Centrales Termoel├®ctricas</div>
+-                  <div class="vert-child-desc">La tecnolog├¡a que mantiene la generaci├│n en l├¡nea, sin importar las
+-                    condiciones del entorno.</div>
+-                </div>
+-              </div>
+-            </div>
+-            <div class="vert-row vert-child">
+-              <div class="vert-row-top">
+-                <div class="vert-dot"></div>
+-                <div>
+-                  <div class="vert-child-name">Parques E├│licos</div>
+-                  <div class="vert-child-desc">Conectividad y control en locaciones remotas donde el viento llega antes
+-                    que la fibra.</div>
+-                </div>
+-              </div>
+-              <div class="vert-tags">
+-                <div class="chip-row">
+-                  <span class="chip-lbl">Caso</span>
+-                  <a class="chip chip-d1" href="#casos">02 ┬À PECASA</a>
+-                </div>
+-              </div>
+-            </div>
+-            <div class="vert-row vert-child">
+-              <div class="vert-row-top">
+-                <div class="vert-dot"></div>
+-                <div>
+-                  <div class="vert-child-name">Parques Solares</div>
+-                  <div class="vert-child-desc">Infraestructura IT y OT para parques que operan solos, lejos de todo.
+-                  </div>
+-                </div>
+-              </div>
+-              <div class="vert-tags">
+-                <div class="chip-row">
+-                  <span class="chip-lbl">Casos</span>
+-                  <a class="chip chip-d1" href="#casos">03 ┬À Zonda</a>
+-                  <a class="chip chip-d1" href="#casos">01 ┬À El Quemado</a>
+-                  <span class="chip chip-rigi">RIGI Ôÿà</span>
+-                </div>
+-              </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">├Ültima Milla</span>
++              <span class="chip chip-d2">Redes</span>
++              <span class="chip chip-d2">Seguridad</span>
++              <span class="chip chip-d2">Gestionados</span>
+             </div>
+           </div>
+-          <div class="vert-row">
++        </div>
++        <div class="acc-panel" id="energia-panel">
++          <div class="vert-row vert-child">
+             <div class="vert-row-top">
+               <div class="vert-dot"></div>
+               <div>
+-                <div class="vert-name">Oil &amp; Gas</div>
+-                <div class="vert-desc">Desde el pozo hasta la refiner├¡a. Redes, automatizaci├│n y seguridad donde la
+-                  operaci├│n no puede parar.</div>
+-              </div>
+-            </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Automatizaci├│n</span>
+-                <span class="chip chip-d2">IT/OT Bridge</span>
+-                <span class="chip chip-d2">├Ültima Milla</span>
+-              </div>
+-              <div class="chip-row">
+-                <span class="chip-lbl">Caso</span>
+-                <a class="chip chip-d1" href="#casos">05 ┬À V├ílvula</a>
++                <div class="vert-child-name">Centrales Termoel├®ctricas</div>
++                <div class="vert-child-desc">La tecnolog├¡a que mantiene la generaci├│n en l├¡nea, sin importar las
++                  condiciones del entorno.</div>
+               </div>
+             </div>
+           </div>
+-          <div class="vert-row">
++          <div class="vert-row vert-child">
+             <div class="vert-row-top">
+               <div class="vert-dot"></div>
+               <div>
+-                <div class="vert-name">Miner├¡a</div>
+-                <div class="vert-desc">En superficie o bajo tierra, llevamos tecnolog├¡a a donde otros no llegan.</div>
++                <div class="vert-child-name">Parques E├│licos</div>
++                <div class="vert-child-desc">Conectividad y control en locaciones remotas donde el viento llega antes
++                  que la fibra.</div>
+               </div>
+             </div>
+             <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Automatizaci├│n</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-              </div>
+               <div class="chip-row">
+                 <span class="chip-lbl">Caso</span>
+-                <a class="chip chip-d1" href="#casos">06 ┬À Molino</a>
++                <a class="chip chip-d1" href="#casos">02 ┬À PECASA</a>
+               </div>
+             </div>
+           </div>
+-          <div class="vert-row">
++          <div class="vert-row vert-child">
+             <div class="vert-row-top">
+               <div class="vert-dot"></div>
+               <div>
+-                <div class="vert-name">Plantas de Producci├│n</div>
+-                <div class="vert-desc">Conectamos el piso de planta con la sala de direcci├│n. En tiempo real.</div>
++                <div class="vert-child-name">Parques Solares</div>
++                <div class="vert-child-desc">Infraestructura IT y OT para parques que operan solos, lejos de todo.</div>
+               </div>
+             </div>
+             <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Automatizaci├│n</span>
+-                <span class="chip chip-d2">IT/OT Bridge</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-              </div>
+               <div class="chip-row">
+                 <span class="chip-lbl">Casos</span>
+-                <a class="chip chip-d1" href="#casos">04 ┬À Fresadora</a>
+-                <a class="chip chip-d1" href="#casos">07 ┬À Laminadora</a>
++                <a class="chip chip-d1" href="#casos">03 ┬À Zonda</a>
++                <a class="chip chip-d1" href="#casos">01 ┬À El Quemado</a>
++                <span class="chip chip-rigi">RIGI Ôÿà</span>
+               </div>
+             </div>
+           </div>
+         </div>
+-        <!-- CORPORATIVO -->
+-        <div class="vert-col">
+-          <div class="vert-head">
+-            <svg viewbox="0 0 24 24">
+-              <rect height="14" rx="2" width="20" x="2" y="3"></rect>
+-              <line x1="8" x2="16" y1="21" y2="21"></line>
+-              <line x1="12" x2="12" y1="17" y2="21"></line>
+-            </svg>
+-            Corporativo
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Oil &amp; Gas</div>
++              <div class="vert-desc">Desde el pozo hasta la refiner├¡a. Redes, automatizaci├│n y seguridad donde la
++                operaci├│n no puede parar.</div>
++            </div>
+           </div>
+-          <div class="vert-row">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Empresas Multisite</div>
+-                <div class="vert-desc">Una sola tecnolog├¡a, muchas locaciones. Estandarizaci├│n y soporte unificado.
+-                </div>
+-              </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Automatizaci├│n</span>
++              <span class="chip chip-d2">IT/OT Bridge</span>
++              <span class="chip chip-d2">├Ültima Milla</span>
+             </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Redes</span>
+-                <span class="chip chip-d2">Gestionados</span>
+-                <span class="chip chip-d2">Infraestructura</span>
+-              </div>
++            <div class="chip-row">
++              <span class="chip-lbl">Caso</span>
++              <a class="chip chip-d1" href="#casos">05 ┬À V├ílvula</a>
+             </div>
+           </div>
+-          <div class="vert-row">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Log├¡stica &amp; Supply Chain</div>
+-                <div class="vert-desc">Trazabilidad, conectividad y automatizaci├│n para operaciones que no admiten
+-                  demoras.</div>
+-              </div>
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Miner├¡a</div>
++              <div class="vert-desc">En superficie o bajo tierra, llevamos tecnolog├¡a a donde otros no llegan.</div>
+             </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Automatizaci├│n</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-                <span class="chip chip-d2">Redes</span>
+-              </div>
++          </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Automatizaci├│n</span>
++              <span class="chip chip-d2">Seguridad</span>
++            </div>
++            <div class="chip-row">
++              <span class="chip-lbl">Caso</span>
++              <a class="chip chip-d1" href="#casos">06 ┬À Molino</a>
+             </div>
+           </div>
+-          <div class="vert-row">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Banca &amp; Servicios Financieros</div>
+-                <div class="vert-desc">Infraestructura cr├¡tica para entornos donde cada segundo y cada dato importan.
+-                </div>
+-              </div>
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Plantas de Producci├│n</div>
++              <div class="vert-desc">Conectamos el piso de planta con la sala de direcci├│n. En tiempo real.</div>
+             </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-                <span class="chip chip-d2">Infraestructura</span>
+-                <span class="chip chip-d2">Gestionados</span>
+-              </div>
++          </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Automatizaci├│n</span>
++              <span class="chip chip-d2">IT/OT Bridge</span>
++              <span class="chip chip-d2">Seguridad</span>
++            </div>
++            <div class="chip-row">
++              <span class="chip-lbl">Casos</span>
++              <a class="chip chip-d1" href="#casos">04 ┬À Fresadora</a>
++              <a class="chip chip-d1" href="#casos">07 ┬À Laminadora</a>
+             </div>
+           </div>
+-          <div class="vert-row">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Salud</div>
+-                <div class="vert-desc">Tecnolog├¡a confiable para organizaciones donde una falla puede tener
+-                  consecuencias reales.</div>
+-              </div>
++        </div>
++      </div>
++      <!-- CORPORATIVO -->
++      <div class="vert-col">
++        <div class="vert-head">
++          <svg viewbox="0 0 24 24">
++            <rect height="14" rx="2" width="20" x="2" y="3"></rect>
++            <line x1="8" x2="16" y1="21" y2="21"></line>
++            <line x1="12" x2="12" y1="17" y2="21"></line>
++          </svg>
++          Corporativo
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Empresas Multisite</div>
++              <div class="vert-desc">Una sola tecnolog├¡a, muchas locaciones. Estandarizaci├│n y soporte unificado.</div>
+             </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Redes</span>
+-                <span class="chip chip-d2">Infraestructura</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-              </div>
++          </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Redes</span>
++              <span class="chip chip-d2">Gestionados</span>
++              <span class="chip chip-d2">Infraestructura</span>
+             </div>
+           </div>
+-          <div class="vert-row">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Real Estate Corporativo</div>
+-                <div class="vert-desc">Edificios inteligentes, seguros y conectados. Tecnolog├¡a invisible que se nota
+-                  cuando falta.</div>
+-              </div>
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Log├¡stica &amp; Supply Chain</div>
++              <div class="vert-desc">Trazabilidad, conectividad y automatizaci├│n para operaciones que no admiten
++                demoras.</div>
+             </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Infraestructura</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-                <span class="chip chip-d2">Automatizaci├│n</span>
++          </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Automatizaci├│n</span>
++              <span class="chip chip-d2">Seguridad</span>
++              <span class="chip chip-d2">Redes</span>
++            </div>
++          </div>
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Banca &amp; Servicios Financieros</div>
++              <div class="vert-desc">Infraestructura cr├¡tica para entornos donde cada segundo y cada dato importan.
+               </div>
+             </div>
+           </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Seguridad</span>
++              <span class="chip chip-d2">Infraestructura</span>
++              <span class="chip chip-d2">Gestionados</span>
++            </div>
++          </div>
+         </div>
+-        <!-- GOBIERNO -->
+-        <div class="vert-col">
+-          <div class="vert-head">
+-            <svg viewbox="0 0 24 24">
+-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+-            </svg>
+-            Gobierno
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Salud</div>
++              <div class="vert-desc">Tecnolog├¡a confiable para organizaciones donde una falla puede tener consecuencias
++                reales.</div>
++            </div>
+           </div>
+-          <div class="vert-row">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Seguridad &amp; Fuerzas</div>
+-                <div class="vert-desc">Infraestructura tecnol├│gica robusta para organizaciones que operan en alta
+-                  exigencia.</div>
+-              </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Redes</span>
++              <span class="chip chip-d2">Infraestructura</span>
++              <span class="chip chip-d2">Seguridad</span>
+             </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-                <span class="chip chip-d2">├Ültima Milla</span>
+-                <span class="chip chip-d2">Redes</span>
+-              </div>
++          </div>
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Real Estate Corporativo</div>
++              <div class="vert-desc">Edificios inteligentes, seguros y conectados. Tecnolog├¡a invisible que se nota
++                cuando falta.</div>
+             </div>
+           </div>
+-          <div class="vert-row">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Salud P├║blica</div>
+-                <div class="vert-desc">Conectividad y sistemas para hospitales, centros de salud y redes sanitarias
+-                  distribuidas.</div>
+-              </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Infraestructura</span>
++              <span class="chip chip-d2">Seguridad</span>
++              <span class="chip chip-d2">Automatizaci├│n</span>
+             </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Redes</span>
+-                <span class="chip chip-d2">Infraestructura</span>
+-                <span class="chip chip-d2">Gestionados</span>
+-              </div>
++          </div>
++        </div>
++      </div>
++      <!-- GOBIERNO -->
++      <div class="vert-col">
++        <div class="vert-head">
++          <svg viewbox="0 0 24 24">
++            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
++            <polyline points="9 22 9 12 15 12 15 22"></polyline>
++          </svg>
++          Gobierno
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Seguridad &amp; Fuerzas</div>
++              <div class="vert-desc">Infraestructura tecnol├│gica robusta para organizaciones que operan en alta
++                exigencia.</div>
+             </div>
+           </div>
+-          <div class="vert-row">
+-            <div class="vert-row-top">
+-              <div class="vert-dot"></div>
+-              <div>
+-                <div class="vert-name">Smart Cities</div>
+-                <div class="vert-desc">Tecnolog├¡a que hace m├ís eficiente lo p├║blico. Sensores, redes y datos al servicio
+-                  del ciudadano.</div>
+-              </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Seguridad</span>
++              <span class="chip chip-d2">├Ültima Milla</span>
++              <span class="chip chip-d2">Redes</span>
+             </div>
+-            <div class="vert-tags">
+-              <div class="chip-row">
+-                <span class="chip-lbl">Servicios</span>
+-                <span class="chip chip-d2">Automatizaci├│n</span>
+-                <span class="chip chip-d2">Redes</span>
+-                <span class="chip chip-d2">Seguridad</span>
+-              </div>
++          </div>
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Salud P├║blica</div>
++              <div class="vert-desc">Conectividad y sistemas para hospitales, centros de salud y redes sanitarias
++                distribuidas.</div>
++            </div>
++          </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Redes</span>
++              <span class="chip chip-d2">Infraestructura</span>
++              <span class="chip chip-d2">Gestionados</span>
++            </div>
++          </div>
++        </div>
++        <div class="vert-row">
++          <div class="vert-row-top">
++            <div class="vert-dot"></div>
++            <div>
++              <div class="vert-name">Smart Cities</div>
++              <div class="vert-desc">Tecnolog├¡a que hace m├ís eficiente lo p├║blico. Sensores, redes y datos al servicio
++                del ciudadano.</div>
++            </div>
++          </div>
++          <div class="vert-tags">
++            <div class="chip-row">
++              <span class="chip-lbl">Servicios</span>
++              <span class="chip chip-d2">Automatizaci├│n</span>
++              <span class="chip chip-d2">Redes</span>
++              <span class="chip chip-d2">Seguridad</span>
+             </div>
+           </div>
+         </div>
+@@ -3223,93 +3201,108 @@
+       <p class="sec-sub" style="margin-bottom:2rem;">Industriales, Corporativas y Gobierno ÔÇö con una constante:
+         exigencia operativa real.</p>
+       <div class="clientes-wrap">
+-        <!-- Industriales & Energ├¡a -->
+-        <div>
+-          <div class="clientes-grupo-title">Industriales &amp; Energ├¡a</div>
+-          <div class="clientes-logos">
+-            <div class="cli"><img alt="Techint" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Techint&lt;/span&gt;'"
+-                src="https://logos.hunter.io/techint.com" /></div>
+-            <div class="cli"><img alt="Siemens" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Siemens&lt;/span&gt;'"
+-                src="https://logos.hunter.io/siemens.com" /></div>
+-            <div class="cli"><img alt="General Electric" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;General Electric&lt;/span&gt;'"
+-                src="https://logos.hunter.io/ge.com" /></div>
+-            <div class="cli"><img alt="Central Puerto" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Central Puerto&lt;/span&gt;'"
+-                src="https://logos.hunter.io/centralpuerto.com" /></div>
+-            <div class="cli"><span class="cli-txt">AESA</span></div>
+-            <div class="cli"><span class="cli-txt">DVS Energy</span></div>
+-            <div class="cli"><span class="cli-txt">Aspro Energy</span></div>
+-            <div class="cli"><span class="cli-txt">Central Dock Sud</span></div>
+-            <div class="cli"><span class="cli-txt">Refinor</span></div>
+-            <div class="cli"><img alt="YPF Luz" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;YPF Luz&lt;/span&gt;'"
+-                src="https://logos.hunter.io/ypfluz.com" /></div>
+-            <div class="cli"><span class="cli-txt">MSU Energy</span></div>
+-            <div class="cli"><span class="cli-txt">ALUAR</span></div>
+-            <div class="cli"><img alt="W├ñrtsil├ñ" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;W├ñrtsil├ñ&lt;/span&gt;'"
+-                src="https://logos.hunter.io/wartsila.com" /></div>
+-            <div class="cli"><img alt="Veolia" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Veolia&lt;/span&gt;'"
+-                src="https://logos.hunter.io/veolia.com" /></div>
+-          </div>
++        <div class="clientes-grupo-title">Energ├¡a</div>
++        <div class="clientes-logos">
++          <div class="cli"><img alt="General Electric" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;General Electric&lt;/span&gt;'"
++              src="https://logos.hunter.io/ge.com" /></div>
++          <div class="cli"><span class="cli-txt">YPF Luz</span></div>
++          <div class="cli"><img alt="Siemens" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Siemens&lt;/span&gt;'"
++              src="https://logos.hunter.io/siemens.com" /></div>
++          <div class="cli"><img alt="ABB" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;ABB&lt;/span&gt;'"
++              src="https://logos.hunter.io/abb.com" /></div>
++          <div class="cli"><span class="cli-txt">Aspro Energy</span></div>
++          <div class="cli"><span class="cli-txt">Refinor</span></div>
++          <div class="cli"><span class="cli-txt">FieldCore</span></div>
++          <div class="cli"><img alt="Techint" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Techint&lt;/span&gt;'"
++              src="https://logos.hunter.io/techint.com" /></div>
++          <div class="cli"><img alt="W├ñrtsil├ñ" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;W├ñrtsil├ñ&lt;/span&gt;'"
++              src="https://logos.hunter.io/wartsila.com" /></div>
++          <div class="cli"><span class="cli-txt">Central Puerto</span></div>
++          <div class="cli"><span class="cli-txt">Central Dock Sud</span></div>
++          <div class="cli"><span class="cli-txt">AESA</span></div>
++          <div class="cli"><span class="cli-txt">DVS Energy</span></div>
++          <div class="cli"><span class="cli-txt">MSU Energy</span></div>
+         </div>
+-        <!-- Corporativos & Gobierno -->
+-        <div>
+-          <div class="clientes-grupo-title">Corporativos &amp; Gobierno</div>
+-          <div class="clientes-logos">
+-            <div class="cli"><img alt="Toyota" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Toyota&lt;/span&gt;'"
+-                src="https://logos.hunter.io/toyota.com" /></div>
+-            <div class="cli"><img alt="ESPN" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;ESPN&lt;/span&gt;'"
+-                src="https://logos.hunter.io/espn.com" /></div>
+-            <div class="cli"><span class="cli-txt">Autopistas del Oeste</span></div>
+-            <div class="cli"><img alt="Swiss Medical" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Swiss Medical&lt;/span&gt;'"
+-                src="https://logos.hunter.io/swissmedical.com.ar" /></div>
+-            <div class="cli"><span class="cli-txt">ACARA</span></div>
+-            <div class="cli"><img alt="Ferrov├¡as" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Ferrov├¡as&lt;/span&gt;'"
+-                src="https://logos.hunter.io/ferrovias.com.ar" /></div>
+-            <div class="cli"><span class="cli-txt">Autotrol</span></div>
+-            <div class="cli"><span class="cli-txt">IOSFA</span></div>
+-            <div class="cli"><span class="cli-txt">OSFATLYF</span></div>
+-            <div class="cli"><span class="cli-txt">Epidata</span></div>
+-            <div class="cli"><img alt="IESS" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;IESS Ecuador&lt;/span&gt;'"
+-                src="https://logos.hunter.io/iess.gob.ec" /></div>
+-            <div class="cli"><img alt="RITBA" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;RITBA EE.UU.&lt;/span&gt;'"
+-                src="https://logos.hunter.io/ritba.com" /></div>
+-            <div class="cli"><img alt="AYSA" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;AYSA&lt;/span&gt;'"
+-                src="https://logos.hunter.io/aysa.com.ar" /></div>
+-            <div class="cli"><img alt="Duro Felguera" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Duro Felguera&lt;/span&gt;'"
+-                src="https://logos.hunter.io/durofelguera.com" /></div>
+-            <div class="cli"><span class="cli-txt">ACTC</span></div>
+-            <div class="cli"><span class="cli-txt">Grupo Timbo</span></div>
+-            <div class="cli"><span class="cli-txt">Distecna SA <span
+-                  style="font-size:8px;opacity:0.7;">Paraguay</span></span></div>
+-            <div class="cli"><span class="cli-txt">Gob. San Juan</span></div>
+-            <div class="cli"><span class="cli-txt">Ferrocarriles Argentinos S.E.</span></div>
+-          </div>
++        <div class="clientes-grupo-title">Oil &amp; Gas y Miner├¡a</div>
++        <div class="clientes-logos">
++          <div class="cli"><span class="cli-txt">UTE Potasio R├¡o Colorado</span></div>
++          <div class="cli"><span class="cli-txt">McEwen Copper</span></div>
++          <div class="cli"><span class="cli-txt">Xstrata Copper</span></div>
++          <div class="cli"><img alt="VALE" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;VALE&lt;/span&gt;'"
++              src="https://logos.hunter.io/vale.com" /></div>
++          <div class="cli"><span class="cli-txt">ProdEng</span></div>
++          <div class="cli"><span class="cli-txt">Adita ÔÇô ImbOil</span></div>
++          <div class="cli"><span class="cli-txt">SOCOTHERM AMERICAS</span></div>
+         </div>
+-        <!-- Miner├¡a -->
+-        <div>
+-          <div class="clientes-grupo-title">Miner├¡a</div>
+-          <div class="clientes-logos">
+-            <div class="cli"><img alt="VALE" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;VALE&lt;/span&gt;'"
+-                src="https://logos.hunter.io/vale.com" /></div>
+-            <div class="cli"><img alt="McEwen Copper" loading="lazy"
+-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;McEwen Copper&lt;/span&gt;'"
+-                src="https://logos.hunter.io/mcewencopper.com" /></div>
+-          </div>
++        <div class="clientes-grupo-title">Industrial y Corporativo</div>
++        <div class="clientes-logos">
++          <div class="cli"><img alt="ALUAR" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;ALUAR&lt;/span&gt;'"
++              src="https://logos.hunter.io/aluar.com.ar" /></div>
++          <div class="cli"><img alt="ESPN" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;ESPN&lt;/span&gt;'"
++              src="https://logos.hunter.io/espn.com" /></div>
++          <div class="cli"><span class="cli-txt">Autopistas del Oeste</span></div>
++          <div class="cli"><img alt="AYSA" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;AYSA&lt;/span&gt;'"
++              src="https://logos.hunter.io/aysa.com.ar" /></div>
++          <div class="cli"><span class="cli-txt">Tyco Fire &amp; Security</span></div>
++          <div class="cli"><span class="cli-txt">DSM ÔÇô Ex Laboratorios Roche</span></div>
++          <div class="cli"><span class="cli-txt">Ferrosur Roca</span></div>
++          <div class="cli"><img alt="Ferrov├¡as" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Ferrov├¡as&lt;/span&gt;'"
++              src="https://logos.hunter.io/ferrovias.com.ar" /></div>
++          <div class="cli"><span class="cli-txt">Constructora Norberto Odebrecht SA</span></div>
++          <div class="cli"><img alt="Duro Felguera" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Duro Felguera&lt;/span&gt;'"
++              src="https://logos.hunter.io/durofelguera.com" /></div>
++          <div class="cli"><span class="cli-txt">UTE SABAVISAÔÇôMerco VialÔÇôZONIS</span></div>
++          <div class="cli"><span class="cli-txt">Grupo Timbo</span></div>
++          <div class="cli"><img alt="Open English" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Open English&lt;/span&gt;'"
++              src="https://logos.hunter.io/openenglish.com" /></div>
++          <div class="cli"><img alt="Ottobock Argentina" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Ottobock Argentina&lt;/span&gt;'"
++              src="https://logos.hunter.io/ottobock.com" /></div>
++          <div class="cli"><img alt="Greenpeace Argentina" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Greenpeace Argentina&lt;/span&gt;'"
++              src="https://logos.hunter.io/greenpeace.org" /></div>
++          <div class="cli"><img alt="Greenpeace Chile" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Greenpeace Chile&lt;/span&gt;'"
++              src="https://logos.hunter.io/greenpeace.org" /></div>
++          <div class="cli"><span class="cli-txt">A.C.T.C.</span></div>
++          <div class="cli"><span class="cli-txt">A.C.A.R.A.</span></div>
++          <div class="cli"><span class="cli-txt">Epidata</span></div>
++          <div class="cli"><span class="cli-txt">Distecna SA</span></div>
++          <div class="cli"><span class="cli-txt">Truelogic</span></div>
++          <div class="cli"><span class="cli-txt">Bombas NIR</span></div>
++          <div class="cli"><span class="cli-txt">Ristal</span></div>
++          <div class="cli"><span class="cli-txt">Asistec Hidr├íulica</span></div>
++          <div class="cli"><span class="cli-txt">Praimex</span></div>
++          <div class="cli"><span class="cli-txt">Idealistas.org</span></div>
++          <div class="cli"><span class="cli-txt">YRC Logistics</span></div>
++        </div>
++        <div class="clientes-grupo-title">Gobierno y Salud</div>
++        <div class="clientes-logos">
++          <div class="cli"><img alt="C.F.I." loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;C.F.I.&lt;/span&gt;'"
++              src="https://logos.hunter.io/cfi.org.ar" /></div>
++          <div class="cli"><span class="cli-txt">Servicio Penitenciario Bonaerense</span></div>
++          <div class="cli"><span class="cli-txt">Gob. San Juan</span></div>
++          <div class="cli"><span class="cli-txt">APN</span></div>
++          <div class="cli"><span class="cli-txt">Ferrocarriles Argentinos S.E.</span></div>
++          <div class="cli"><img alt="Swiss Medical" loading="lazy"
++              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Swiss Medical&lt;/span&gt;'"
++              src="https://logos.hunter.io/swissmedical.com.ar" /></div>
++          <div class="cli"><span class="cli-txt">Obra social AySA</span></div>
++          <div class="cli"><span class="cli-txt">OSFATLyF</span></div>
++          <div class="cli"><span class="cli-txt">IOSFA</span></div>
+         </div>
+       </div>
+     </div>
+@@ -3416,13 +3409,12 @@
+       referencias verificables bajo acuerdo de confidencialidad.
+     </div>
+     <div class="casos-grid">
+-      <!-- CASO 03 ÔÇö El Quemado -->
+       <div class="caso" id="caso-01">
+         <div class="caso-head">
+-          <div class="caso-sector">Energ├¡a Solar ┬À Primer RIGI Nacional Ôÿà</div>
++          <div class="caso-sector">Energ├¡a Solar ┬À RIGI Ôÿà</div>
+           <div class="caso-num">// 01</div>
+         </div>
+-        <div class="caso-title">El Quemado ÔÇö Primer RIGI aprobado y desplegado en Argentina, Mendoza</div>
++        <div class="caso-title">Parque Solar El Quemado ÔÇö Mendoza</div>
+         <div class="caso-desc">Soluci├│n llave en mano en entorno hostil de baja infraestructura. IT-ONE despleg├│
+           internet de alta disponibilidad, WiFi LAN con seguridad administrada y monitoreo, videovigilancia para el
+           predio de Aduana, radioenlaces industriales y redes OT en campo, y monitoreo continuo de todos los servicios.
+@@ -3461,7 +3453,6 @@
+             <span class="chip chip-d4">SAR-H</span>
+           </div>
+         </div>
+-        <div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
+         <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
+         </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+@@ -3475,65 +3466,12 @@
+           <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+         </div>
+       </div>
+-      <!-- CASO 01 ÔÇö PECASA -->
+       <div class="caso" id="caso-02">
+         <div class="caso-head">
+-          <div class="caso-sector">Energ├¡a E├│lica ┬À 2024</div>
++          <div class="caso-sector">Energ├¡a Solar</div>
+           <div class="caso-num">// 02</div>
+         </div>
+-        <div class="caso-title">PECASA ÔÇö Internet de Obra en 24hs</div>
+-        <div class="caso-desc">YPF Luz necesitaba conectividad operativa inmediata en un sitio de obra que no contaba
+-          con infraestructura. IT-ONE relev├│ el sitio, dise├▒├│ la infraestructura y gestion├│ el servicio en el transcurso
+-          del d├¡a. Monitoreo continuo y coordinaci├│n directa con el responsable de obra durante toda la ejecuci├│n.</div>
+-        <div class="caso-results">
+-          <div class="caso-result">Ô£ö Conectividad operativa en tiempo r├®cord</div>
+-          <div class="caso-result">Ô£ö Implementaci├│n sin infraestructura previa</div>
+-          <div class="caso-result">Ô£ö Monitoreo continuo durante toda la obra</div>
+-        </div>
+-        <div class="caso-tags-block">
+-          <div class="chip-row">
+-            <span class="chip-lbl">D1</span>
+-            <span class="chip chip-d1">Industrial</span>
+-            <span class="chip chip-d1">Energ├¡a ┬À E├│lica</span>
+-          </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D2</span>
+-            <span class="chip chip-d2">├Ültima Milla</span>
+-            <span class="chip chip-d2">Redes</span>
+-            <span class="chip chip-d2">Gestionados</span>
+-          </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D3</span>
+-            <span class="chip chip-d3">Despliegue Express</span>
+-            <span class="chip chip-d3">Sin Infraestructura Previa</span>
+-            <span class="chip chip-d3">Monitoreo 24/7</span>
+-          </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D4</span>
+-            <span class="chip chip-d4">Starlink</span>
+-          </div>
+-        </div>
+-        <div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
+-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
+-        </div>
+-        <div class="caso-ctas"><a class="caso-cta-link"
+-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+-            ingenier├¡a ÔåÆ</a></div>
+-        <div class="caso-nav-ctas">
+-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+-            class="caso-nav-sim" href="#caso-03">03 ┬À Zonda</a> ┬À <a class="caso-nav-sim" href="#caso-01">01 ┬À El
+-            Quemado</a> ┬À <a class="caso-nav-sim" href="#caso-08">08 ┬À Los Teros</a>
+-          <span class="caso-nav-sep">┬À</span>
+-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+-        </div>
+-      </div>
+-      <!-- CASO 02 ÔÇö Zonda -->
+-      <div class="caso" id="caso-03">
+-        <div class="caso-head">
+-          <div class="caso-sector">Energ├¡a Solar ┬À 2021</div>
+-          <div class="caso-num">// 03</div>
+-        </div>
+-        <div class="caso-title">Parque Solar Zonda ÔÇö Relevamiento de conectividad en zona remota, San Juan</div>
++        <div class="caso-title">Parque Solar Zonda ÔÇö San Juan</div>
+         <div class="caso-desc">En una zona extremadamente remota de San Juan, sin infraestructura de carrier disponible,
+           YPF Luz necesitaba saber si era posible conectar el futuro Parque Solar Zonda ÔÇö y c├│mo. IT-ONE pas├│ 7 d├¡as en
+           el sitio, relev├│ el terreno y entreg├│ un informe con tres alternativas comparadas, estimaci├│n de costos y
+@@ -3561,7 +3499,6 @@
+             <span class="chip chip-d3">Sin Infraestructura Previa</span>
+           </div>
+         </div>
+-        <div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
+         <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
+         </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+@@ -3575,206 +3512,204 @@
+           <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+         </div>
+       </div>
+-      <!-- CASO 04 ÔÇö Fresadora -->
++      <div class="caso" id="caso-03">
++        <div class="caso-head">
++          <div class="caso-sector">Energ├¡a ┬À Termoel├®ctrica</div>
++          <div class="caso-num">// 03</div>
++        </div>
++        <div class="caso-title">Central Termoel├®ctrica El Bracho ÔÇô Tucum├ín</div>
++        <div class="caso-desc">Ingenier├¡a, dise├▒o, construcci├│n, ejecuci├│n y operaci├│n de la infraestructura tecnol├│gica
++          completa del Complejo Generaci├│n Tucum├ín de YPF Energ├¡a El├®ctrica, proyecto conjunto YPFÔÇôGE de 261 MW e
++          inversi├│n de US$ 170 millones. En etapas de construcci├│n (fases I y II): servicio de ├║ltima milla de
++          conectividad al sitio. En puesta en marcha: datacenter, red de cableado estructurado, networking, WiFi en
++          oficinas y frentes remotos, videovigilancia IP con guarda y auditor├¡a, control de accesos y backbones de FO
++          con radioenlaces a los sitios del predio.</div>
++        <div class="caso-results">
++          <div class="caso-result">Ô£ö Infraestructura IT completa operativa para uno de los polos de generaci├│n el├®ctrica
++            m├ís importantes del NOA</div>
++        </div>
++        <div class="caso-tags-block">
++          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Industrial</span><span
++              class="chip chip-d1">Energ├¡a</span><span class="chip chip-d1">Termoel├®ctrica</span></div>
++          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Infraestructura</span><span
++              class="chip chip-d2">Redes</span><span class="chip chip-d2">Datacenter</span><span
++              class="chip chip-d2">├Ültima Milla</span><span class="chip chip-d2">Seguridad</span><span
++              class="chip chip-d2">Conectividad</span><span class="chip chip-d2">Servicios gestionados</span></div>
++          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Llave en mano</span><span
++              class="chip chip-d3">Gran Escala</span><span class="chip chip-d3">Dos etapas</span></div>
++          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Fibra ├│ptica</span><span
++              class="chip chip-d4">Radioenlaces</span><span class="chip chip-d4">WiFi</span><span
++              class="chip chip-d4">Video IP</span><span class="chip chip-d4">Control de accesos</span></div>
++        </div>
++        <div class="caso-ctas"><a class="caso-cta-link"
++            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
++            ingenier├¡a ÔåÆ</a></div>
++      </div>
+       <div class="caso" id="caso-04">
+         <div class="caso-head">
+-          <div class="caso-sector">Automatizaci├│n ┬À Industria</div>
++          <div class="caso-sector">Energ├¡a ┬À Termoel├®ctrica</div>
+           <div class="caso-num">// 04</div>
+         </div>
+-        <div class="caso-title">Fresadora ┬À Automatizaci├│n y telemetr├¡a industrial en nube</div>
+-        <div class="caso-desc">Una l├¡nea de montaje industrial necesitaba automatizar el cabezal de una fresadora con
+-          sistema hidr├íulico de avance y tener visibilidad remota del equipo en tiempo real. IT-ONE dise├▒├│ una soluci├│n
+-          a medida: automatizaci├│n del proceso mec├ínico e integraci├│n de telemetr├¡a v├¡a microprocesador conectado a
+-          Microsoft Azure, con visualizaci├│n y control centralizado del equipo desde cualquier ubicaci├│n.</div>
++        <div class="caso-title">Central Termoel├®ctrica Manantiales Behr ÔÇô Chubut</div>
++        <div class="caso-desc">Instalaci├│n del sistema de videovigilancia.</div>
+         <div class="caso-results">
+-          <div class="caso-result">Ô£ö Automatizaci├│n completa del cabezal hidr├íulico</div>
+-          <div class="caso-result">Ô£ö Telemetr├¡a en tiempo real integrada a Azure</div>
+-          <div class="caso-result">Ô£ö Control y visualizaci├│n remota desde cualquier punto</div>
++          <div class="caso-result">Ô£ö Sistema de videovigilancia operativo</div>
+         </div>
+         <div class="caso-tags-block">
+-          <div class="chip-row">
+-            <span class="chip-lbl">D1</span>
+-            <span class="chip chip-d1">Industrial</span>
+-            <span class="chip chip-d1">Plantas de Producci├│n</span>
+-          </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D2</span>
+-            <span class="chip chip-d2">Automatizaci├│n</span>
+-            <span class="chip chip-d2">IT/OT Bridge</span>
+-          </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D3</span>
+-            <span class="chip chip-d3">IIoT</span>
+-            <span class="chip chip-d3">Telemetr├¡a</span>
+-            <span class="chip chip-d3">Convergencia IT/OT</span>
+-            <span class="chip chip-d3">Confidencial</span>
+-          </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D4</span>
+-            <span class="chip chip-d4">Microsoft Azure</span>
+-          </div>
+-        </div>
+-        <div class="caso-client">Cliente: <b>Confidencial</b></div>
+-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
++          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Industrial</span><span
++              class="chip chip-d1">Energ├¡a</span><span class="chip chip-d1">Termoel├®ctrica</span></div>
++          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Seguridad</span></div>
+         </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+             href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+             ingenier├¡a ÔåÆ</a></div>
+-        <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+-        <div class="caso-nav-ctas">
+-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+-            class="caso-nav-sim" href="#caso-07">07 ┬À Laminadora</a>
+-          <span class="caso-nav-sep">┬À</span>
+-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+-        </div>
+       </div>
+-      <!-- CASO 05 ÔÇö V├ílvula -->
+       <div class="caso" id="caso-05">
+         <div class="caso-head">
+-          <div class="caso-sector">Automatizaci├│n ┬À Oil &amp; Gas</div>
++          <div class="caso-sector">Energ├¡a ┬À Termoel├®ctrica</div>
+           <div class="caso-num">// 05</div>
+         </div>
+-        <div class="caso-title">V├ílvula de ramal ┬À Actuador autom├ítico con energ├¡a solar y telemetr├¡a</div>
+-        <div class="caso-desc">Una empresa petrolera necesitaba automatizar una v├ílvula de cuarto de giro en un ramal
+-          principal, en una locaci├│n sin acceso a red el├®ctrica. IT-ONE desarroll├│ una soluci├│n integral: control del
+-          sistema hidr├íulico del actuador con modos de operaci├│n temporizado y manual, apertura y cierre diferenciados
+-          para neutralizar el efecto golpe de ariete, telemetr├¡a remota v├¡a red m├│vil y un sistema de energ├¡a solar para
+-          alimentar de forma aut├│noma el circuito de control y el actuador hidr├íulico.</div>
++        <div class="caso-title">Tablero Variaci├│n Velocidad Sistema de Motores Diesel ÔÇô Costanera, Bs. As.</div>
++        <div class="caso-desc">La Central Termoel├®ctrica Costanera necesitaba un sistema de control para sus motores
++          diesel Cummins ÔÇö dos grupos electr├│genos y tres bombas de incendio ÔÇö con encendido remoto y sincronizaci├│n de
++          cargas. IT-ONE ejecut├│ el proyecto llave en mano: ingenier├¡a, instalaci├│n mec├ínica y el├®ctrica, calibraci├│n,
++          sincronizaci├│n de grupos y documentaci├│n completa.</div>
+         <div class="caso-results">
+-          <div class="caso-result">Ô£ö Operaci├│n automatizada sin dependencia de red el├®ctrica</div>
+-          <div class="caso-result">Ô£ö Telemetr├¡a remota operativa v├¡a red m├│vil</div>
+-          <div class="caso-result">Ô£ö Protecci├│n contra golpe de ariete implementada en control</div>
++          <div class="caso-result">Ô£ö Sistema de incendio con encendido remoto y control de velocidad integrado</div>
++          <div class="caso-result">Ô£ö Sincronizaci├│n de 5 motores diesel para balance de carga</div>
++          <div class="caso-result">Ô£ö Entrega llave en mano con documentaci├│n de ingenier├¡a completa</div>
+         </div>
+         <div class="caso-tags-block">
+-          <div class="chip-row">
+-            <span class="chip-lbl">D1</span>
++          <div class="chip-row"><span class="chip-lbl">D1</span>
+             <span class="chip chip-d1">Industrial</span>
+-            <span class="chip chip-d1">Oil &amp; Gas</span>
++            <span class="chip chip-d1">Energ├¡a ┬À Termoel├®ctrica</span>
+           </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D2</span>
++          <div class="chip-row"><span class="chip-lbl">D2</span>
+             <span class="chip chip-d2">Automatizaci├│n</span>
+-            <span class="chip chip-d2">IT/OT Bridge</span>
++            <span class="chip chip-d2">Ingenier├¡a IT/OT</span>
+           </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D3</span>
+-            <span class="chip chip-d3">Telemetr├¡a</span>
+-            <span class="chip chip-d3">Energ├¡a Aut├│noma</span>
+-            <span class="chip chip-d3">Zona Remota</span>
+-            <span class="chip chip-d3">Confidencial</span>
++          <div class="chip-row"><span class="chip-lbl">D3</span>
++            <span class="chip chip-d3">Llave en Mano</span>
++            <span class="chip chip-d3">Operaci├│n Cr├¡tica</span>
+           </div>
++          <div class="chip-row"><span class="chip-lbl">D4</span>
++            <span class="chip chip-d4">Cummins</span>
++          </div>
++        </div>
++        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
+         </div>
+-        <div class="caso-client">Cliente: <b>Confidencial</b></div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+             href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+             ingenier├¡a ÔåÆ</a></div>
+-        <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+         <div class="caso-nav-ctas">
+-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar con ingenier├¡a ÔåÆ</a>
++          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
++            class="caso-nav-sim" href="#caso-01">01 ┬À El Quemado</a>
++          <span class="caso-nav-sep">┬À</span>
++          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+         </div>
+       </div>
+-      <!-- CASO 06 ÔÇö Molino -->
+       <div class="caso" id="caso-06">
+         <div class="caso-head">
+-          <div class="caso-sector">Automatizaci├│n ┬À Miner├¡a</div>
++          <div class="caso-sector">Energ├¡a ┬À Oil &amp; Gas</div>
+           <div class="caso-num">// 06</div>
+         </div>
+-        <div class="caso-title">Molino de bolas ┬À Sistema de control neum├ítico y el├®ctrico</div>
+-        <div class="caso-desc">Dise├▒o e implementaci├│n del sistema de control completo para un molino de bolas
+-          industrial. IT-ONE ejecut├│ el control neum├ítico y el├®ctrico del equipo integrando los sistemas de seguridad
+-          requeridos para la operaci├│n continua y segura del proceso. La soluci├│n garantiza la coordinaci├│n de los
+-          subsistemas de potencia y mando bajo una arquitectura de control unificada.</div>
++        <div class="caso-title">Sistema de Video IP para Supervisi├│n de Obra ÔÇô Complejo Industrial Ensenada, Bs. As.
++        </div>
++        <div class="caso-desc">Ingenier├¡a, dise├▒o, provisi├│n, montaje, ejecuci├│n y operaci├│n del sistema de video IP
++          para la supervisi├│n de las tareas de construcci├│n en el Complejo Industrial Ensenada ÔÇô YPF Qu├¡mica, uno de los
++          complejos petroqu├¡micos m├ís importantes de Argentina, productor de 950.000 toneladas anuales de productos
++          petroqu├¡micos. El sistema consiste en un domo PTZ 35x con radioenlace, montados a 70 metros de altura, m├ís el
++          equipamiento completo de monitoreo, almacenamiento y auditor├¡a de im├ígenes para la direcci├│n de obra.</div>
+         <div class="caso-results">
+-          <div class="caso-result">Ô£ö Control neum├ítico y el├®ctrico bajo arquitectura unificada</div>
+-          <div class="caso-result">Ô£ö Sistemas de seguridad incorporados al proceso de control</div>
+-          <div class="caso-result">Ô£ö Operaci├│n continua y segura en entorno minero</div>
++          <div class="caso-result">Ô£ö Sistema de videovigilancia IP operativo para supervisi├│n remota en tiempo real del
++            avance de construcci├│n, con trazabilidad completa de im├ígenes</div>
+         </div>
+         <div class="caso-tags-block">
+-          <div class="chip-row">
+-            <span class="chip-lbl">D1</span>
+-            <span class="chip chip-d1">Industrial</span>
+-            <span class="chip chip-d1">Miner├¡a</span>
+-          </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D2</span>
+-            <span class="chip chip-d2">Automatizaci├│n</span>
+-            <span class="chip chip-d2">Seguridad</span>
+-          </div>
+-          <div class="chip-row">
+-            <span class="chip-lbl">D3</span>
+-            <span class="chip chip-d3">Seguridad Industrial</span>
+-            <span class="chip chip-d3">Operaci├│n Cr├¡tica</span>
+-            <span class="chip chip-d3">Confidencial</span>
+-          </div>
++          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Industrial</span><span
++              class="chip chip-d1">Energ├¡a</span><span class="chip chip-d1">Oil &amp; Gas</span></div>
++          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Seguridad</span><span
++              class="chip chip-d2">Conectividad</span><span class="chip chip-d2">Servicios gestionados</span></div>
++          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Altura extrema</span><span
++              class="chip chip-d3">Monitoreo remoto</span><span class="chip chip-d3">Llave en mano</span></div>
++          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Domo PTZ 35x</span><span
++              class="chip chip-d4">Radioenlace</span></div>
+         </div>
+-        <div class="caso-client">Cliente: <b>Confidencial</b></div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+             href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+             ingenier├¡a ÔåÆ</a></div>
+-        <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+-        <div class="caso-nav-ctas">
+-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+-            class="caso-nav-sim" href="#caso-09">09 ┬À VALE</a>
+-          <span class="caso-nav-sep">┬À</span>
+-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+-        </div>
+       </div>
+-      <!-- CASO 07 ÔÇö Laminadora -->
+       <div class="caso" id="caso-07">
+         <div class="caso-head">
+-          <div class="caso-sector">Automatizaci├│n ┬À Industria</div>
++          <div class="caso-sector">Energ├¡a ┬À Oil &amp; Gas</div>
+           <div class="caso-num">// 07</div>
+         </div>
+-        <div class="caso-title">Laminadora ┬À Control de carro de transporte para bobinas de acero</div>
+-        <div class="caso-desc">Una planta laminadora necesitaba automatizar el carro de transporte de bobinas de acero,
+-          un proceso que exige precisi├│n milim├®trica en la alineaci├│n en dos ejes para la carga correcta en el mandril.
+-          IT-ONE dise├▒├│ el sistema de control completo: posicionamiento automatizado con modo manual para operarios,
+-          control el├®ctrico e hidr├íulico de potencia, y un sistema de seguridad con barreras l├íser a lo largo de todo el
+-          recorrido del carro y barrera f├¡sica en la zona de carga.</div>
++        <div class="caso-title">Yacimiento Cerro Drag├│n ÔÇô Chubut</div>
++        <div class="caso-desc">Dise├▒o y ejecuci├│n del sistema de conectividad y red de datos para el equipo de
++          mantenimiento mec├ínico durante parada de planta. 40 mec├ínicos conectados en 2 meses.</div>
++        <div class="caso-results">
++          <div class="caso-result">Ô£ö Conectividad operativa para 40 personas en plazo cr├¡tico de parada de planta</div>
++        </div>
++        <div class="caso-tags-block">
++          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Industrial</span><span
++              class="chip chip-d1">Oil &amp; Gas</span></div>
++          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Redes</span><span
++              class="chip chip-d2">Conectividad</span></div>
++          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Plazo Cr├¡tico</span><span
++              class="chip chip-d3">Parada de Planta</span></div>
++        </div>
++        <div class="caso-ctas"><a class="caso-cta-link"
++            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
++            ingenier├¡a ÔåÆ</a></div>
++      </div>
++      <div class="caso" id="caso-08">
++        <div class="caso-head">
++          <div class="caso-sector">Energ├¡a ┬À Oil &amp; Gas</div>
++          <div class="caso-num">// 08</div>
++        </div>
++        <div class="caso-title">SAR-H: Sistema Actuador Remoto Hidr├íulico para V├ílvulas ┬╝ giro ┬À Neuqu├®n</div>
++        <div class="caso-desc">Una empresa petrolera necesitaba automatizar una v├ílvula de cuarto de giro en un ramal
++          principal, en una locaci├│n sin acceso a red el├®ctrica. IT-ONE desarroll├│ una soluci├│n integral: control del
++          sistema hidr├íulico del actuador con modos de operaci├│n temporizado y manual, apertura y cierre diferenciados
++          para neutralizar el efecto golpe de ariete, telemetr├¡a remota v├¡a red m├│vil y un sistema de energ├¡a solar para
++          alimentar de forma aut├│noma el circuito de control y el actuador hidr├íulico.</div>
+         <div class="caso-results">
+-          <div class="caso-result">Ô£ö Posicionamiento de bobinas con alineaci├│n en dos ejes</div>
+-          <div class="caso-result">Ô£ö Seguridad perimetral con barreras l├íser en toda la trayectoria</div>
+-          <div class="caso-result">Ô£ö Control integrado el├®ctrico e hidr├íulico bajo un ├║nico sistema</div>
++          <div class="caso-result">Ô£ö Operaci├│n automatizada sin dependencia de red el├®ctrica</div>
++          <div class="caso-result">Ô£ö Telemetr├¡a remota operativa v├¡a red m├│vil</div>
++          <div class="caso-result">Ô£ö Protecci├│n contra golpe de ariete implementada en control</div>
+         </div>
+         <div class="caso-tags-block">
+           <div class="chip-row">
+             <span class="chip-lbl">D1</span>
+             <span class="chip chip-d1">Industrial</span>
+-            <span class="chip chip-d1">Plantas de Producci├│n</span>
++            <span class="chip chip-d1">Oil &amp; Gas</span>
+           </div>
+           <div class="chip-row">
+             <span class="chip-lbl">D2</span>
+             <span class="chip chip-d2">Automatizaci├│n</span>
+-            <span class="chip chip-d2">Seguridad</span>
++            <span class="chip chip-d2">IT/OT Bridge</span>
+           </div>
+           <div class="chip-row">
+             <span class="chip-lbl">D3</span>
+-            <span class="chip chip-d3">Seguridad Industrial</span>
+-            <span class="chip chip-d3">Operaci├│n Cr├¡tica</span>
++            <span class="chip chip-d3">Telemetr├¡a</span>
++            <span class="chip chip-d3">Energ├¡a Aut├│noma</span>
++            <span class="chip chip-d3">Zona Remota</span>
+             <span class="chip chip-d3">Confidencial</span>
+           </div>
+         </div>
+-        <div class="caso-client">Cliente: <b>Confidencial</b></div>
+-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
+-        </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+             href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+             ingenier├¡a ÔåÆ</a></div>
+         <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+         <div class="caso-nav-ctas">
+-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+-            class="caso-nav-sim" href="#caso-04">04 ┬À Fresadora</a>
+-          <span class="caso-nav-sep">┬À</span>
+-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
++          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar con ingenier├¡a ÔåÆ</a>
+         </div>
+       </div>
+-      <!-- CASO 08 ÔÇö Los Teros -->
+-      <div class="caso" id="caso-08">
++      <div class="caso" id="caso-09">
+         <div class="caso-head">
+           <div class="caso-sector">Energ├¡a E├│lica ┬À Buenos Aires</div>
+-          <div class="caso-num">// 08</div>
++          <div class="caso-num">// 09</div>
+         </div>
+-        <div class="caso-title">Torre Inteligente M├│vil para cobertura de radiocomunicaciones en parque e├│lico</div>
++        <div class="caso-title">Parque E├│lico Los Teros I ÔÇô Azul, Bs. As.</div>
+         <div class="caso-desc">El Parque E├│lico Los Teros requer├¡a un sistema de comunicaciones capaz de adaptarse a la
+           geograf├¡a con zonas oscuras en la se├▒al, para cubrir los distintos frentes remotos de trabajo con cumplimiento
+           de H&amp;S. IT-ONE dise├▒├│, construy├│ y puso en servicio la T.I.M. (Torre Inteligente M├│vil) de fabricaci├│n
+@@ -3802,11 +3737,6 @@
+             <span class="chip chip-d4">TIM</span>
+           </div>
+         </div>
+-        <div class="caso-client">Cliente: <b>General Electric</b> <span
+-            style="font-family:var(--mono);font-size:10px;font-weight:400;color:var(--tx-muted);letter-spacing:0.5px;">EPC</span>
+-          ┬À <b>YPF Energ├¡a El├®ctrica</b> <span
+-            style="font-family:var(--mono);font-size:10px;font-weight:400;color:var(--tx-muted);letter-spacing:0.5px;">propietario
+-            del activo</span></div>
+         <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
+         </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+@@ -3820,14 +3750,62 @@
+           <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+         </div>
+       </div>
+-      <!-- CASO 09 ÔÇö VALE -->
+-      <div class="caso" id="caso-09">
++      <div class="caso" id="caso-10">
++        <div class="caso-head">
++          <div class="caso-sector">Energ├¡a E├│lica</div>
++          <div class="caso-num">// 10</div>
++        </div>
++        <div class="caso-title">Parque E├│lico Cementos Avellaneda ÔÇô Olavarr├¡a, Bs. As.</div>
++        <div class="caso-desc">YPF Luz necesitaba conectividad operativa inmediata en un sitio de obra que no contaba
++          con infraestructura. IT-ONE relev├│ el sitio, dise├▒├│ la infraestructura y gestion├│ el servicio en el transcurso
++          del d├¡a. Monitoreo continuo y coordinaci├│n directa con el responsable de obra durante toda la ejecuci├│n.</div>
++        <div class="caso-results">
++          <div class="caso-result">Ô£ö Conectividad operativa en tiempo r├®cord</div>
++          <div class="caso-result">Ô£ö Implementaci├│n sin infraestructura previa</div>
++          <div class="caso-result">Ô£ö Monitoreo continuo durante toda la obra</div>
++        </div>
++        <div class="caso-tags-block">
++          <div class="chip-row">
++            <span class="chip-lbl">D1</span>
++            <span class="chip chip-d1">Industrial</span>
++            <span class="chip chip-d1">Energ├¡a ┬À E├│lica</span>
++          </div>
++          <div class="chip-row">
++            <span class="chip-lbl">D2</span>
++            <span class="chip chip-d2">├Ültima Milla</span>
++            <span class="chip chip-d2">Redes</span>
++            <span class="chip chip-d2">Gestionados</span>
++          </div>
++          <div class="chip-row">
++            <span class="chip-lbl">D3</span>
++            <span class="chip chip-d3">Despliegue Express</span>
++            <span class="chip chip-d3">Sin Infraestructura Previa</span>
++            <span class="chip chip-d3">Monitoreo 24/7</span>
++          </div>
++          <div class="chip-row">
++            <span class="chip-lbl">D4</span>
++            <span class="chip chip-d4">Starlink</span>
++          </div>
++        </div>
++        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
++        </div>
++        <div class="caso-ctas"><a class="caso-cta-link"
++            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
++            ingenier├¡a ÔåÆ</a></div>
++        <div class="caso-nav-ctas">
++          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
++            class="caso-nav-sim" href="#caso-03">03 ┬À Zonda</a> ┬À <a class="caso-nav-sim" href="#caso-01">01 ┬À El
++            Quemado</a> ┬À <a class="caso-nav-sim" href="#caso-08">08 ┬À Los Teros</a>
++          <span class="caso-nav-sep">┬À</span>
++          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
++        </div>
++      </div>
++      <div class="caso" id="caso-11">
+         <div class="caso-head">
+           <div class="caso-sector">Miner├¡a ┬À Mendoza</div>
+-          <div class="caso-num">// 09</div>
++          <div class="caso-num">// 11</div>
+         </div>
+-        <div class="caso-title">700 puestos de trabajo, 3 data centers y backbone de fibra para proyecto minero de gran
+-          escala</div>
++        <div class="caso-title">VALE Potasio R├¡o Colorado ÔÇô Mendoza</div>
+         <div class="caso-desc">El proyecto de potasio de VALE en R├¡o Colorado requer├¡a una infraestructura tecnol├│gica
+           completa para 700 puestos de trabajo en zona remota. IT-ONE implement├│ cableado Cat 6, backbone de fibra
+           ├│ptica con backup Cat 6A, tres data centers con detecci├│n y extinci├│n de incendio, control de accesos,
+@@ -3859,7 +3837,6 @@
+             <span class="chip chip-d4">Fibra ├ôptica</span>
+           </div>
+         </div>
+-        <div class="caso-client">Cliente: <b>VALE S.A.</b></div>
+         <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
+         </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+@@ -3872,142 +3849,120 @@
+           <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+         </div>
+       </div>
+-      <!-- CASO 10 ÔÇö Central Costanera -->
+-      <div class="caso" id="caso-10">
++      <div class="caso" id="caso-12">
+         <div class="caso-head">
+-          <div class="caso-sector">Energ├¡a ┬À Buenos Aires</div>
+-          <div class="caso-num">// 10</div>
++          <div class="caso-sector">Corporativo ┬À CABA</div>
++          <div class="caso-num">// 12</div>
+         </div>
+-        <div class="caso-title">Control de variaci├│n de velocidad de motores diesel para sistema de incendio en central
+-          termoel├®ctrica</div>
+-        <div class="caso-desc">La Central Termoel├®ctrica Costanera necesitaba un sistema de control para sus motores
+-          diesel Cummins ÔÇö dos grupos electr├│genos y tres bombas de incendio ÔÇö con encendido remoto y sincronizaci├│n de
+-          cargas. IT-ONE ejecut├│ el proyecto llave en mano: ingenier├¡a, instalaci├│n mec├ínica y el├®ctrica, calibraci├│n,
+-          sincronizaci├│n de grupos y documentaci├│n completa.</div>
++        <div class="caso-title">Sede ACTC "Edificio Juan G├ílvez" ÔÇô Caballito, CABA</div>
++        <div class="caso-desc">Dise├▒o, ingenier├¡a, ejecuci├│n y montaje de la infraestructura tecnol├│gica completa de la
++          nueva sede de la Asociaci├│n Corredores Turismo Carretera, la instituci├│n que organiza el campeonato de
++          automovilismo m├ís popular de Argentina. IT-ONE ejecut├│ el datacenter, la red de cableado estructurado, el
++          networking, el sistema de videovigilancia IP, el sistema de control de accesos, el sistema de m├║sica ambiente
++          y los backbones de fibra ├│ptica con vinculaci├│n entre sedes.</div>
+         <div class="caso-results">
+-          <div class="caso-result">Ô£ö Sistema de incendio con encendido remoto y control de velocidad integrado</div>
+-          <div class="caso-result">Ô£ö Sincronizaci├│n de 5 motores diesel para balance de carga</div>
+-          <div class="caso-result">Ô£ö Entrega llave en mano con documentaci├│n de ingenier├¡a completa</div>
++          <div class="caso-result">Ô£ö Infraestructura tecnol├│gica integral operativa para la sede institucional de
++            referencia del automovilismo nacional argentino</div>
+         </div>
+         <div class="caso-tags-block">
+-          <div class="chip-row"><span class="chip-lbl">D1</span>
+-            <span class="chip chip-d1">Industrial</span>
+-            <span class="chip chip-d1">Energ├¡a ┬À Termoel├®ctrica</span>
+-          </div>
+-          <div class="chip-row"><span class="chip-lbl">D2</span>
+-            <span class="chip chip-d2">Automatizaci├│n</span>
+-            <span class="chip chip-d2">Ingenier├¡a IT/OT</span>
+-          </div>
+-          <div class="chip-row"><span class="chip-lbl">D3</span>
+-            <span class="chip chip-d3">Llave en Mano</span>
+-            <span class="chip chip-d3">Operaci├│n Cr├¡tica</span>
+-          </div>
+-          <div class="chip-row"><span class="chip-lbl">D4</span>
+-            <span class="chip chip-d4">Cummins</span>
+-          </div>
+-        </div>
+-        <div class="caso-client">Cliente: <b>Central Costanera</b></div>
+-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
++          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Corporativo</span></div>
++          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Infraestructura</span><span
++              class="chip chip-d2">Redes</span><span class="chip chip-d2">Datacenter</span><span
++              class="chip chip-d2">Seguridad</span><span class="chip chip-d2">Cableado estructurado</span></div>
++          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Llave en mano</span><span
++              class="chip chip-d3">Integraci├│n de sistemas</span></div>
++          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Fibra ├│ptica</span><span
++              class="chip chip-d4">Control de accesos</span><span class="chip chip-d4">Video IP</span></div>
+         </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+             href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+             ingenier├¡a ÔåÆ</a></div>
+-        <div class="caso-nav-ctas">
+-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+-            class="caso-nav-sim" href="#caso-01">01 ┬À El Quemado</a>
+-          <span class="caso-nav-sep">┬À</span>
+-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+-        </div>
+       </div>
+-      <!-- CASO 11 ÔÇö IESS -->
+-      <div class="caso" id="caso-11">
++      <div class="caso" id="caso-13">
+         <div class="caso-head">
+-          <div class="caso-sector">Gobierno ┬À Ecuador</div>
+-          <div class="caso-num">// 11</div>
++          <div class="caso-sector">Corporativo ┬À R├¡o Negro</div>
++          <div class="caso-num">// 13</div>
+         </div>
+-        <div class="caso-title">Infraestructura tecnol├│gica cr├¡tica para m├ís de 7 millones de usuarios</div>
+-        <div class="caso-desc">El IESS necesitaba una infraestructura robusta y escalable para soportar la demanda de
+-          m├ís de 7 millones de usuarios con alta disponibilidad. IT-ONE dise├▒├│ e implement├│ la soluci├│n integral con
+-          hardware y software para grandes vol├║menes de datos y transacciones simult├íneas, y monitoreo 24/7 para
+-          garantizar la continuidad del servicio.</div>
++        <div class="caso-title">Desarrollo app integraci├│n Sistema Control de Accesos a Sistema Centro de Costos ÔÇô
++          Allen, R├¡o Negro</div>
++        <div class="caso-desc">Integraci├│n de sistema de control de accesos de personal, visitas y veh├¡culos con lectura
++          de DNIs y patentes, vinculado a las bases de datos corporativas del cliente. 3 lectores de DNI, 2 lectores de
++          patentes, 2 plataformas y 5 bases de datos integradas en 1 mes.</div>
+         <div class="caso-results">
+-          <div class="caso-result">Ô£ö Infraestructura operativa para m├ís de 7 millones de usuarios</div>
+-          <div class="caso-result">Ô£ö Reducci├│n de tiempos de respuesta y ahorro de costos del 35%</div>
+-          <div class="caso-result">Ô£ö Operaciones ininterrumpidas con confiabilidad mejorada en servicios cr├¡ticos</div>
++          <div class="caso-result">Ô£ö Sistema unificado de accesos conectado a las bases de datos corporativas del
++            cliente</div>
+         </div>
+         <div class="caso-tags-block">
+-          <div class="chip-row"><span class="chip-lbl">D1</span>
+-            <span class="chip chip-d1">Gobierno</span>
+-            <span class="chip chip-d1">Salud P├║blica</span>
+-          </div>
+-          <div class="chip-row"><span class="chip-lbl">D2</span>
+-            <span class="chip chip-d2">Infraestructura Cr├¡tica</span>
+-            <span class="chip chip-d2">Gestionados</span>
+-          </div>
+-          <div class="chip-row"><span class="chip-lbl">D3</span>
+-            <span class="chip chip-d3">Alta Disponibilidad</span>
+-            <span class="chip chip-d3">Gran Escala</span>
+-            <span class="chip chip-d3">Monitoreo 24/7</span>
+-          </div>
+-        </div>
+-        <div class="caso-client">Cliente: <b>IESS ÔÇö Instituto Ecuatoriano de Seguridad Social</b></div>
+-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
++          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Corporativo</span></div>
++          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Seguridad</span><span
++              class="chip chip-d2">Integraci├│n de sistemas</span></div>
++          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Integraci├│n de
++              plataformas</span></div>
++          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Control de
++              accesos</span><span class="chip chip-d4">Lectura DNI</span><span class="chip chip-d4">Lectura de
++              patentes</span></div>
+         </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+             href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+             ingenier├¡a ÔåÆ</a></div>
+-        <div class="caso-nav-ctas">
+-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+-            class="caso-nav-sim" href="#caso-12">12 ┬À RITBA</a>
+-          <span class="caso-nav-sep">┬À</span>
+-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
+-        </div>
+       </div>
+-      <!-- CASO 12 ÔÇö RITBA -->
+-      <div class="caso" id="caso-12">
++      <div class="caso" id="caso-14">
+         <div class="caso-head">
+-          <div class="caso-sector">Gobierno ┬À Estados Unidos</div>
+-          <div class="caso-num">// 12</div>
++          <div class="caso-sector">Gobierno ┬À San Juan</div>
++          <div class="caso-num">// 14</div>
+         </div>
+-        <div class="caso-title">Cl├║steres de bases de datos con recuperaci├│n ante desastres para autoridad vial de Rhode
+-          Island</div>
+-        <div class="caso-desc">RITBA necesitaba garantizar alta disponibilidad y recuperaci├│n ante desastres para sus
+-          sistemas cr├¡ticos en SQL Server y PostgreSQL. IT-ONE dise├▒├│ e implement├│ cl├║steres con replicaci├│n y failover
+-          autom├ítico, cre├│ un sitio DRS completamente funcional y optimiz├│ el rendimiento con monitoreo proactivo.</div>
++        <div class="caso-title">Centro C├¡vico de San Juan ÔÇô San Juan Capital</div>
++        <div class="caso-desc">Dise├▒o y ejecuci├│n de la infraestructura tecnol├│gica del principal complejo de
++          administraci├│n p├║blica de la Provincia de San Juan, en rol de subcontratista de la constructora principal.
++          IT-ONE ejecut├│ la red de cableado estructurado, el datacenter central y las 18 salas de cableado distribuidas
++          en el edificio. El complejo concentra 4 ministerios provinciales y opera con una circulaci├│n de
++          aproximadamente 10.000 personas diarias. Proyectado en 1971 e inaugurado en 2009, fue sede de la Cumbre del
++          Mercosur de 2010.</div>
+         <div class="caso-results">
+-          <div class="caso-result">Ô£ö Reducci├│n del downtime operativo en un 90%</div>
+-          <div class="caso-result">Ô£ö Recuperaci├│n integral garantizada en menos de 15 minutos</div>
+-          <div class="caso-result">Ô£ö Recuperaci├│n completa de operatividad en 2 horas ante eventos de desastre</div>
++          <div class="caso-result">Ô£ö Infraestructura de red y datacenter operativos para el edificio de administraci├│n
++            p├║blica m├ís relevante de la Provincia de San Juan</div>
+         </div>
+         <div class="caso-tags-block">
+-          <div class="chip-row"><span class="chip-lbl">D1</span>
+-            <span class="chip chip-d1">Gobierno</span>
+-          </div>
+-          <div class="chip-row"><span class="chip-lbl">D2</span>
+-            <span class="chip chip-d2">Infraestructura Cr├¡tica</span>
+-            <span class="chip chip-d2">Alta Disponibilidad</span>
+-          </div>
+-          <div class="chip-row"><span class="chip-lbl">D3</span>
+-            <span class="chip chip-d3">Disaster Recovery</span>
+-            <span class="chip chip-d3">Alta Disponibilidad</span>
+-          </div>
+-          <div class="chip-row"><span class="chip-lbl">D4</span>
+-            <span class="chip chip-d4">SQL Server</span>
+-            <span class="chip chip-d4">PostgreSQL</span>
+-          </div>
+-        </div>
+-        <div class="caso-client">Cliente: <b>RITBA ÔÇö Rhode Island Turnpike and Bridge Authority</b></div>
+-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver m├ís proyectos similares ÔåÆ</a>
++          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Gobierno</span></div>
++          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Infraestructura</span><span
++              class="chip chip-d2">Redes</span><span class="chip chip-d2">Datacenter</span><span
++              class="chip chip-d2">Cableado estructurado</span></div>
++          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Gran Escala</span><span
++              class="chip chip-d3">Edificio Cr├¡tico</span></div>
+         </div>
+         <div class="caso-ctas"><a class="caso-cta-link"
+             href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+             ingenier├¡a ÔåÆ</a></div>
+-        <div class="caso-nav-ctas">
+-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+-            class="caso-nav-sim" href="#caso-11">11 ┬À IESS Ecuador</a>
+-          <span class="caso-nav-sep">┬À</span>
+-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar ÔåÆ</a>
++      </div>
++      <div class="caso" id="caso-15">
++        <div class="caso-head">
++          <div class="caso-sector">Gobierno ┬À Bs. As.</div>
++          <div class="caso-num">// 15</div>
++        </div>
++        <div class="caso-title">Unidad Penitenciaria N┬░ 47 ÔÇô San Mart├¡n, Bs. As.</div>
++        <div class="caso-desc">Ingenier├¡a, dise├▒o y ejecuci├│n de la infraestructura tecnol├│gica y de seguridad completa
++          de la Unidad Penitenciaria N┬░ 47 del Servicio Penitenciario Bonaerense. IT-ONE ejecut├│ el datacenter, la red
++          de cableado estructurado, la red de telefon├¡a, el networking, la central telef├│nica, el sistema de alarmas
++          perimetral, el sistema de sirenas perimetral y el sistema de videovigilancia IP con guarda y auditor├¡a de
++          im├ígenes.</div>
++        <div class="caso-results">
++          <div class="caso-result">Ô£ö Infraestructura tecnol├│gica y de seguridad perimetral integral operativa para una
++            unidad penitenciaria de alta exigencia operativa</div>
+         </div>
++        <div class="caso-tags-block">
++          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Gobierno</span></div>
++          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Infraestructura</span><span
++              class="chip chip-d2">Redes</span><span class="chip chip-d2">Datacenter</span><span
++              class="chip chip-d2">Seguridad</span><span class="chip chip-d2">Telefon├¡a</span></div>
++          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Llave en mano</span><span
++              class="chip chip-d3">Entorno cr├¡tico</span><span class="chip chip-d3">Integraci├│n de sistemas</span></div>
++          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Video IP</span><span
++              class="chip chip-d4">Alarmas perimetral</span><span class="chip chip-d4">Central telef├│nica</span><span
++              class="chip chip-d4">Fibra ├│ptica</span></div>
++        </div>
++        <div class="caso-ctas"><a class="caso-cta-link"
++            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
++            ingenier├¡a ÔåÆ</a></div>
+       </div>
+     </div>
+     <!-- BISAGRA 1: Casos ÔåÆ Otros proyectos (transici├│n interna) -->
+@@ -4043,38 +3998,47 @@
+           <div class="otros-lista">
+             <div class="otro-item">Parque E├│lico Gral. Levalle <span class="otro-loc">C├│rdoba</span></div>
+             <div class="otro-item">Parque E├│lico Los Teros II <span class="otro-loc">BA</span></div>
+-            <div class="otro-item">Parque E├│lico Manantiales Behr <span class="otro-loc">Chubut</span></div>
+           </div>
+-          <div class="otros-grupo-lbl" style="margin-top:2rem;"><span class="chip chip-d1">Gobierno &amp;
+-              Infraestructura</span></div>
++        </div>
++        <div>
++          <div class="otros-grupo-lbl"><span class="chip chip-d1">Miner├¡a</span></div>
++          <div class="otros-lista">
++            <div class="otro-item">Xstrata Copper ÔÇô Minera Alumbrera <span class="otro-loc">CABA</span></div>
++            <div class="otro-item">McEwen Copper ÔÇô Los Azules <span class="otro-loc">San Juan</span></div>
++          </div>
++        </div>
++        <div>
++          <div class="otros-grupo-lbl"><span class="chip chip-d1">Gobierno &amp; Infraestructura</span></div>
+           <div class="otros-lista">
+-            <div class="otro-item">Centro C├¡vico Provincia de San Juan <span class="otro-loc">San Juan</span></div>
+             <div class="otro-item">Proyecto Soterramiento Tren Sarmiento <span class="otro-loc">BA</span></div>
+             <div class="otro-item">Renovaci├│n Belgrano Cargas Ramal C8 <span class="otro-loc">Tucum├ín</span></div>
+             <div class="otro-item">Renovaci├│n Belgrano Cargas Ramal C8 <span class="otro-loc">Salta</span></div>
++            <div class="otro-item">Alcald├¡a Santa Catalina <span class="otro-loc">BA</span></div>
++            <div class="otro-item">Fuero de Menores San Justo <span class="otro-loc">BA</span></div>
++            <div class="otro-item">Plaza de la Memoria <span class="otro-loc">CABA</span></div>
+           </div>
+         </div>
+-        <div style="grid-column: 1 / -1;">
++        <div>
+           <div class="otros-grupo-lbl"><span class="chip chip-d1">Industrial &amp; Corporativo</span></div>
+-          <div class="otros-lista" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0 3rem;">
++          <div class="otros-lista">
+             <div class="otro-item">Planta ALUAR <span class="otro-loc">Puerto Madryn ┬À Chubut</span></div>
+             <div class="otro-item">Planta Productiva Grupo Timbo <span class="otro-loc">La Pampa</span></div>
+-            <div class="otro-item">Planta YPF <span class="otro-loc">Ensenada ┬À BA</span></div>
+-            <div class="otro-item">Planta Water Tech Veolia <span class="otro-loc">BA</span></div>
+-            <div class="otro-item">Oficinas Corporativas W├ñrtsil├ñ <span class="otro-loc">BA</span></div>
+-            <div class="otro-item">Oficinas Corporativas Duro Felguera <span class="otro-loc">CABA</span></div>
+-            <div class="otro-item">Oficinas ACTC <span class="otro-loc">BA</span></div>
++            <div class="otro-item">Planta Potabilizadora Ing. Maschwitz <span class="otro-loc">BA</span></div>
++            <div class="otro-item">Centro Log├¡stica JBS Pilarica <span class="otro-loc">BA</span></div>
++            <div class="otro-item">Hospital Garrahan <span class="otro-loc">CABA</span></div>
+             <div class="otro-item">Oficinas Corporativas Grupo Timbo <span class="otro-loc">BA</span></div>
++            <div class="otro-item">Oficinas Corporativas W├ñrtsil├ñ <span class="otro-loc">CABA</span></div>
++            <div class="otro-item">Oficinas Corporativas Duro Felguera <span class="otro-loc">CABA</span></div>
+             <div class="otro-item">Oficinas Corporativas AYSA <span class="otro-loc">Escobar</span></div>
+             <div class="otro-item">Oficinas Distecna SA <span class="otro-loc">Paraguay</span></div>
+-            <div class="otro-item">Oficinas Proyecto CCR YPF <span class="otro-loc">BA</span></div>
+-            <div class="otro-item">Oficinas Emergencias M├®dicas <span class="otro-loc">BA</span></div>
++            <div class="otro-item">Oficinas Emergencias M├®dicas <span class="otro-loc">CABA</span></div>
++            <div class="otro-item">Oficinas Corporativas Greenpeace Argentina <span class="otro-loc">CABA</span></div>
++            <div class="otro-item">Oficinas Corporativas Greenpeace Chile <span class="otro-loc">CABA</span></div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- BISAGRA 2: Otros proyectos ÔåÆ Clientes (transici├│n interna) -->
+-
+     <!-- CLIENTES (sub-bloque dentro de Evidencia) -->
+     <!-- /clientes-block -->
+     <div style="margin-top:2.5rem; text-align:center;">
+@@ -4097,23 +4061,35 @@
+     <div class="prod-propios-wrap">
+       <div class="prod-propios">
+         <div class="prod-propio">
+-          <div class="prod-propio-badge">Fabricaci├│n propia</div>
++          <div class="prod-propio-badge">Desarrollo propio</div>
+           <div class="prod-propio-name">TIM</div>
++          <div class="prod-propio-tagline">Conectividad de campo operativa en una hora. Sin obra civil, sin
++            excavaciones, sin esperar a que la infraestructura llegue.</div>
+           <div class="prod-propio-full">Torre Inteligente M├│vil</div>
+-          <div class="prod-propio-desc">Desplegable en el d├¡a sin obra civil ni excavaciones. Provee Internet de alta
+-            disponibilidad, WiFi en campo, Video IP y radiocomunicaciones desde el primer momento de operaci├│n. Dise├▒ada
+-            para zonas remotas donde la infraestructura no llega antes que la operaci├│n.</div>
+-          <div class="prod-propio-used">ÔåÆ Aplicada en <a href="#caso-01">01 ┬À El Quemado</a> ┬À <a href="#caso-08">08 ┬À
+-              Los Teros</a></div>
++          <div class="prod-propio-desc">Una torre de comunicaciones transportable de hasta 36 metros de altura,
++            desplegable en horas y operativa en menos de una hora. Concebida para entornos donde la infraestructura no
++            existe, no llega a tiempo, o instalarla permanentemente no es viable.<br /><br />Configuraciones
++            disponibles: Internet ┬À Starlink ┬À WiFi ┬À Videovigilancia IP ┬À Puesto de Control de Accesos M├│vil ┬À
++            Radiocomunicaciones ┬À Telemetr├¡a ┬À IIoT.<br />Cobertura de hasta 20/30 km de radio (*) seg├║n servicios
++            configurados. Autonom├¡a energ├®tica completa ÔÇö sin dependencia de red el├®ctrica
++            (solar/e├│lica).<br /><br />Una torre fija requiere obra civil, excavaciones, permisos y semanas de trabajo.
++            La TIM requiere un veh├¡culo y una hora.</div>
++          <div class="prod-propio-used">ÔåÆ Aplicada en <a href="#caso-01">01 ┬À El Quemado</a> ┬À <a href="#caso-09">09 ┬À
++              Los Teros I</a>, en Los Teros II y Parque E├│lico Gral. Levalle.</div>
+         </div>
+         <div class="prod-propio">
+-          <div class="prod-propio-badge">Fabricaci├│n propia</div>
++          <div class="prod-propio-badge">Desarrollo propio</div>
+           <div class="prod-propio-name">SAR-H</div>
++          <div class="prod-propio-tagline">Control remoto de v├ílvulas industriales de ┬╝ de giro desde cualquier lugar ÔÇö
++            con respaldo manual y certificaci├│n ATEX opcional.</div>
+           <div class="prod-propio-full">Sistema de Accionamiento Remoto Hidr├íulico</div>
+-          <div class="prod-propio-desc">Control autom├ítico y monitoreo remoto para v├ílvulas de ┬╝ de giro en pozos
+-            petroleros. Modos temporizado y manual, apertura y cierre diferenciados para neutralizar golpe de ariete,
+-            telemetr├¡a 2G/3G/4G y energ├¡a solar aut├│noma ÔÇö sin dependencia de red el├®ctrica.</div>
+-          <div class="prod-propio-used">ÔåÆ Aplicado en <a href="#caso-05">05 ┬À V├ílvula</a></div>
++          <div class="prod-propio-desc">Sistema avanzado de control remoto para v├ílvulas de ┬╝ de giro en entornos de Oil
++            &amp; Gas. Operaci├│n desde plataforma web dedicada en modo autom├ítico, semiautom├ítico o manual, con respaldo
++            de operaci├│n manual local mediante llave dedicada.<br /><br />Incluye: apertura y cierre diferenciados para
++            neutralizar golpe de ariete, telemetr├¡a 2G/3G/4G, monitoreo en tiempo real, notificaciones autom├íticas por
++            email a usuarios autorizados y energ├¡a solar aut├│noma sin dependencia de red el├®ctrica. Certificaci├│n ATEX
++            opcional para ├íreas con riesgo de explosi├│n.</div>
++          <div class="prod-propio-used">ÔåÆ Aplicado en <a href="#caso-08">08 ┬À SAR-H ┬À Neuqu├®n</a></div>
+         </div>
+       </div>
+     </div>
+@@ -4266,8 +4242,8 @@
+       </div>
+       <div>
+         <div class="footer-col-lbl">Misi├│n</div>
+-        <p class="footer-col-text">Brindar soluciones en todas las plataformas de tecnolog├¡as de la informaci├│n y
+-          comunicaciones, para cubrir las necesidades de nuestros clientes en cualquier ambiente y zona geogr├ífica.</p>
++        <p class="footer-col-text">Dise├▒ar, ejecutar y operar proyectos IT/OT en los entornos industriales, corporativos
++          y de gobierno m├ís exigentes de Argentina y la regi├│n.</p>
+       </div>
+       <div>
+         <div class="footer-col-lbl">Visi├│n</div>
+@@ -4288,13 +4264,6 @@
+       <div class="footer-attrib">Logos by <a href="https://hunter.io" rel="noopener" target="_blank">Hunter.io</a></div>
+     </div>
+   </footer>
+-
+-  <!-- Bot├│n provisional para volver al dise├▒o de React -->
+-  <a href="/"
+-    style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #0066ff; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-family: sans-serif; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s;"
+-    onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
+-    Ver Sitio B
+-  </a>
+ </body>
+ 
+ </html>
+\ No newline at end of file

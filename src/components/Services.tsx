@@ -8,13 +8,7 @@ const Services = () => {
 <section className="servicios" id="servicios">
 <div className="eyebrow reveal">Lo que hacemos</div>
 <h2 className="sec-title reveal reveal-delay-1">El integrador que une los dos mundos</h2>
-<p className="sec-sub reveal reveal-delay-2">No somos un reseller. Somos un equipo de ingeniería propio que diseña, ejecuta y sostiene proyectos donde el mundo IT y OT se encuentran.</p>
-<div className="srv-intro reveal reveal-delay-3">
-<div className="srv-intro-content">
-<h3 className="srv-intro-title">No somos un reseller. Somos el equipo que entiende el problema, diseña la solución y la ejecuta en campo.</h3>
-<p className="srv-intro-desc">Servicios integrales IT &amp; OT, diseñados para condiciones reales. Cada servicio puede contratarse de forma independiente o como parte de un proyecto integral. Modelos CAPEX para implementación y OPEX para operación gestionada.</p>
-</div>
-</div>
+<p className="sec-sub reveal reveal-delay-2">No somos un reseller. Somos el equipo que entiende el problema, diseña la solución y la ejecuta en campo. Cada servicio puede contratarse de forma independiente o como parte de un proyecto integral. Modelos CAPEX para implementación y OPEX para operación gestionada.</p>
 {/* ★ IT & OT BRIDGE BAND */}
 <div className="itot-band reveal">
 <div className="itot-bg-parallax"></div>
@@ -195,15 +189,13 @@ const Services = () => {
 </div>
 </div>
 </div>
-{/* CTA Card */}
-<div className="srv srv-cta-card">
-<div className="srv-num" style={{ color: "var(--amber)" }}>// CTA</div>
-<div className="srv-title">¿Su proyecto tiene requerimientos específicos?</div>
-<div className="srv-desc" style={{ marginBottom: "1.5rem" }}>Cada proyecto es único. El equipo de ingeniería evalúa los requerimientos y diseña la solución.</div>
-<a className="btn-blue" href="#contacto" style={{ alignSelf: "flex-start" }}>Consultar con ingeniería</a>
 </div>
-</div>
-<div className="por-bridge reveal"><p className="por-bridge-text">La misma ingeniería, adaptada al entorno donde opera. IT-ONE conoce las tres: industria, corporaciones y gobierno.</p></div><div className="verticales verticales-sub"><div id="verticales" style={{ position: "absolute", top: "-80px" }}></div><div className="eyebrow reveal">Sectores</div><h2 className="sec-title reveal reveal-delay-1">Verticales</h2><p className="sec-sub reveal reveal-delay-2">Industrial, Corporativo y Gobierno. Cada contexto define sus propias exigencias operativas; IT-ONE tiene interlocución e ingeniería propias para cada uno.</p><div className="vert-wrap">
+</section>
+<section className="verticales" id="verticales">
+  <div className="eyebrow reveal">Sectores</div>
+  <h2 className="sec-title reveal reveal-delay-1">Verticales</h2>
+  <p className="sec-sub reveal reveal-delay-2">Industrial, Corporativo y Gobierno. Cada contexto define sus propias exigencias operativas; IT-ONE tiene interlocución e ingeniería propias para cada uno.</p>
+  <div className="vert-wrap">
 {/* INDUSTRIAL */}
 <div className="vert-col reveal">
 <div className="vert-head">
@@ -485,7 +477,7 @@ const Services = () => {
 </div>
 </div>
 </div>
-</div></div></section>
+</div></section>
     </>
   );
 };

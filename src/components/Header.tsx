@@ -25,6 +25,7 @@ const Header = () => {
 
       <ul className={`nav-links${menuOpen ? ' active' : ''}`}>
         <li><a href="#servicios" onClick={() => setMenuOpen(false)}>Lo que hacemos</a></li>
+        <li><a href="#verticales" onClick={() => setMenuOpen(false)}>Verticales</a></li>
         <li><a href="#empresa" onClick={() => setMenuOpen(false)}>Por qué IT-ONE</a></li>
         <li><a href="#casos" onClick={() => setMenuOpen(false)}>Casos</a></li>
         <li><a href="#productos" onClick={() => setMenuOpen(false)}>Productos</a></li>

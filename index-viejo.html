@@ -2489,6 +2489,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#servicios">Lo que hacemos</a></li>
+      <li><a href="#verticales">Verticales</a></li>
       <li><a href="#empresa">Por qué IT-ONE</a></li>
       <li><a href="#casos">Casos</a></li>
       <li><a href="#productos">Productos</a></li>
@@ -2503,8 +2504,7 @@
         <span class="thin">Un solo equipo.</span>
         De la <span class="accent">ingeniería</span> al activo en operación.
       </h1>
-      <p class="hero-sub">Industria, energía, corporativos y gobierno. Diseñamos la ingeniería, ejecutamos en campo y
-        operamos lo entregado — bajo un mismo responsable técnico, de principio a fin.</p>
+      <p class="hero-sub">Industria, energía, corporativo y gobierno. Donde IT y OT se conectan, estamos nosotros.</p>
       <div class="hero-acts">
         <a class="btn-blue" href="#contacto">Conversemos sobre su proyecto →</a>
         <a class="btn-outline" href="#casos">Ver casos ejecutados</a>
@@ -2583,17 +2583,9 @@
   <section class="servicios" id="servicios">
     <div class="eyebrow">Lo que hacemos</div>
     <h2 class="sec-title">El integrador que une los dos mundos</h2>
-    <p class="sec-sub">No somos un reseller. Somos un equipo de ingeniería propio que diseña, ejecuta y sostiene
-      proyectos donde el mundo IT y OT se encuentran.</p>
-    <div class="srv-intro">
-      <div class="srv-intro-content">
-        <h3 class="srv-intro-title">No somos un reseller. Somos el equipo que entiende el problema, diseña la solución y
-          la ejecuta en campo.</h3>
-        <p class="srv-intro-desc">Servicios integrales IT &amp; OT, diseñados para condiciones reales. Cada servicio
-          puede contratarse de forma independiente o como parte de un proyecto integral. Modelos CAPEX para
-          implementación y OPEX para operación gestionada.</p>
-      </div>
-    </div>
+    <p class="sec-sub">No somos un reseller. Somos el equipo que entiende el problema, diseña la solución y la ejecuta
+      en campo. Cada servicio puede contratarse de forma independiente o como parte de un proyecto integral. Modelos
+      CAPEX para implementación y OPEX para operación gestionada.</p>
     <!-- ★ IT & OT BRIDGE BAND -->
     <div class="itot-band">
       <div class="itot-eyebrow">★ Categoría integrada</div>
@@ -2814,324 +2806,310 @@
         </div>
       </div>
       <!-- CTA Card -->
-      <div class="srv srv-cta-card">
-        <div class="srv-num" style="color: var(--amber);">// CTA</div>
-        <div class="srv-title">¿Su proyecto tiene requerimientos específicos?</div>
-        <div class="srv-desc" style="margin-bottom: 1.5rem;">Cada proyecto es único. El equipo de ingeniería evalúa los
-          requerimientos y diseña la solución.</div>
-        <a class="btn-blue" href="#contacto" style="align-self: flex-start;">Consultar con ingeniería</a>
-      </div>
     </div>
-    <div class="por-bridge">
-      <p class="por-bridge-text">La misma ingeniería, adaptada al entorno donde opera. IT-ONE conoce las tres:
-        industria, corporaciones y gobierno.</p>
-    </div>
-    <div class="verticales verticales-sub">
-      <div id="verticales" style="position:absolute;top:-80px;"></div>
-      <div class="eyebrow">Sectores</div>
-      <h2 class="sec-title">Verticales</h2>
-      <p class="sec-sub">Industrial, Corporativo y Gobierno. Cada contexto define sus propias exigencias operativas;
-        IT-ONE tiene interlocución e ingeniería propias para cada uno.</p>
-      <div class="vert-wrap">
-        <!-- INDUSTRIAL -->
-        <div class="vert-col">
-          <div class="vert-head">
-            <svg viewbox="0 0 24 24">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-            </svg>
-            Industrial
+  </section>
+  <section class="verticales" id="verticales">
+    <div class="eyebrow">Sectores</div>
+    <h2 class="sec-title">Verticales</h2>
+    <p class="sec-sub">Industrial, Corporativo y Gobierno. Cada contexto define sus propias exigencias operativas;
+      IT-ONE tiene interlocución e ingeniería propias para cada uno.</p>
+    <div class="vert-wrap">
+      <!-- INDUSTRIAL -->
+      <div class="vert-col">
+        <div class="vert-head">
+          <svg viewbox="0 0 24 24">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+          Industrial
+        </div>
+        <div class="vert-row vert-accordion" onclick="toggleEnergia(this)">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Energía <span class="acc-arrow">▸</span></div>
+              <div class="vert-desc">Generación térmica, eólica y solar.</div>
+            </div>
           </div>
-          <div class="vert-row vert-accordion" onclick="toggleEnergia(this)">
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Última Milla</span>
+              <span class="chip chip-d2">Redes</span>
+              <span class="chip chip-d2">Seguridad</span>
+              <span class="chip chip-d2">Gestionados</span>
+            </div>
+          </div>
+        </div>
+        <div class="acc-panel" id="energia-panel">
+          <div class="vert-row vert-child">
             <div class="vert-row-top">
               <div class="vert-dot"></div>
               <div>
-                <div class="vert-name">Energía <span class="acc-arrow">▸</span></div>
-                <div class="vert-desc">Generación térmica, eólica y solar.</div>
-              </div>
-            </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Última Milla</span>
-                <span class="chip chip-d2">Redes</span>
-                <span class="chip chip-d2">Seguridad</span>
-                <span class="chip chip-d2">Gestionados</span>
+                <div class="vert-child-name">Centrales Termoeléctricas</div>
+                <div class="vert-child-desc">La tecnología que mantiene la generación en línea, sin importar las
+                  condiciones del entorno.</div>
               </div>
             </div>
           </div>
-          <div class="acc-panel" id="energia-panel">
-            <div class="vert-row vert-child">
-              <div class="vert-row-top">
-                <div class="vert-dot"></div>
-                <div>
-                  <div class="vert-child-name">Centrales Termoeléctricas</div>
-                  <div class="vert-child-desc">La tecnología que mantiene la generación en línea, sin importar las
-                    condiciones del entorno.</div>
-                </div>
-              </div>
-            </div>
-            <div class="vert-row vert-child">
-              <div class="vert-row-top">
-                <div class="vert-dot"></div>
-                <div>
-                  <div class="vert-child-name">Parques Eólicos</div>
-                  <div class="vert-child-desc">Conectividad y control en locaciones remotas donde el viento llega antes
-                    que la fibra.</div>
-                </div>
-              </div>
-              <div class="vert-tags">
-                <div class="chip-row">
-                  <span class="chip-lbl">Caso</span>
-                  <a class="chip chip-d1" href="#casos">02 · PECASA</a>
-                </div>
-              </div>
-            </div>
-            <div class="vert-row vert-child">
-              <div class="vert-row-top">
-                <div class="vert-dot"></div>
-                <div>
-                  <div class="vert-child-name">Parques Solares</div>
-                  <div class="vert-child-desc">Infraestructura IT y OT para parques que operan solos, lejos de todo.
-                  </div>
-                </div>
-              </div>
-              <div class="vert-tags">
-                <div class="chip-row">
-                  <span class="chip-lbl">Casos</span>
-                  <a class="chip chip-d1" href="#casos">03 · Zonda</a>
-                  <a class="chip chip-d1" href="#casos">01 · El Quemado</a>
-                  <span class="chip chip-rigi">RIGI ★</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="vert-row">
+          <div class="vert-row vert-child">
             <div class="vert-row-top">
               <div class="vert-dot"></div>
               <div>
-                <div class="vert-name">Oil &amp; Gas</div>
-                <div class="vert-desc">Desde el pozo hasta la refinería. Redes, automatización y seguridad donde la
-                  operación no puede parar.</div>
+                <div class="vert-child-name">Parques Eólicos</div>
+                <div class="vert-child-desc">Conectividad y control en locaciones remotas donde el viento llega antes
+                  que la fibra.</div>
               </div>
             </div>
             <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Automatización</span>
-                <span class="chip chip-d2">IT/OT Bridge</span>
-                <span class="chip chip-d2">Última Milla</span>
-              </div>
               <div class="chip-row">
                 <span class="chip-lbl">Caso</span>
-                <a class="chip chip-d1" href="#casos">05 · Válvula</a>
+                <a class="chip chip-d1" href="#casos">02 · PECASA</a>
               </div>
             </div>
           </div>
-          <div class="vert-row">
+          <div class="vert-row vert-child">
             <div class="vert-row-top">
               <div class="vert-dot"></div>
               <div>
-                <div class="vert-name">Minería</div>
-                <div class="vert-desc">En superficie o bajo tierra, llevamos tecnología a donde otros no llegan.</div>
+                <div class="vert-child-name">Parques Solares</div>
+                <div class="vert-child-desc">Infraestructura IT y OT para parques que operan solos, lejos de todo.</div>
               </div>
             </div>
             <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Automatización</span>
-                <span class="chip chip-d2">Seguridad</span>
-              </div>
-              <div class="chip-row">
-                <span class="chip-lbl">Caso</span>
-                <a class="chip chip-d1" href="#casos">06 · Molino</a>
-              </div>
-            </div>
-          </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Plantas de Producción</div>
-                <div class="vert-desc">Conectamos el piso de planta con la sala de dirección. En tiempo real.</div>
-              </div>
-            </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Automatización</span>
-                <span class="chip chip-d2">IT/OT Bridge</span>
-                <span class="chip chip-d2">Seguridad</span>
-              </div>
               <div class="chip-row">
                 <span class="chip-lbl">Casos</span>
-                <a class="chip chip-d1" href="#casos">04 · Fresadora</a>
-                <a class="chip chip-d1" href="#casos">07 · Laminadora</a>
+                <a class="chip chip-d1" href="#casos">03 · Zonda</a>
+                <a class="chip chip-d1" href="#casos">01 · El Quemado</a>
+                <span class="chip chip-rigi">RIGI ★</span>
               </div>
             </div>
           </div>
         </div>
-        <!-- CORPORATIVO -->
-        <div class="vert-col">
-          <div class="vert-head">
-            <svg viewbox="0 0 24 24">
-              <rect height="14" rx="2" width="20" x="2" y="3"></rect>
-              <line x1="8" x2="16" y1="21" y2="21"></line>
-              <line x1="12" x2="12" y1="17" y2="21"></line>
-            </svg>
-            Corporativo
-          </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Empresas Multisite</div>
-                <div class="vert-desc">Una sola tecnología, muchas locaciones. Estandarización y soporte unificado.
-                </div>
-              </div>
-            </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Redes</span>
-                <span class="chip chip-d2">Gestionados</span>
-                <span class="chip chip-d2">Infraestructura</span>
-              </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Oil &amp; Gas</div>
+              <div class="vert-desc">Desde el pozo hasta la refinería. Redes, automatización y seguridad donde la
+                operación no puede parar.</div>
             </div>
           </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Logística &amp; Supply Chain</div>
-                <div class="vert-desc">Trazabilidad, conectividad y automatización para operaciones que no admiten
-                  demoras.</div>
-              </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Automatización</span>
+              <span class="chip chip-d2">IT/OT Bridge</span>
+              <span class="chip chip-d2">Última Milla</span>
             </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Automatización</span>
-                <span class="chip chip-d2">Seguridad</span>
-                <span class="chip chip-d2">Redes</span>
-              </div>
-            </div>
-          </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Banca &amp; Servicios Financieros</div>
-                <div class="vert-desc">Infraestructura crítica para entornos donde cada segundo y cada dato importan.
-                </div>
-              </div>
-            </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Seguridad</span>
-                <span class="chip chip-d2">Infraestructura</span>
-                <span class="chip chip-d2">Gestionados</span>
-              </div>
-            </div>
-          </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Salud</div>
-                <div class="vert-desc">Tecnología confiable para organizaciones donde una falla puede tener
-                  consecuencias reales.</div>
-              </div>
-            </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Redes</span>
-                <span class="chip chip-d2">Infraestructura</span>
-                <span class="chip chip-d2">Seguridad</span>
-              </div>
-            </div>
-          </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Real Estate Corporativo</div>
-                <div class="vert-desc">Edificios inteligentes, seguros y conectados. Tecnología invisible que se nota
-                  cuando falta.</div>
-              </div>
-            </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Infraestructura</span>
-                <span class="chip chip-d2">Seguridad</span>
-                <span class="chip chip-d2">Automatización</span>
-              </div>
+            <div class="chip-row">
+              <span class="chip-lbl">Caso</span>
+              <a class="chip chip-d1" href="#casos">05 · Válvula</a>
             </div>
           </div>
         </div>
-        <!-- GOBIERNO -->
-        <div class="vert-col">
-          <div class="vert-head">
-            <svg viewbox="0 0 24 24">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-            Gobierno
-          </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Seguridad &amp; Fuerzas</div>
-                <div class="vert-desc">Infraestructura tecnológica robusta para organizaciones que operan en alta
-                  exigencia.</div>
-              </div>
-            </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Seguridad</span>
-                <span class="chip chip-d2">Última Milla</span>
-                <span class="chip chip-d2">Redes</span>
-              </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Minería</div>
+              <div class="vert-desc">En superficie o bajo tierra, llevamos tecnología a donde otros no llegan.</div>
             </div>
           </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Salud Pública</div>
-                <div class="vert-desc">Conectividad y sistemas para hospitales, centros de salud y redes sanitarias
-                  distribuidas.</div>
-              </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Automatización</span>
+              <span class="chip chip-d2">Seguridad</span>
             </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Redes</span>
-                <span class="chip chip-d2">Infraestructura</span>
-                <span class="chip chip-d2">Gestionados</span>
+            <div class="chip-row">
+              <span class="chip-lbl">Caso</span>
+              <a class="chip chip-d1" href="#casos">06 · Molino</a>
+            </div>
+          </div>
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Plantas de Producción</div>
+              <div class="vert-desc">Conectamos el piso de planta con la sala de dirección. En tiempo real.</div>
+            </div>
+          </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Automatización</span>
+              <span class="chip chip-d2">IT/OT Bridge</span>
+              <span class="chip chip-d2">Seguridad</span>
+            </div>
+            <div class="chip-row">
+              <span class="chip-lbl">Casos</span>
+              <a class="chip chip-d1" href="#casos">04 · Fresadora</a>
+              <a class="chip chip-d1" href="#casos">07 · Laminadora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CORPORATIVO -->
+      <div class="vert-col">
+        <div class="vert-head">
+          <svg viewbox="0 0 24 24">
+            <rect height="14" rx="2" width="20" x="2" y="3"></rect>
+            <line x1="8" x2="16" y1="21" y2="21"></line>
+            <line x1="12" x2="12" y1="17" y2="21"></line>
+          </svg>
+          Corporativo
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Empresas Multisite</div>
+              <div class="vert-desc">Una sola tecnología, muchas locaciones. Estandarización y soporte unificado.</div>
+            </div>
+          </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Redes</span>
+              <span class="chip chip-d2">Gestionados</span>
+              <span class="chip chip-d2">Infraestructura</span>
+            </div>
+          </div>
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Logística &amp; Supply Chain</div>
+              <div class="vert-desc">Trazabilidad, conectividad y automatización para operaciones que no admiten
+                demoras.</div>
+            </div>
+          </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Automatización</span>
+              <span class="chip chip-d2">Seguridad</span>
+              <span class="chip chip-d2">Redes</span>
+            </div>
+          </div>
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Banca &amp; Servicios Financieros</div>
+              <div class="vert-desc">Infraestructura crítica para entornos donde cada segundo y cada dato importan.
               </div>
             </div>
           </div>
-          <div class="vert-row">
-            <div class="vert-row-top">
-              <div class="vert-dot"></div>
-              <div>
-                <div class="vert-name">Smart Cities</div>
-                <div class="vert-desc">Tecnología que hace más eficiente lo público. Sensores, redes y datos al servicio
-                  del ciudadano.</div>
-              </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Seguridad</span>
+              <span class="chip chip-d2">Infraestructura</span>
+              <span class="chip chip-d2">Gestionados</span>
             </div>
-            <div class="vert-tags">
-              <div class="chip-row">
-                <span class="chip-lbl">Servicios</span>
-                <span class="chip chip-d2">Automatización</span>
-                <span class="chip chip-d2">Redes</span>
-                <span class="chip chip-d2">Seguridad</span>
-              </div>
+          </div>
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Salud</div>
+              <div class="vert-desc">Tecnología confiable para organizaciones donde una falla puede tener consecuencias
+                reales.</div>
+            </div>
+          </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Redes</span>
+              <span class="chip chip-d2">Infraestructura</span>
+              <span class="chip chip-d2">Seguridad</span>
+            </div>
+          </div>
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Real Estate Corporativo</div>
+              <div class="vert-desc">Edificios inteligentes, seguros y conectados. Tecnología invisible que se nota
+                cuando falta.</div>
+            </div>
+          </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Infraestructura</span>
+              <span class="chip chip-d2">Seguridad</span>
+              <span class="chip chip-d2">Automatización</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- GOBIERNO -->
+      <div class="vert-col">
+        <div class="vert-head">
+          <svg viewbox="0 0 24 24">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Gobierno
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Seguridad &amp; Fuerzas</div>
+              <div class="vert-desc">Infraestructura tecnológica robusta para organizaciones que operan en alta
+                exigencia.</div>
+            </div>
+          </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Seguridad</span>
+              <span class="chip chip-d2">Última Milla</span>
+              <span class="chip chip-d2">Redes</span>
+            </div>
+          </div>
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Salud Pública</div>
+              <div class="vert-desc">Conectividad y sistemas para hospitales, centros de salud y redes sanitarias
+                distribuidas.</div>
+            </div>
+          </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Redes</span>
+              <span class="chip chip-d2">Infraestructura</span>
+              <span class="chip chip-d2">Gestionados</span>
+            </div>
+          </div>
+        </div>
+        <div class="vert-row">
+          <div class="vert-row-top">
+            <div class="vert-dot"></div>
+            <div>
+              <div class="vert-name">Smart Cities</div>
+              <div class="vert-desc">Tecnología que hace más eficiente lo público. Sensores, redes y datos al servicio
+                del ciudadano.</div>
+            </div>
+          </div>
+          <div class="vert-tags">
+            <div class="chip-row">
+              <span class="chip-lbl">Servicios</span>
+              <span class="chip chip-d2">Automatización</span>
+              <span class="chip chip-d2">Redes</span>
+              <span class="chip chip-d2">Seguridad</span>
             </div>
           </div>
         </div>
@@ -3223,93 +3201,108 @@
       <p class="sec-sub" style="margin-bottom:2rem;">Industriales, Corporativas y Gobierno — con una constante:
         exigencia operativa real.</p>
       <div class="clientes-wrap">
-        <!-- Industriales & Energía -->
-        <div>
-          <div class="clientes-grupo-title">Industriales &amp; Energía</div>
-          <div class="clientes-logos">
-            <div class="cli"><img alt="Techint" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Techint&lt;/span&gt;'"
-                src="https://logos.hunter.io/techint.com" /></div>
-            <div class="cli"><img alt="Siemens" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Siemens&lt;/span&gt;'"
-                src="https://logos.hunter.io/siemens.com" /></div>
-            <div class="cli"><img alt="General Electric" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;General Electric&lt;/span&gt;'"
-                src="https://logos.hunter.io/ge.com" /></div>
-            <div class="cli"><img alt="Central Puerto" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Central Puerto&lt;/span&gt;'"
-                src="https://logos.hunter.io/centralpuerto.com" /></div>
-            <div class="cli"><span class="cli-txt">AESA</span></div>
-            <div class="cli"><span class="cli-txt">DVS Energy</span></div>
-            <div class="cli"><span class="cli-txt">Aspro Energy</span></div>
-            <div class="cli"><span class="cli-txt">Central Dock Sud</span></div>
-            <div class="cli"><span class="cli-txt">Refinor</span></div>
-            <div class="cli"><img alt="YPF Luz" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;YPF Luz&lt;/span&gt;'"
-                src="https://logos.hunter.io/ypfluz.com" /></div>
-            <div class="cli"><span class="cli-txt">MSU Energy</span></div>
-            <div class="cli"><span class="cli-txt">ALUAR</span></div>
-            <div class="cli"><img alt="Wärtsilä" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Wärtsilä&lt;/span&gt;'"
-                src="https://logos.hunter.io/wartsila.com" /></div>
-            <div class="cli"><img alt="Veolia" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Veolia&lt;/span&gt;'"
-                src="https://logos.hunter.io/veolia.com" /></div>
-          </div>
+        <div class="clientes-grupo-title">Energía</div>
+        <div class="clientes-logos">
+          <div class="cli"><img alt="General Electric" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;General Electric&lt;/span&gt;'"
+              src="https://logos.hunter.io/ge.com" /></div>
+          <div class="cli"><span class="cli-txt">YPF Luz</span></div>
+          <div class="cli"><img alt="Siemens" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Siemens&lt;/span&gt;'"
+              src="https://logos.hunter.io/siemens.com" /></div>
+          <div class="cli"><img alt="ABB" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;ABB&lt;/span&gt;'"
+              src="https://logos.hunter.io/abb.com" /></div>
+          <div class="cli"><span class="cli-txt">Aspro Energy</span></div>
+          <div class="cli"><span class="cli-txt">Refinor</span></div>
+          <div class="cli"><span class="cli-txt">FieldCore</span></div>
+          <div class="cli"><img alt="Techint" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Techint&lt;/span&gt;'"
+              src="https://logos.hunter.io/techint.com" /></div>
+          <div class="cli"><img alt="Wärtsilä" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Wärtsilä&lt;/span&gt;'"
+              src="https://logos.hunter.io/wartsila.com" /></div>
+          <div class="cli"><span class="cli-txt">Central Puerto</span></div>
+          <div class="cli"><span class="cli-txt">Central Dock Sud</span></div>
+          <div class="cli"><span class="cli-txt">AESA</span></div>
+          <div class="cli"><span class="cli-txt">DVS Energy</span></div>
+          <div class="cli"><span class="cli-txt">MSU Energy</span></div>
         </div>
-        <!-- Corporativos & Gobierno -->
-        <div>
-          <div class="clientes-grupo-title">Corporativos &amp; Gobierno</div>
-          <div class="clientes-logos">
-            <div class="cli"><img alt="Toyota" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Toyota&lt;/span&gt;'"
-                src="https://logos.hunter.io/toyota.com" /></div>
-            <div class="cli"><img alt="ESPN" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;ESPN&lt;/span&gt;'"
-                src="https://logos.hunter.io/espn.com" /></div>
-            <div class="cli"><span class="cli-txt">Autopistas del Oeste</span></div>
-            <div class="cli"><img alt="Swiss Medical" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Swiss Medical&lt;/span&gt;'"
-                src="https://logos.hunter.io/swissmedical.com.ar" /></div>
-            <div class="cli"><span class="cli-txt">ACARA</span></div>
-            <div class="cli"><img alt="Ferrovías" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Ferrovías&lt;/span&gt;'"
-                src="https://logos.hunter.io/ferrovias.com.ar" /></div>
-            <div class="cli"><span class="cli-txt">Autotrol</span></div>
-            <div class="cli"><span class="cli-txt">IOSFA</span></div>
-            <div class="cli"><span class="cli-txt">OSFATLYF</span></div>
-            <div class="cli"><span class="cli-txt">Epidata</span></div>
-            <div class="cli"><img alt="IESS" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;IESS Ecuador&lt;/span&gt;'"
-                src="https://logos.hunter.io/iess.gob.ec" /></div>
-            <div class="cli"><img alt="RITBA" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;RITBA EE.UU.&lt;/span&gt;'"
-                src="https://logos.hunter.io/ritba.com" /></div>
-            <div class="cli"><img alt="AYSA" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;AYSA&lt;/span&gt;'"
-                src="https://logos.hunter.io/aysa.com.ar" /></div>
-            <div class="cli"><img alt="Duro Felguera" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;Duro Felguera&lt;/span&gt;'"
-                src="https://logos.hunter.io/durofelguera.com" /></div>
-            <div class="cli"><span class="cli-txt">ACTC</span></div>
-            <div class="cli"><span class="cli-txt">Grupo Timbo</span></div>
-            <div class="cli"><span class="cli-txt">Distecna SA <span
-                  style="font-size:8px;opacity:0.7;">Paraguay</span></span></div>
-            <div class="cli"><span class="cli-txt">Gob. San Juan</span></div>
-            <div class="cli"><span class="cli-txt">Ferrocarriles Argentinos S.E.</span></div>
-          </div>
+        <div class="clientes-grupo-title">Oil &amp; Gas y Minería</div>
+        <div class="clientes-logos">
+          <div class="cli"><span class="cli-txt">UTE Potasio Río Colorado</span></div>
+          <div class="cli"><span class="cli-txt">McEwen Copper</span></div>
+          <div class="cli"><span class="cli-txt">Xstrata Copper</span></div>
+          <div class="cli"><img alt="VALE" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;VALE&lt;/span&gt;'"
+              src="https://logos.hunter.io/vale.com" /></div>
+          <div class="cli"><span class="cli-txt">ProdEng</span></div>
+          <div class="cli"><span class="cli-txt">Adita – ImbOil</span></div>
+          <div class="cli"><span class="cli-txt">SOCOTHERM AMERICAS</span></div>
         </div>
-        <!-- Minería -->
-        <div>
-          <div class="clientes-grupo-title">Minería</div>
-          <div class="clientes-logos">
-            <div class="cli"><img alt="VALE" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;VALE&lt;/span&gt;'"
-                src="https://logos.hunter.io/vale.com" /></div>
-            <div class="cli"><img alt="McEwen Copper" loading="lazy"
-                onerror="this.parentNode.innerHTML='&lt;span class=\'cli-txt\'&gt;McEwen Copper&lt;/span&gt;'"
-                src="https://logos.hunter.io/mcewencopper.com" /></div>
-          </div>
+        <div class="clientes-grupo-title">Industrial y Corporativo</div>
+        <div class="clientes-logos">
+          <div class="cli"><img alt="ALUAR" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;ALUAR&lt;/span&gt;'"
+              src="https://logos.hunter.io/aluar.com.ar" /></div>
+          <div class="cli"><img alt="ESPN" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;ESPN&lt;/span&gt;'"
+              src="https://logos.hunter.io/espn.com" /></div>
+          <div class="cli"><span class="cli-txt">Autopistas del Oeste</span></div>
+          <div class="cli"><img alt="AYSA" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;AYSA&lt;/span&gt;'"
+              src="https://logos.hunter.io/aysa.com.ar" /></div>
+          <div class="cli"><span class="cli-txt">Tyco Fire &amp; Security</span></div>
+          <div class="cli"><span class="cli-txt">DSM – Ex Laboratorios Roche</span></div>
+          <div class="cli"><span class="cli-txt">Ferrosur Roca</span></div>
+          <div class="cli"><img alt="Ferrovías" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Ferrovías&lt;/span&gt;'"
+              src="https://logos.hunter.io/ferrovias.com.ar" /></div>
+          <div class="cli"><span class="cli-txt">Constructora Norberto Odebrecht SA</span></div>
+          <div class="cli"><img alt="Duro Felguera" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Duro Felguera&lt;/span&gt;'"
+              src="https://logos.hunter.io/durofelguera.com" /></div>
+          <div class="cli"><span class="cli-txt">UTE SABAVISA–Merco Vial–ZONIS</span></div>
+          <div class="cli"><span class="cli-txt">Grupo Timbo</span></div>
+          <div class="cli"><img alt="Open English" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Open English&lt;/span&gt;'"
+              src="https://logos.hunter.io/openenglish.com" /></div>
+          <div class="cli"><img alt="Ottobock Argentina" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Ottobock Argentina&lt;/span&gt;'"
+              src="https://logos.hunter.io/ottobock.com" /></div>
+          <div class="cli"><img alt="Greenpeace Argentina" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Greenpeace Argentina&lt;/span&gt;'"
+              src="https://logos.hunter.io/greenpeace.org" /></div>
+          <div class="cli"><img alt="Greenpeace Chile" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Greenpeace Chile&lt;/span&gt;'"
+              src="https://logos.hunter.io/greenpeace.org" /></div>
+          <div class="cli"><span class="cli-txt">A.C.T.C.</span></div>
+          <div class="cli"><span class="cli-txt">A.C.A.R.A.</span></div>
+          <div class="cli"><span class="cli-txt">Epidata</span></div>
+          <div class="cli"><span class="cli-txt">Distecna SA</span></div>
+          <div class="cli"><span class="cli-txt">Truelogic</span></div>
+          <div class="cli"><span class="cli-txt">Bombas NIR</span></div>
+          <div class="cli"><span class="cli-txt">Ristal</span></div>
+          <div class="cli"><span class="cli-txt">Asistec Hidráulica</span></div>
+          <div class="cli"><span class="cli-txt">Praimex</span></div>
+          <div class="cli"><span class="cli-txt">Idealistas.org</span></div>
+          <div class="cli"><span class="cli-txt">YRC Logistics</span></div>
+        </div>
+        <div class="clientes-grupo-title">Gobierno y Salud</div>
+        <div class="clientes-logos">
+          <div class="cli"><img alt="C.F.I." loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;C.F.I.&lt;/span&gt;'"
+              src="https://logos.hunter.io/cfi.org.ar" /></div>
+          <div class="cli"><span class="cli-txt">Servicio Penitenciario Bonaerense</span></div>
+          <div class="cli"><span class="cli-txt">Gob. San Juan</span></div>
+          <div class="cli"><span class="cli-txt">APN</span></div>
+          <div class="cli"><span class="cli-txt">Ferrocarriles Argentinos S.E.</span></div>
+          <div class="cli"><img alt="Swiss Medical" loading="lazy"
+              onerror="this.parentNode.innerHTML='&lt;span class=&quot;cli-txt&quot;&gt;Swiss Medical&lt;/span&gt;'"
+              src="https://logos.hunter.io/swissmedical.com.ar" /></div>
+          <div class="cli"><span class="cli-txt">Obra social AySA</span></div>
+          <div class="cli"><span class="cli-txt">OSFATLyF</span></div>
+          <div class="cli"><span class="cli-txt">IOSFA</span></div>
         </div>
       </div>
     </div>
@@ -3416,13 +3409,12 @@
       referencias verificables bajo acuerdo de confidencialidad.
     </div>
     <div class="casos-grid">
-      <!-- CASO 03 — El Quemado -->
       <div class="caso" id="caso-01">
         <div class="caso-head">
-          <div class="caso-sector">Energía Solar · Primer RIGI Nacional ★</div>
+          <div class="caso-sector">Energía Solar · RIGI ★</div>
           <div class="caso-num">// 01</div>
         </div>
-        <div class="caso-title">El Quemado — Primer RIGI aprobado y desplegado en Argentina, Mendoza</div>
+        <div class="caso-title">Parque Solar El Quemado — Mendoza</div>
         <div class="caso-desc">Solución llave en mano en entorno hostil de baja infraestructura. IT-ONE desplegó
           internet de alta disponibilidad, WiFi LAN con seguridad administrada y monitoreo, videovigilancia para el
           predio de Aduana, radioenlaces industriales y redes OT en campo, y monitoreo continuo de todos los servicios.
@@ -3461,7 +3453,6 @@
             <span class="chip chip-d4">SAR-H</span>
           </div>
         </div>
-        <div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
         <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
         </div>
         <div class="caso-ctas"><a class="caso-cta-link"
@@ -3475,13 +3466,296 @@
           <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
         </div>
       </div>
-      <!-- CASO 01 — PECASA -->
       <div class="caso" id="caso-02">
         <div class="caso-head">
-          <div class="caso-sector">Energía Eólica · 2024</div>
+          <div class="caso-sector">Energía Solar</div>
           <div class="caso-num">// 02</div>
         </div>
-        <div class="caso-title">PECASA — Internet de Obra en 24hs</div>
+        <div class="caso-title">Parque Solar Zonda — San Juan</div>
+        <div class="caso-desc">En una zona extremadamente remota de San Juan, sin infraestructura de carrier disponible,
+          YPF Luz necesitaba saber si era posible conectar el futuro Parque Solar Zonda — y cómo. IT-ONE pasó 7 días en
+          el sitio, relevó el terreno y entregó un informe con tres alternativas comparadas, estimación de costos y
+          cronograma. Ese informe fue el punto de partida de una relación de largo plazo: los proyectos El Quemado y
+          PECASA son su consecuencia directa.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Factibilidad técnica documentada con tres alternativas comparadas</div>
+          <div class="caso-result">✔ Plazo de implementación establecido: 90 días máximo</div>
+          <div class="caso-result">✔ Antecedente directo para El Quemado y PECASA</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row">
+            <span class="chip-lbl">D1</span>
+            <span class="chip chip-d1">Industrial</span>
+            <span class="chip chip-d1">Energía · Solar</span>
+          </div>
+          <div class="chip-row">
+            <span class="chip-lbl">D2</span>
+            <span class="chip chip-d2">Ingeniería IT/OT</span>
+            <span class="chip chip-d2">Última Milla</span>
+          </div>
+          <div class="chip-row">
+            <span class="chip-lbl">D3</span>
+            <span class="chip chip-d3">Zona Remota</span>
+            <span class="chip chip-d3">Sin Infraestructura Previa</span>
+          </div>
+        </div>
+        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+        <div class="caso-nav-ctas">
+          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+            class="caso-nav-sim" href="#caso-02">02 · PECASA</a> · <a class="caso-nav-sim" href="#caso-01">01 · El
+            Quemado</a>
+          <span class="caso-nav-sep">·</span>
+          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+        </div>
+      </div>
+      <div class="caso" id="caso-03">
+        <div class="caso-head">
+          <div class="caso-sector">Energía · Termoeléctrica</div>
+          <div class="caso-num">// 03</div>
+        </div>
+        <div class="caso-title">Central Termoeléctrica El Bracho – Tucumán</div>
+        <div class="caso-desc">Ingeniería, diseño, construcción, ejecución y operación de la infraestructura tecnológica
+          completa del Complejo Generación Tucumán de YPF Energía Eléctrica, proyecto conjunto YPF–GE de 261 MW e
+          inversión de US$ 170 millones. En etapas de construcción (fases I y II): servicio de última milla de
+          conectividad al sitio. En puesta en marcha: datacenter, red de cableado estructurado, networking, WiFi en
+          oficinas y frentes remotos, videovigilancia IP con guarda y auditoría, control de accesos y backbones de FO
+          con radioenlaces a los sitios del predio.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Infraestructura IT completa operativa para uno de los polos de generación eléctrica
+            más importantes del NOA</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Industrial</span><span
+              class="chip chip-d1">Energía</span><span class="chip chip-d1">Termoeléctrica</span></div>
+          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Infraestructura</span><span
+              class="chip chip-d2">Redes</span><span class="chip chip-d2">Datacenter</span><span
+              class="chip chip-d2">Última Milla</span><span class="chip chip-d2">Seguridad</span><span
+              class="chip chip-d2">Conectividad</span><span class="chip chip-d2">Servicios gestionados</span></div>
+          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Llave en mano</span><span
+              class="chip chip-d3">Gran Escala</span><span class="chip chip-d3">Dos etapas</span></div>
+          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Fibra óptica</span><span
+              class="chip chip-d4">Radioenlaces</span><span class="chip chip-d4">WiFi</span><span
+              class="chip chip-d4">Video IP</span><span class="chip chip-d4">Control de accesos</span></div>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+      </div>
+      <div class="caso" id="caso-04">
+        <div class="caso-head">
+          <div class="caso-sector">Energía · Termoeléctrica</div>
+          <div class="caso-num">// 04</div>
+        </div>
+        <div class="caso-title">Central Termoeléctrica Manantiales Behr – Chubut</div>
+        <div class="caso-desc">Instalación del sistema de videovigilancia.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Sistema de videovigilancia operativo</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Industrial</span><span
+              class="chip chip-d1">Energía</span><span class="chip chip-d1">Termoeléctrica</span></div>
+          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Seguridad</span></div>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+      </div>
+      <div class="caso" id="caso-05">
+        <div class="caso-head">
+          <div class="caso-sector">Energía · Termoeléctrica</div>
+          <div class="caso-num">// 05</div>
+        </div>
+        <div class="caso-title">Tablero Variación Velocidad Sistema de Motores Diesel – Costanera, Bs. As.</div>
+        <div class="caso-desc">La Central Termoeléctrica Costanera necesitaba un sistema de control para sus motores
+          diesel Cummins — dos grupos electrógenos y tres bombas de incendio — con encendido remoto y sincronización de
+          cargas. IT-ONE ejecutó el proyecto llave en mano: ingeniería, instalación mecánica y eléctrica, calibración,
+          sincronización de grupos y documentación completa.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Sistema de incendio con encendido remoto y control de velocidad integrado</div>
+          <div class="caso-result">✔ Sincronización de 5 motores diesel para balance de carga</div>
+          <div class="caso-result">✔ Entrega llave en mano con documentación de ingeniería completa</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span>
+            <span class="chip chip-d1">Industrial</span>
+            <span class="chip chip-d1">Energía · Termoeléctrica</span>
+          </div>
+          <div class="chip-row"><span class="chip-lbl">D2</span>
+            <span class="chip chip-d2">Automatización</span>
+            <span class="chip chip-d2">Ingeniería IT/OT</span>
+          </div>
+          <div class="chip-row"><span class="chip-lbl">D3</span>
+            <span class="chip chip-d3">Llave en Mano</span>
+            <span class="chip chip-d3">Operación Crítica</span>
+          </div>
+          <div class="chip-row"><span class="chip-lbl">D4</span>
+            <span class="chip chip-d4">Cummins</span>
+          </div>
+        </div>
+        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+        <div class="caso-nav-ctas">
+          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+            class="caso-nav-sim" href="#caso-01">01 · El Quemado</a>
+          <span class="caso-nav-sep">·</span>
+          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+        </div>
+      </div>
+      <div class="caso" id="caso-06">
+        <div class="caso-head">
+          <div class="caso-sector">Energía · Oil &amp; Gas</div>
+          <div class="caso-num">// 06</div>
+        </div>
+        <div class="caso-title">Sistema de Video IP para Supervisión de Obra – Complejo Industrial Ensenada, Bs. As.
+        </div>
+        <div class="caso-desc">Ingeniería, diseño, provisión, montaje, ejecución y operación del sistema de video IP
+          para la supervisión de las tareas de construcción en el Complejo Industrial Ensenada – YPF Química, uno de los
+          complejos petroquímicos más importantes de Argentina, productor de 950.000 toneladas anuales de productos
+          petroquímicos. El sistema consiste en un domo PTZ 35x con radioenlace, montados a 70 metros de altura, más el
+          equipamiento completo de monitoreo, almacenamiento y auditoría de imágenes para la dirección de obra.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Sistema de videovigilancia IP operativo para supervisión remota en tiempo real del
+            avance de construcción, con trazabilidad completa de imágenes</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Industrial</span><span
+              class="chip chip-d1">Energía</span><span class="chip chip-d1">Oil &amp; Gas</span></div>
+          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Seguridad</span><span
+              class="chip chip-d2">Conectividad</span><span class="chip chip-d2">Servicios gestionados</span></div>
+          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Altura extrema</span><span
+              class="chip chip-d3">Monitoreo remoto</span><span class="chip chip-d3">Llave en mano</span></div>
+          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Domo PTZ 35x</span><span
+              class="chip chip-d4">Radioenlace</span></div>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+      </div>
+      <div class="caso" id="caso-07">
+        <div class="caso-head">
+          <div class="caso-sector">Energía · Oil &amp; Gas</div>
+          <div class="caso-num">// 07</div>
+        </div>
+        <div class="caso-title">Yacimiento Cerro Dragón – Chubut</div>
+        <div class="caso-desc">Diseño y ejecución del sistema de conectividad y red de datos para el equipo de
+          mantenimiento mecánico durante parada de planta. 40 mecánicos conectados en 2 meses.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Conectividad operativa para 40 personas en plazo crítico de parada de planta</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Industrial</span><span
+              class="chip chip-d1">Oil &amp; Gas</span></div>
+          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Redes</span><span
+              class="chip chip-d2">Conectividad</span></div>
+          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Plazo Crítico</span><span
+              class="chip chip-d3">Parada de Planta</span></div>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+      </div>
+      <div class="caso" id="caso-08">
+        <div class="caso-head">
+          <div class="caso-sector">Energía · Oil &amp; Gas</div>
+          <div class="caso-num">// 08</div>
+        </div>
+        <div class="caso-title">SAR-H: Sistema Actuador Remoto Hidráulico para Válvulas ¼ giro · Neuquén</div>
+        <div class="caso-desc">Una empresa petrolera necesitaba automatizar una válvula de cuarto de giro en un ramal
+          principal, en una locación sin acceso a red eléctrica. IT-ONE desarrolló una solución integral: control del
+          sistema hidráulico del actuador con modos de operación temporizado y manual, apertura y cierre diferenciados
+          para neutralizar el efecto golpe de ariete, telemetría remota vía red móvil y un sistema de energía solar para
+          alimentar de forma autónoma el circuito de control y el actuador hidráulico.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Operación automatizada sin dependencia de red eléctrica</div>
+          <div class="caso-result">✔ Telemetría remota operativa vía red móvil</div>
+          <div class="caso-result">✔ Protección contra golpe de ariete implementada en control</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row">
+            <span class="chip-lbl">D1</span>
+            <span class="chip chip-d1">Industrial</span>
+            <span class="chip chip-d1">Oil &amp; Gas</span>
+          </div>
+          <div class="chip-row">
+            <span class="chip-lbl">D2</span>
+            <span class="chip chip-d2">Automatización</span>
+            <span class="chip chip-d2">IT/OT Bridge</span>
+          </div>
+          <div class="chip-row">
+            <span class="chip-lbl">D3</span>
+            <span class="chip chip-d3">Telemetría</span>
+            <span class="chip chip-d3">Energía Autónoma</span>
+            <span class="chip chip-d3">Zona Remota</span>
+            <span class="chip chip-d3">Confidencial</span>
+          </div>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+        <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
+        <div class="caso-nav-ctas">
+          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar con ingeniería →</a>
+        </div>
+      </div>
+      <div class="caso" id="caso-09">
+        <div class="caso-head">
+          <div class="caso-sector">Energía Eólica · Buenos Aires</div>
+          <div class="caso-num">// 09</div>
+        </div>
+        <div class="caso-title">Parque Eólico Los Teros I – Azul, Bs. As.</div>
+        <div class="caso-desc">El Parque Eólico Los Teros requería un sistema de comunicaciones capaz de adaptarse a la
+          geografía con zonas oscuras en la señal, para cubrir los distintos frentes remotos de trabajo con cumplimiento
+          de H&amp;S. IT-ONE diseñó, construyó y puso en servicio la T.I.M. (Torre Inteligente Móvil) de fabricación
+          propia, proveyendo radiocomunicaciones, Video IP y WiFi en campo desde el primer día.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Cobertura de radiocomunicaciones en zonas oscuras sin infraestructura previa</div>
+          <div class="caso-result">✔ Despliegue en el día sin obra civil ni excavaciones</div>
+          <div class="caso-result">✔ Cumplimiento de requisitos H&amp;S para todos los frentes de trabajo</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span>
+            <span class="chip chip-d1">Industrial</span>
+            <span class="chip chip-d1">Energía · Eólica</span>
+          </div>
+          <div class="chip-row"><span class="chip-lbl">D2</span>
+            <span class="chip chip-d2">Radiocomunicaciones</span>
+            <span class="chip chip-d2">Última Milla</span>
+          </div>
+          <div class="chip-row"><span class="chip-lbl">D3</span>
+            <span class="chip chip-d3">Despliegue Express</span>
+            <span class="chip chip-d3">Sin Infraestructura Previa</span>
+            <span class="chip chip-d3">H&amp;S</span>
+          </div>
+          <div class="chip-row"><span class="chip-lbl">D4</span>
+            <span class="chip chip-d4">TIM</span>
+          </div>
+        </div>
+        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+        <div class="caso-nav-ctas">
+          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
+            class="caso-nav-sim" href="#caso-02">02 · PECASA</a> · <a class="caso-nav-sim" href="#caso-01">01 · El
+            Quemado</a>
+          <span class="caso-nav-sep">·</span>
+          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+        </div>
+      </div>
+      <div class="caso" id="caso-10">
+        <div class="caso-head">
+          <div class="caso-sector">Energía Eólica</div>
+          <div class="caso-num">// 10</div>
+        </div>
+        <div class="caso-title">Parque Eólico Cementos Avellaneda – Olavarría, Bs. As.</div>
         <div class="caso-desc">YPF Luz necesitaba conectividad operativa inmediata en un sitio de obra que no contaba
           con infraestructura. IT-ONE relevó el sitio, diseñó la infraestructura y gestionó el servicio en el transcurso
           del día. Monitoreo continuo y coordinación directa con el responsable de obra durante toda la ejecución.</div>
@@ -3513,7 +3787,6 @@
             <span class="chip chip-d4">Starlink</span>
           </div>
         </div>
-        <div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
         <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
         </div>
         <div class="caso-ctas"><a class="caso-cta-link"
@@ -3527,307 +3800,12 @@
           <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
         </div>
       </div>
-      <!-- CASO 02 — Zonda -->
-      <div class="caso" id="caso-03">
-        <div class="caso-head">
-          <div class="caso-sector">Energía Solar · 2021</div>
-          <div class="caso-num">// 03</div>
-        </div>
-        <div class="caso-title">Parque Solar Zonda — Relevamiento de conectividad en zona remota, San Juan</div>
-        <div class="caso-desc">En una zona extremadamente remota de San Juan, sin infraestructura de carrier disponible,
-          YPF Luz necesitaba saber si era posible conectar el futuro Parque Solar Zonda — y cómo. IT-ONE pasó 7 días en
-          el sitio, relevó el terreno y entregó un informe con tres alternativas comparadas, estimación de costos y
-          cronograma. Ese informe fue el punto de partida de una relación de largo plazo: los proyectos El Quemado y
-          PECASA son su consecuencia directa.</div>
-        <div class="caso-results">
-          <div class="caso-result">✔ Factibilidad técnica documentada con tres alternativas comparadas</div>
-          <div class="caso-result">✔ Plazo de implementación establecido: 90 días máximo</div>
-          <div class="caso-result">✔ Antecedente directo para El Quemado y PECASA</div>
-        </div>
-        <div class="caso-tags-block">
-          <div class="chip-row">
-            <span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Industrial</span>
-            <span class="chip chip-d1">Energía · Solar</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Ingeniería IT/OT</span>
-            <span class="chip chip-d2">Última Milla</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">Zona Remota</span>
-            <span class="chip chip-d3">Sin Infraestructura Previa</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>YPF Luz S.A.</b></div>
-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
-        </div>
-        <div class="caso-ctas"><a class="caso-cta-link"
-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
-            ingeniería →</a></div>
-        <div class="caso-nav-ctas">
-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
-            class="caso-nav-sim" href="#caso-02">02 · PECASA</a> · <a class="caso-nav-sim" href="#caso-01">01 · El
-            Quemado</a>
-          <span class="caso-nav-sep">·</span>
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
-        </div>
-      </div>
-      <!-- CASO 04 — Fresadora -->
-      <div class="caso" id="caso-04">
-        <div class="caso-head">
-          <div class="caso-sector">Automatización · Industria</div>
-          <div class="caso-num">// 04</div>
-        </div>
-        <div class="caso-title">Fresadora · Automatización y telemetría industrial en nube</div>
-        <div class="caso-desc">Una línea de montaje industrial necesitaba automatizar el cabezal de una fresadora con
-          sistema hidráulico de avance y tener visibilidad remota del equipo en tiempo real. IT-ONE diseñó una solución
-          a medida: automatización del proceso mecánico e integración de telemetría vía microprocesador conectado a
-          Microsoft Azure, con visualización y control centralizado del equipo desde cualquier ubicación.</div>
-        <div class="caso-results">
-          <div class="caso-result">✔ Automatización completa del cabezal hidráulico</div>
-          <div class="caso-result">✔ Telemetría en tiempo real integrada a Azure</div>
-          <div class="caso-result">✔ Control y visualización remota desde cualquier punto</div>
-        </div>
-        <div class="caso-tags-block">
-          <div class="chip-row">
-            <span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Industrial</span>
-            <span class="chip chip-d1">Plantas de Producción</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Automatización</span>
-            <span class="chip chip-d2">IT/OT Bridge</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">IIoT</span>
-            <span class="chip chip-d3">Telemetría</span>
-            <span class="chip chip-d3">Convergencia IT/OT</span>
-            <span class="chip chip-d3">Confidencial</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D4</span>
-            <span class="chip chip-d4">Microsoft Azure</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>Confidencial</b></div>
-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
-        </div>
-        <div class="caso-ctas"><a class="caso-cta-link"
-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
-            ingeniería →</a></div>
-        <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
-        <div class="caso-nav-ctas">
-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
-            class="caso-nav-sim" href="#caso-07">07 · Laminadora</a>
-          <span class="caso-nav-sep">·</span>
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
-        </div>
-      </div>
-      <!-- CASO 05 — Válvula -->
-      <div class="caso" id="caso-05">
-        <div class="caso-head">
-          <div class="caso-sector">Automatización · Oil &amp; Gas</div>
-          <div class="caso-num">// 05</div>
-        </div>
-        <div class="caso-title">Válvula de ramal · Actuador automático con energía solar y telemetría</div>
-        <div class="caso-desc">Una empresa petrolera necesitaba automatizar una válvula de cuarto de giro en un ramal
-          principal, en una locación sin acceso a red eléctrica. IT-ONE desarrolló una solución integral: control del
-          sistema hidráulico del actuador con modos de operación temporizado y manual, apertura y cierre diferenciados
-          para neutralizar el efecto golpe de ariete, telemetría remota vía red móvil y un sistema de energía solar para
-          alimentar de forma autónoma el circuito de control y el actuador hidráulico.</div>
-        <div class="caso-results">
-          <div class="caso-result">✔ Operación automatizada sin dependencia de red eléctrica</div>
-          <div class="caso-result">✔ Telemetría remota operativa vía red móvil</div>
-          <div class="caso-result">✔ Protección contra golpe de ariete implementada en control</div>
-        </div>
-        <div class="caso-tags-block">
-          <div class="chip-row">
-            <span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Industrial</span>
-            <span class="chip chip-d1">Oil &amp; Gas</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Automatización</span>
-            <span class="chip chip-d2">IT/OT Bridge</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">Telemetría</span>
-            <span class="chip chip-d3">Energía Autónoma</span>
-            <span class="chip chip-d3">Zona Remota</span>
-            <span class="chip chip-d3">Confidencial</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>Confidencial</b></div>
-        <div class="caso-ctas"><a class="caso-cta-link"
-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
-            ingeniería →</a></div>
-        <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
-        <div class="caso-nav-ctas">
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar con ingeniería →</a>
-        </div>
-      </div>
-      <!-- CASO 06 — Molino -->
-      <div class="caso" id="caso-06">
-        <div class="caso-head">
-          <div class="caso-sector">Automatización · Minería</div>
-          <div class="caso-num">// 06</div>
-        </div>
-        <div class="caso-title">Molino de bolas · Sistema de control neumático y eléctrico</div>
-        <div class="caso-desc">Diseño e implementación del sistema de control completo para un molino de bolas
-          industrial. IT-ONE ejecutó el control neumático y eléctrico del equipo integrando los sistemas de seguridad
-          requeridos para la operación continua y segura del proceso. La solución garantiza la coordinación de los
-          subsistemas de potencia y mando bajo una arquitectura de control unificada.</div>
-        <div class="caso-results">
-          <div class="caso-result">✔ Control neumático y eléctrico bajo arquitectura unificada</div>
-          <div class="caso-result">✔ Sistemas de seguridad incorporados al proceso de control</div>
-          <div class="caso-result">✔ Operación continua y segura en entorno minero</div>
-        </div>
-        <div class="caso-tags-block">
-          <div class="chip-row">
-            <span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Industrial</span>
-            <span class="chip chip-d1">Minería</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Automatización</span>
-            <span class="chip chip-d2">Seguridad</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">Seguridad Industrial</span>
-            <span class="chip chip-d3">Operación Crítica</span>
-            <span class="chip chip-d3">Confidencial</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>Confidencial</b></div>
-        <div class="caso-ctas"><a class="caso-cta-link"
-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
-            ingeniería →</a></div>
-        <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
-        <div class="caso-nav-ctas">
-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
-            class="caso-nav-sim" href="#caso-09">09 · VALE</a>
-          <span class="caso-nav-sep">·</span>
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
-        </div>
-      </div>
-      <!-- CASO 07 — Laminadora -->
-      <div class="caso" id="caso-07">
-        <div class="caso-head">
-          <div class="caso-sector">Automatización · Industria</div>
-          <div class="caso-num">// 07</div>
-        </div>
-        <div class="caso-title">Laminadora · Control de carro de transporte para bobinas de acero</div>
-        <div class="caso-desc">Una planta laminadora necesitaba automatizar el carro de transporte de bobinas de acero,
-          un proceso que exige precisión milimétrica en la alineación en dos ejes para la carga correcta en el mandril.
-          IT-ONE diseñó el sistema de control completo: posicionamiento automatizado con modo manual para operarios,
-          control eléctrico e hidráulico de potencia, y un sistema de seguridad con barreras láser a lo largo de todo el
-          recorrido del carro y barrera física en la zona de carga.</div>
-        <div class="caso-results">
-          <div class="caso-result">✔ Posicionamiento de bobinas con alineación en dos ejes</div>
-          <div class="caso-result">✔ Seguridad perimetral con barreras láser en toda la trayectoria</div>
-          <div class="caso-result">✔ Control integrado eléctrico e hidráulico bajo un único sistema</div>
-        </div>
-        <div class="caso-tags-block">
-          <div class="chip-row">
-            <span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Industrial</span>
-            <span class="chip chip-d1">Plantas de Producción</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Automatización</span>
-            <span class="chip chip-d2">Seguridad</span>
-          </div>
-          <div class="chip-row">
-            <span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">Seguridad Industrial</span>
-            <span class="chip chip-d3">Operación Crítica</span>
-            <span class="chip chip-d3">Confidencial</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>Confidencial</b></div>
-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
-        </div>
-        <div class="caso-ctas"><a class="caso-cta-link"
-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
-            ingeniería →</a></div>
-        <div class="caso-nda">Referencias verificables disponibles bajo NDA.</div>
-        <div class="caso-nav-ctas">
-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
-            class="caso-nav-sim" href="#caso-04">04 · Fresadora</a>
-          <span class="caso-nav-sep">·</span>
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
-        </div>
-      </div>
-      <!-- CASO 08 — Los Teros -->
-      <div class="caso" id="caso-08">
-        <div class="caso-head">
-          <div class="caso-sector">Energía Eólica · Buenos Aires</div>
-          <div class="caso-num">// 08</div>
-        </div>
-        <div class="caso-title">Torre Inteligente Móvil para cobertura de radiocomunicaciones en parque eólico</div>
-        <div class="caso-desc">El Parque Eólico Los Teros requería un sistema de comunicaciones capaz de adaptarse a la
-          geografía con zonas oscuras en la señal, para cubrir los distintos frentes remotos de trabajo con cumplimiento
-          de H&amp;S. IT-ONE diseñó, construyó y puso en servicio la T.I.M. (Torre Inteligente Móvil) de fabricación
-          propia, proveyendo radiocomunicaciones, Video IP y WiFi en campo desde el primer día.</div>
-        <div class="caso-results">
-          <div class="caso-result">✔ Cobertura de radiocomunicaciones en zonas oscuras sin infraestructura previa</div>
-          <div class="caso-result">✔ Despliegue en el día sin obra civil ni excavaciones</div>
-          <div class="caso-result">✔ Cumplimiento de requisitos H&amp;S para todos los frentes de trabajo</div>
-        </div>
-        <div class="caso-tags-block">
-          <div class="chip-row"><span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Industrial</span>
-            <span class="chip chip-d1">Energía · Eólica</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Radiocomunicaciones</span>
-            <span class="chip chip-d2">Última Milla</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">Despliegue Express</span>
-            <span class="chip chip-d3">Sin Infraestructura Previa</span>
-            <span class="chip chip-d3">H&amp;S</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D4</span>
-            <span class="chip chip-d4">TIM</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>General Electric</b> <span
-            style="font-family:var(--mono);font-size:10px;font-weight:400;color:var(--tx-muted);letter-spacing:0.5px;">EPC</span>
-          · <b>YPF Energía Eléctrica</b> <span
-            style="font-family:var(--mono);font-size:10px;font-weight:400;color:var(--tx-muted);letter-spacing:0.5px;">propietario
-            del activo</span></div>
-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
-        </div>
-        <div class="caso-ctas"><a class="caso-cta-link"
-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
-            ingeniería →</a></div>
-        <div class="caso-nav-ctas">
-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
-            class="caso-nav-sim" href="#caso-02">02 · PECASA</a> · <a class="caso-nav-sim" href="#caso-01">01 · El
-            Quemado</a>
-          <span class="caso-nav-sep">·</span>
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
-        </div>
-      </div>
-      <!-- CASO 09 — VALE -->
-      <div class="caso" id="caso-09">
+      <div class="caso" id="caso-11">
         <div class="caso-head">
           <div class="caso-sector">Minería · Mendoza</div>
-          <div class="caso-num">// 09</div>
+          <div class="caso-num">// 11</div>
         </div>
-        <div class="caso-title">700 puestos de trabajo, 3 data centers y backbone de fibra para proyecto minero de gran
-          escala</div>
+        <div class="caso-title">VALE Potasio Río Colorado – Mendoza</div>
         <div class="caso-desc">El proyecto de potasio de VALE en Río Colorado requería una infraestructura tecnológica
           completa para 700 puestos de trabajo en zona remota. IT-ONE implementó cableado Cat 6, backbone de fibra
           óptica con backup Cat 6A, tres data centers con detección y extinción de incendio, control de accesos,
@@ -3859,7 +3837,6 @@
             <span class="chip chip-d4">Fibra Óptica</span>
           </div>
         </div>
-        <div class="caso-client">Cliente: <b>VALE S.A.</b></div>
         <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
         </div>
         <div class="caso-ctas"><a class="caso-cta-link"
@@ -3872,142 +3849,120 @@
           <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
         </div>
       </div>
-      <!-- CASO 10 — Central Costanera -->
-      <div class="caso" id="caso-10">
-        <div class="caso-head">
-          <div class="caso-sector">Energía · Buenos Aires</div>
-          <div class="caso-num">// 10</div>
-        </div>
-        <div class="caso-title">Control de variación de velocidad de motores diesel para sistema de incendio en central
-          termoeléctrica</div>
-        <div class="caso-desc">La Central Termoeléctrica Costanera necesitaba un sistema de control para sus motores
-          diesel Cummins — dos grupos electrógenos y tres bombas de incendio — con encendido remoto y sincronización de
-          cargas. IT-ONE ejecutó el proyecto llave en mano: ingeniería, instalación mecánica y eléctrica, calibración,
-          sincronización de grupos y documentación completa.</div>
-        <div class="caso-results">
-          <div class="caso-result">✔ Sistema de incendio con encendido remoto y control de velocidad integrado</div>
-          <div class="caso-result">✔ Sincronización de 5 motores diesel para balance de carga</div>
-          <div class="caso-result">✔ Entrega llave en mano con documentación de ingeniería completa</div>
-        </div>
-        <div class="caso-tags-block">
-          <div class="chip-row"><span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Industrial</span>
-            <span class="chip chip-d1">Energía · Termoeléctrica</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Automatización</span>
-            <span class="chip chip-d2">Ingeniería IT/OT</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">Llave en Mano</span>
-            <span class="chip chip-d3">Operación Crítica</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D4</span>
-            <span class="chip chip-d4">Cummins</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>Central Costanera</b></div>
-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
-        </div>
-        <div class="caso-ctas"><a class="caso-cta-link"
-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
-            ingeniería →</a></div>
-        <div class="caso-nav-ctas">
-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
-            class="caso-nav-sim" href="#caso-01">01 · El Quemado</a>
-          <span class="caso-nav-sep">·</span>
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
-        </div>
-      </div>
-      <!-- CASO 11 — IESS -->
-      <div class="caso" id="caso-11">
-        <div class="caso-head">
-          <div class="caso-sector">Gobierno · Ecuador</div>
-          <div class="caso-num">// 11</div>
-        </div>
-        <div class="caso-title">Infraestructura tecnológica crítica para más de 7 millones de usuarios</div>
-        <div class="caso-desc">El IESS necesitaba una infraestructura robusta y escalable para soportar la demanda de
-          más de 7 millones de usuarios con alta disponibilidad. IT-ONE diseñó e implementó la solución integral con
-          hardware y software para grandes volúmenes de datos y transacciones simultáneas, y monitoreo 24/7 para
-          garantizar la continuidad del servicio.</div>
-        <div class="caso-results">
-          <div class="caso-result">✔ Infraestructura operativa para más de 7 millones de usuarios</div>
-          <div class="caso-result">✔ Reducción de tiempos de respuesta y ahorro de costos del 35%</div>
-          <div class="caso-result">✔ Operaciones ininterrumpidas con confiabilidad mejorada en servicios críticos</div>
-        </div>
-        <div class="caso-tags-block">
-          <div class="chip-row"><span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Gobierno</span>
-            <span class="chip chip-d1">Salud Pública</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Infraestructura Crítica</span>
-            <span class="chip chip-d2">Gestionados</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">Alta Disponibilidad</span>
-            <span class="chip chip-d3">Gran Escala</span>
-            <span class="chip chip-d3">Monitoreo 24/7</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>IESS — Instituto Ecuatoriano de Seguridad Social</b></div>
-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
-        </div>
-        <div class="caso-ctas"><a class="caso-cta-link"
-            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
-            ingeniería →</a></div>
-        <div class="caso-nav-ctas">
-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
-            class="caso-nav-sim" href="#caso-12">12 · RITBA</a>
-          <span class="caso-nav-sep">·</span>
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
-        </div>
-      </div>
-      <!-- CASO 12 — RITBA -->
       <div class="caso" id="caso-12">
         <div class="caso-head">
-          <div class="caso-sector">Gobierno · Estados Unidos</div>
+          <div class="caso-sector">Corporativo · CABA</div>
           <div class="caso-num">// 12</div>
         </div>
-        <div class="caso-title">Clústeres de bases de datos con recuperación ante desastres para autoridad vial de Rhode
-          Island</div>
-        <div class="caso-desc">RITBA necesitaba garantizar alta disponibilidad y recuperación ante desastres para sus
-          sistemas críticos en SQL Server y PostgreSQL. IT-ONE diseñó e implementó clústeres con replicación y failover
-          automático, creó un sitio DRS completamente funcional y optimizó el rendimiento con monitoreo proactivo.</div>
+        <div class="caso-title">Sede ACTC "Edificio Juan Gálvez" – Caballito, CABA</div>
+        <div class="caso-desc">Diseño, ingeniería, ejecución y montaje de la infraestructura tecnológica completa de la
+          nueva sede de la Asociación Corredores Turismo Carretera, la institución que organiza el campeonato de
+          automovilismo más popular de Argentina. IT-ONE ejecutó el datacenter, la red de cableado estructurado, el
+          networking, el sistema de videovigilancia IP, el sistema de control de accesos, el sistema de música ambiente
+          y los backbones de fibra óptica con vinculación entre sedes.</div>
         <div class="caso-results">
-          <div class="caso-result">✔ Reducción del downtime operativo en un 90%</div>
-          <div class="caso-result">✔ Recuperación integral garantizada en menos de 15 minutos</div>
-          <div class="caso-result">✔ Recuperación completa de operatividad en 2 horas ante eventos de desastre</div>
+          <div class="caso-result">✔ Infraestructura tecnológica integral operativa para la sede institucional de
+            referencia del automovilismo nacional argentino</div>
         </div>
         <div class="caso-tags-block">
-          <div class="chip-row"><span class="chip-lbl">D1</span>
-            <span class="chip chip-d1">Gobierno</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D2</span>
-            <span class="chip chip-d2">Infraestructura Crítica</span>
-            <span class="chip chip-d2">Alta Disponibilidad</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D3</span>
-            <span class="chip chip-d3">Disaster Recovery</span>
-            <span class="chip chip-d3">Alta Disponibilidad</span>
-          </div>
-          <div class="chip-row"><span class="chip-lbl">D4</span>
-            <span class="chip chip-d4">SQL Server</span>
-            <span class="chip chip-d4">PostgreSQL</span>
-          </div>
-        </div>
-        <div class="caso-client">Cliente: <b>RITBA — Rhode Island Turnpike and Bridge Authority</b></div>
-        <div class="caso-ctas-ver"><a class="caso-cta-link caso-cta-ver" href="#casos">Ver más proyectos similares →</a>
+          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Corporativo</span></div>
+          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Infraestructura</span><span
+              class="chip chip-d2">Redes</span><span class="chip chip-d2">Datacenter</span><span
+              class="chip chip-d2">Seguridad</span><span class="chip chip-d2">Cableado estructurado</span></div>
+          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Llave en mano</span><span
+              class="chip chip-d3">Integración de sistemas</span></div>
+          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Fibra óptica</span><span
+              class="chip chip-d4">Control de accesos</span><span class="chip chip-d4">Video IP</span></div>
         </div>
         <div class="caso-ctas"><a class="caso-cta-link"
             href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
             ingeniería →</a></div>
-        <div class="caso-nav-ctas">
-          <span style="font-family:var(--mono);font-size:10px;color:var(--tx-dim);">Ver similares:</span> <a
-            class="caso-nav-sim" href="#caso-11">11 · IESS Ecuador</a>
-          <span class="caso-nav-sep">·</span>
-          <a class="caso-nav-consult" href="#contacto">Consultar proyecto similar →</a>
+      </div>
+      <div class="caso" id="caso-13">
+        <div class="caso-head">
+          <div class="caso-sector">Corporativo · Río Negro</div>
+          <div class="caso-num">// 13</div>
         </div>
+        <div class="caso-title">Desarrollo app integración Sistema Control de Accesos a Sistema Centro de Costos –
+          Allen, Río Negro</div>
+        <div class="caso-desc">Integración de sistema de control de accesos de personal, visitas y vehículos con lectura
+          de DNIs y patentes, vinculado a las bases de datos corporativas del cliente. 3 lectores de DNI, 2 lectores de
+          patentes, 2 plataformas y 5 bases de datos integradas en 1 mes.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Sistema unificado de accesos conectado a las bases de datos corporativas del
+            cliente</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Corporativo</span></div>
+          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Seguridad</span><span
+              class="chip chip-d2">Integración de sistemas</span></div>
+          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Integración de
+              plataformas</span></div>
+          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Control de
+              accesos</span><span class="chip chip-d4">Lectura DNI</span><span class="chip chip-d4">Lectura de
+              patentes</span></div>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+      </div>
+      <div class="caso" id="caso-14">
+        <div class="caso-head">
+          <div class="caso-sector">Gobierno · San Juan</div>
+          <div class="caso-num">// 14</div>
+        </div>
+        <div class="caso-title">Centro Cívico de San Juan – San Juan Capital</div>
+        <div class="caso-desc">Diseño y ejecución de la infraestructura tecnológica del principal complejo de
+          administración pública de la Provincia de San Juan, en rol de subcontratista de la constructora principal.
+          IT-ONE ejecutó la red de cableado estructurado, el datacenter central y las 18 salas de cableado distribuidas
+          en el edificio. El complejo concentra 4 ministerios provinciales y opera con una circulación de
+          aproximadamente 10.000 personas diarias. Proyectado en 1971 e inaugurado en 2009, fue sede de la Cumbre del
+          Mercosur de 2010.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Infraestructura de red y datacenter operativos para el edificio de administración
+            pública más relevante de la Provincia de San Juan</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Gobierno</span></div>
+          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Infraestructura</span><span
+              class="chip chip-d2">Redes</span><span class="chip chip-d2">Datacenter</span><span
+              class="chip chip-d2">Cableado estructurado</span></div>
+          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Gran Escala</span><span
+              class="chip chip-d3">Edificio Crítico</span></div>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
+      </div>
+      <div class="caso" id="caso-15">
+        <div class="caso-head">
+          <div class="caso-sector">Gobierno · Bs. As.</div>
+          <div class="caso-num">// 15</div>
+        </div>
+        <div class="caso-title">Unidad Penitenciaria N° 47 – San Martín, Bs. As.</div>
+        <div class="caso-desc">Ingeniería, diseño y ejecución de la infraestructura tecnológica y de seguridad completa
+          de la Unidad Penitenciaria N° 47 del Servicio Penitenciario Bonaerense. IT-ONE ejecutó el datacenter, la red
+          de cableado estructurado, la red de telefonía, el networking, la central telefónica, el sistema de alarmas
+          perimetral, el sistema de sirenas perimetral y el sistema de videovigilancia IP con guarda y auditoría de
+          imágenes.</div>
+        <div class="caso-results">
+          <div class="caso-result">✔ Infraestructura tecnológica y de seguridad perimetral integral operativa para una
+            unidad penitenciaria de alta exigencia operativa</div>
+        </div>
+        <div class="caso-tags-block">
+          <div class="chip-row"><span class="chip-lbl">D1</span><span class="chip chip-d1">Gobierno</span></div>
+          <div class="chip-row"><span class="chip-lbl">D2</span><span class="chip chip-d2">Infraestructura</span><span
+              class="chip chip-d2">Redes</span><span class="chip chip-d2">Datacenter</span><span
+              class="chip chip-d2">Seguridad</span><span class="chip chip-d2">Telefonía</span></div>
+          <div class="chip-row"><span class="chip-lbl">D3</span><span class="chip chip-d3">Llave en mano</span><span
+              class="chip chip-d3">Entorno crítico</span><span class="chip chip-d3">Integración de sistemas</span></div>
+          <div class="chip-row"><span class="chip-lbl">D4</span><span class="chip chip-d4">Video IP</span><span
+              class="chip chip-d4">Alarmas perimetral</span><span class="chip chip-d4">Central telefónica</span><span
+              class="chip chip-d4">Fibra óptica</span></div>
+        </div>
+        <div class="caso-ctas"><a class="caso-cta-link"
+            href="mailto:ventas@it-one.com.ar?subject=Consulta sobre proyecto similar">Consultar proyecto similar con
+            ingeniería →</a></div>
       </div>
     </div>
     <!-- BISAGRA 1: Casos → Otros proyectos (transición interna) -->
@@ -4043,38 +3998,47 @@
           <div class="otros-lista">
             <div class="otro-item">Parque Eólico Gral. Levalle <span class="otro-loc">Córdoba</span></div>
             <div class="otro-item">Parque Eólico Los Teros II <span class="otro-loc">BA</span></div>
-            <div class="otro-item">Parque Eólico Manantiales Behr <span class="otro-loc">Chubut</span></div>
           </div>
-          <div class="otros-grupo-lbl" style="margin-top:2rem;"><span class="chip chip-d1">Gobierno &amp;
-              Infraestructura</span></div>
+        </div>
+        <div>
+          <div class="otros-grupo-lbl"><span class="chip chip-d1">Minería</span></div>
           <div class="otros-lista">
-            <div class="otro-item">Centro Cívico Provincia de San Juan <span class="otro-loc">San Juan</span></div>
+            <div class="otro-item">Xstrata Copper – Minera Alumbrera <span class="otro-loc">CABA</span></div>
+            <div class="otro-item">McEwen Copper – Los Azules <span class="otro-loc">San Juan</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="otros-grupo-lbl"><span class="chip chip-d1">Gobierno &amp; Infraestructura</span></div>
+          <div class="otros-lista">
             <div class="otro-item">Proyecto Soterramiento Tren Sarmiento <span class="otro-loc">BA</span></div>
             <div class="otro-item">Renovación Belgrano Cargas Ramal C8 <span class="otro-loc">Tucumán</span></div>
             <div class="otro-item">Renovación Belgrano Cargas Ramal C8 <span class="otro-loc">Salta</span></div>
+            <div class="otro-item">Alcaldía Santa Catalina <span class="otro-loc">BA</span></div>
+            <div class="otro-item">Fuero de Menores San Justo <span class="otro-loc">BA</span></div>
+            <div class="otro-item">Plaza de la Memoria <span class="otro-loc">CABA</span></div>
           </div>
         </div>
-        <div style="grid-column: 1 / -1;">
+        <div>
           <div class="otros-grupo-lbl"><span class="chip chip-d1">Industrial &amp; Corporativo</span></div>
-          <div class="otros-lista" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0 3rem;">
+          <div class="otros-lista">
             <div class="otro-item">Planta ALUAR <span class="otro-loc">Puerto Madryn · Chubut</span></div>
             <div class="otro-item">Planta Productiva Grupo Timbo <span class="otro-loc">La Pampa</span></div>
-            <div class="otro-item">Planta YPF <span class="otro-loc">Ensenada · BA</span></div>
-            <div class="otro-item">Planta Water Tech Veolia <span class="otro-loc">BA</span></div>
-            <div class="otro-item">Oficinas Corporativas Wärtsilä <span class="otro-loc">BA</span></div>
-            <div class="otro-item">Oficinas Corporativas Duro Felguera <span class="otro-loc">CABA</span></div>
-            <div class="otro-item">Oficinas ACTC <span class="otro-loc">BA</span></div>
+            <div class="otro-item">Planta Potabilizadora Ing. Maschwitz <span class="otro-loc">BA</span></div>
+            <div class="otro-item">Centro Logística JBS Pilarica <span class="otro-loc">BA</span></div>
+            <div class="otro-item">Hospital Garrahan <span class="otro-loc">CABA</span></div>
             <div class="otro-item">Oficinas Corporativas Grupo Timbo <span class="otro-loc">BA</span></div>
+            <div class="otro-item">Oficinas Corporativas Wärtsilä <span class="otro-loc">CABA</span></div>
+            <div class="otro-item">Oficinas Corporativas Duro Felguera <span class="otro-loc">CABA</span></div>
             <div class="otro-item">Oficinas Corporativas AYSA <span class="otro-loc">Escobar</span></div>
             <div class="otro-item">Oficinas Distecna SA <span class="otro-loc">Paraguay</span></div>
-            <div class="otro-item">Oficinas Proyecto CCR YPF <span class="otro-loc">BA</span></div>
-            <div class="otro-item">Oficinas Emergencias Médicas <span class="otro-loc">BA</span></div>
+            <div class="otro-item">Oficinas Emergencias Médicas <span class="otro-loc">CABA</span></div>
+            <div class="otro-item">Oficinas Corporativas Greenpeace Argentina <span class="otro-loc">CABA</span></div>
+            <div class="otro-item">Oficinas Corporativas Greenpeace Chile <span class="otro-loc">CABA</span></div>
           </div>
         </div>
       </div>
     </div>
     <!-- BISAGRA 2: Otros proyectos → Clientes (transición interna) -->
-
     <!-- CLIENTES (sub-bloque dentro de Evidencia) -->
     <!-- /clientes-block -->
     <div style="margin-top:2.5rem; text-align:center;">
@@ -4097,23 +4061,35 @@
     <div class="prod-propios-wrap">
       <div class="prod-propios">
         <div class="prod-propio">
-          <div class="prod-propio-badge">Fabricación propia</div>
+          <div class="prod-propio-badge">Desarrollo propio</div>
           <div class="prod-propio-name">TIM</div>
+          <div class="prod-propio-tagline">Conectividad de campo operativa en una hora. Sin obra civil, sin
+            excavaciones, sin esperar a que la infraestructura llegue.</div>
           <div class="prod-propio-full">Torre Inteligente Móvil</div>
-          <div class="prod-propio-desc">Desplegable en el día sin obra civil ni excavaciones. Provee Internet de alta
-            disponibilidad, WiFi en campo, Video IP y radiocomunicaciones desde el primer momento de operación. Diseñada
-            para zonas remotas donde la infraestructura no llega antes que la operación.</div>
-          <div class="prod-propio-used">→ Aplicada en <a href="#caso-01">01 · El Quemado</a> · <a href="#caso-08">08 ·
-              Los Teros</a></div>
+          <div class="prod-propio-desc">Una torre de comunicaciones transportable de hasta 36 metros de altura,
+            desplegable en horas y operativa en menos de una hora. Concebida para entornos donde la infraestructura no
+            existe, no llega a tiempo, o instalarla permanentemente no es viable.<br /><br />Configuraciones
+            disponibles: Internet · Starlink · WiFi · Videovigilancia IP · Puesto de Control de Accesos Móvil ·
+            Radiocomunicaciones · Telemetría · IIoT.<br />Cobertura de hasta 20/30 km de radio (*) según servicios
+            configurados. Autonomía energética completa — sin dependencia de red eléctrica
+            (solar/eólica).<br /><br />Una torre fija requiere obra civil, excavaciones, permisos y semanas de trabajo.
+            La TIM requiere un vehículo y una hora.</div>
+          <div class="prod-propio-used">→ Aplicada en <a href="#caso-01">01 · El Quemado</a> · <a href="#caso-09">09 ·
+              Los Teros I</a>, en Los Teros II y Parque Eólico Gral. Levalle.</div>
         </div>
         <div class="prod-propio">
-          <div class="prod-propio-badge">Fabricación propia</div>
+          <div class="prod-propio-badge">Desarrollo propio</div>
           <div class="prod-propio-name">SAR-H</div>
+          <div class="prod-propio-tagline">Control remoto de válvulas industriales de ¼ de giro desde cualquier lugar —
+            con respaldo manual y certificación ATEX opcional.</div>
           <div class="prod-propio-full">Sistema de Accionamiento Remoto Hidráulico</div>
-          <div class="prod-propio-desc">Control automático y monitoreo remoto para válvulas de ¼ de giro en pozos
-            petroleros. Modos temporizado y manual, apertura y cierre diferenciados para neutralizar golpe de ariete,
-            telemetría 2G/3G/4G y energía solar autónoma — sin dependencia de red eléctrica.</div>
-          <div class="prod-propio-used">→ Aplicado en <a href="#caso-05">05 · Válvula</a></div>
+          <div class="prod-propio-desc">Sistema avanzado de control remoto para válvulas de ¼ de giro en entornos de Oil
+            &amp; Gas. Operación desde plataforma web dedicada en modo automático, semiautomático o manual, con respaldo
+            de operación manual local mediante llave dedicada.<br /><br />Incluye: apertura y cierre diferenciados para
+            neutralizar golpe de ariete, telemetría 2G/3G/4G, monitoreo en tiempo real, notificaciones automáticas por
+            email a usuarios autorizados y energía solar autónoma sin dependencia de red eléctrica. Certificación ATEX
+            opcional para áreas con riesgo de explosión.</div>
+          <div class="prod-propio-used">→ Aplicado en <a href="#caso-08">08 · SAR-H · Neuquén</a></div>
         </div>
       </div>
     </div>
@@ -4266,8 +4242,8 @@
       </div>
       <div>
         <div class="footer-col-lbl">Misión</div>
-        <p class="footer-col-text">Brindar soluciones en todas las plataformas de tecnologías de la información y
-          comunicaciones, para cubrir las necesidades de nuestros clientes en cualquier ambiente y zona geográfica.</p>
+        <p class="footer-col-text">Diseñar, ejecutar y operar proyectos IT/OT en los entornos industriales, corporativos
+          y de gobierno más exigentes de Argentina y la región.</p>
       </div>
       <div>
         <div class="footer-col-lbl">Visión</div>
@@ -4289,10 +4265,27 @@
     </div>
   </footer>
 
-  <!-- Botón provisional para volver al diseño de React -->
-  <a href="/"
-    style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #0066ff; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-family: sans-serif; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s;"
-    onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'">
+  <!-- Botón provisional para cambiar al diseño normal -->
+  <a
+    href="index.html"
+    style="
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #ff4b4b;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: sans-serif;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    "
+    onmouseenter="this.style.transform='scale(1.05)'"
+    onmouseleave="this.style.transform='scale(1)'"
+  >
     Ver Sitio B
   </a>
 </body>

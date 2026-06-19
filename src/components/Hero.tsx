@@ -29,12 +29,18 @@ const Hero = () => {
 <section className="hero" id="hero" style={{ position: 'relative', overflow: 'hidden' }}>
 <ParticlesBackground />
 <div className="hero-left" style={{ position: 'relative', zIndex: 1, pointerEvents: 'none' }}>
-<div className="hero-tag">IT/OT Convergence</div>
-<h1 className="hero-h" style={{ pointerEvents: 'auto' }}>La ingeniería<br/>de su <span className="accent">operación.</span></h1>
-<p className="hero-sub" style={{ pointerEvents: 'auto' }}>Integramos conectividad, infraestructura y automatización para entornos industriales, corporativos y de misión crítica.</p>
+<div className="badge">+21 años · +120 proyectos ejecutados</div>
+<h1 className="hero-h" style={{ pointerEvents: 'auto' }}>
+  <span className="thin">Un solo equipo.</span>
+  De la <span className="accent">ingeniería</span> al activo en operación.
+</h1>
+<p className="hero-sub" style={{ pointerEvents: 'auto' }}>Industria, energía, corporativo y gobierno. Donde IT y OT se conectan, estamos nosotros.</p>
 <div className="hero-acts" style={{ pointerEvents: 'auto' }}>
-<a className="btn-blue" href="#servicios">Ver soluciones</a>
-<a href="#nosotros">Ver el equipo de ingeniería →</a>
+  <a className="btn-blue" href="#contacto">Conversemos sobre su proyecto →</a>
+  <a className="btn-outline" href="#casos">Ver casos ejecutados</a>
+</div>
+<div className="hero-link-cta" style={{ pointerEvents: 'auto' }}>
+  <a href="#nosotros">Ver el equipo de ingeniería →</a>
 </div>
 <div className="hero-stats">
 <div className="stat"><div className="stat-n"><AnimatedCounter end={21} suffix="+" /></div><div className="stat-l">años de trayectoria</div></div>

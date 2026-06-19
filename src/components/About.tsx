@@ -80,22 +80,29 @@ const About = () => {
   }}>
     {[1, 2].map((setIndex) => (
       <div key={`row1-${setIndex}`} style={{ display: "flex", gap: "1rem" }}>
-        <div className="cli"><img alt="Techint" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Techint</span>"; }} src="https://logos.hunter.io/techint.com"/></div>
-        <div className="cli"><img alt="Siemens" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Siemens</span>"; }} src="https://logos.hunter.io/siemens.com"/></div>
         <div className="cli"><img alt="General Electric" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>General Electric</span>"; }} src="https://logos.hunter.io/ge.com"/></div>
-        <div className="cli"><img alt="Central Puerto" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Central Puerto</span>"; }} src="https://logos.hunter.io/centralpuerto.com"/></div>
+        <div className="cli"><span className="cli-txt">YPF Luz</span></div>
+        <div className="cli"><img alt="Siemens" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Siemens</span>"; }} src="https://logos.hunter.io/siemens.com"/></div>
+        <div className="cli"><img alt="ABB" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>ABB</span>"; }} src="https://logos.hunter.io/abb.com"/></div>
+        <div className="cli"><span className="cli-txt">Aspro Energy</span></div>
+        <div className="cli"><span className="cli-txt">Refinor</span></div>
+        <div className="cli"><span className="cli-txt">FieldCore</span></div>
+        <div className="cli"><img alt="Techint" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Techint</span>"; }} src="https://logos.hunter.io/techint.com"/></div>
+        <div className="cli"><img alt="Wärtsilä" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Wärtsilä</span>"; }} src="https://logos.hunter.io/wartsila.com"/></div>
+        <div className="cli"><span className="cli-txt">Central Puerto</span></div>
+        <div className="cli"><span className="cli-txt">Central Dock Sud</span></div>
         <div className="cli"><span className="cli-txt">AESA</span></div>
         <div className="cli"><span className="cli-txt">DVS Energy</span></div>
-        <div className="cli"><span className="cli-txt">Aspro Energy</span></div>
-        <div className="cli"><span className="cli-txt">Central Dock Sud</span></div>
-        <div className="cli"><span className="cli-txt">Refinor</span></div>
-        <div className="cli"><img alt="YPF Luz" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>YPF Luz</span>"; }} src="https://logos.hunter.io/ypfluz.com"/></div>
         <div className="cli"><span className="cli-txt">MSU Energy</span></div>
-        <div className="cli"><span className="cli-txt">ALUAR</span></div>
-        <div className="cli"><img alt="Wärtsilä" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Wärtsilä</span>"; }} src="https://logos.hunter.io/wartsila.com"/></div>
-        <div className="cli"><img alt="Veolia" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Veolia</span>"; }} src="https://logos.hunter.io/veolia.com"/></div>
+        <div className="cli"><span className="cli-txt">UTE Potasio Río Colorado</span></div>
+        <div className="cli"><span className="cli-txt">McEwen Copper</span></div>
+        <div className="cli"><span className="cli-txt">Xstrata Copper</span></div>
         <div className="cli"><img alt="VALE" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>VALE</span>"; }} src="https://logos.hunter.io/vale.com"/></div>
-        <div className="cli"><img alt="McEwen Copper" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>McEwen Copper</span>"; }} src="https://logos.hunter.io/mcewencopper.com"/></div>
+        <div className="cli"><span className="cli-txt">ProdEng</span></div>
+        <div className="cli"><span className="cli-txt">Adita – ImbOil</span></div>
+        <div className="cli"><span className="cli-txt">SOCOTHERM AMERICAS</span></div>
+        <div className="cli"><img alt="ALUAR" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>ALUAR</span>"; }} src="https://logos.hunter.io/aluar.com.ar"/></div>
+        <div className="cli"><img alt="Veolia" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Veolia</span>"; }} src="https://logos.hunter.io/veolia.com"/></div>
       </div>
     ))}
   </div>
@@ -112,22 +119,39 @@ const About = () => {
         <div className="cli"><img alt="Toyota" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Toyota</span>"; }} src="https://logos.hunter.io/toyota.com"/></div>
         <div className="cli"><img alt="ESPN" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>ESPN</span>"; }} src="https://logos.hunter.io/espn.com"/></div>
         <div className="cli"><span className="cli-txt">Autopistas del Oeste</span></div>
-        <div className="cli"><img alt="Swiss Medical" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Swiss Medical</span>"; }} src="https://logos.hunter.io/swissmedical.com.ar"/></div>
-        <div className="cli"><span className="cli-txt">ACARA</span></div>
-        <div className="cli"><img alt="Ferrovías" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Ferrovías</span>"; }} src="https://logos.hunter.io/ferrovias.com.ar"/></div>
-        <div className="cli"><span className="cli-txt">Autotrol</span></div>
-        <div className="cli"><span className="cli-txt">IOSFA</span></div>
-        <div className="cli"><span className="cli-txt">OSFATLYF</span></div>
-        <div className="cli"><span className="cli-txt">Epidata</span></div>
-        <div className="cli"><img alt="IESS" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>IESS Ecuador</span>"; }} src="https://logos.hunter.io/iess.gob.ec"/></div>
-        <div className="cli"><img alt="RITBA" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>RITBA EE.UU.</span>"; }} src="https://logos.hunter.io/ritba.com"/></div>
         <div className="cli"><img alt="AYSA" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>AYSA</span>"; }} src="https://logos.hunter.io/aysa.com.ar"/></div>
+        <div className="cli"><span className="cli-txt">Tyco Fire &amp; Security</span></div>
+        <div className="cli"><span className="cli-txt">DSM – Ex Laboratorios Roche</span></div>
+        <div className="cli"><span className="cli-txt">Ferrosur Roca</span></div>
+        <div className="cli"><img alt="Ferrovías" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Ferrovías</span>"; }} src="https://logos.hunter.io/ferrovias.com.ar"/></div>
+        <div className="cli"><span className="cli-txt">Constructora Norberto Odebrecht SA</span></div>
         <div className="cli"><img alt="Duro Felguera" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Duro Felguera</span>"; }} src="https://logos.hunter.io/durofelguera.com"/></div>
-        <div className="cli"><span className="cli-txt">ACTC</span></div>
+        <div className="cli"><span className="cli-txt">UTE SABAVISA–Merco Vial–ZONIS</span></div>
         <div className="cli"><span className="cli-txt">Grupo Timbo</span></div>
-        <div className="cli"><span className="cli-txt">Distecna SA <span style={{fontSize:"8px", opacity:0.7}}>Paraguay</span></span></div>
+        <div className="cli"><img alt="Open English" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Open English</span>"; }} src="https://logos.hunter.io/openenglish.com"/></div>
+        <div className="cli"><img alt="Ottobock Argentina" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Ottobock Argentina</span>"; }} src="https://logos.hunter.io/ottobock.com"/></div>
+        <div className="cli"><img alt="Greenpeace Argentina" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Greenpeace Argentina</span>"; }} src="https://logos.hunter.io/greenpeace.org"/></div>
+        <div className="cli"><img alt="Greenpeace Chile" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Greenpeace Chile</span>"; }} src="https://logos.hunter.io/greenpeace.org"/></div>
+        <div className="cli"><span className="cli-txt">A.C.T.C.</span></div>
+        <div className="cli"><span className="cli-txt">A.C.A.R.A.</span></div>
+        <div className="cli"><span className="cli-txt">Epidata</span></div>
+        <div className="cli"><span className="cli-txt">Distecna SA</span></div>
+        <div className="cli"><span className="cli-txt">Truelogic</span></div>
+        <div className="cli"><span className="cli-txt">Bombas NIR</span></div>
+        <div className="cli"><span className="cli-txt">Ristal</span></div>
+        <div className="cli"><span className="cli-txt">Asistec Hidráulica</span></div>
+        <div className="cli"><span className="cli-txt">Praimex</span></div>
+        <div className="cli"><span className="cli-txt">Idealistas.org</span></div>
+        <div className="cli"><span className="cli-txt">YRC Logistics</span></div>
+        <div className="cli"><img alt="C.F.I." loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>C.F.I.</span>"; }} src="https://logos.hunter.io/cfi.org.ar"/></div>
+        <div className="cli"><span className="cli-txt">Servicio Penitenciario Bonaerense</span></div>
         <div className="cli"><span className="cli-txt">Gob. San Juan</span></div>
+        <div className="cli"><span className="cli-txt">APN</span></div>
         <div className="cli"><span className="cli-txt">Ferrocarriles Argentinos S.E.</span></div>
+        <div className="cli"><img alt="Swiss Medical" loading="lazy" onError={(e) => { const p = e.currentTarget.parentNode as HTMLElement; if (p) p.innerHTML = "<span class='cli-txt'>Swiss Medical</span>"; }} src="https://logos.hunter.io/swissmedical.com.ar"/></div>
+        <div className="cli"><span className="cli-txt">Obra social AySA</span></div>
+        <div className="cli"><span className="cli-txt">OSFATLyF</span></div>
+        <div className="cli"><span className="cli-txt">IOSFA</span></div>
       </div>
     ))}
   </div>
